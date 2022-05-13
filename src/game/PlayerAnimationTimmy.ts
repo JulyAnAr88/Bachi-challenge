@@ -46,6 +46,7 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         );
 
         this.ninieAnimatedIdle.play();
+        this.ninieAnimatedIdle.loop = true;
         this.ninieAnimatedIdle.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedIdle.visible = PlayerAnimationTimmy.VISIBLE;
         this.ninieAnimatedIdle.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -73,6 +74,7 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         );
 
         this.ninieAnimatedWalk.play();
+        this.ninieAnimatedWalk.loop = false;
         this.ninieAnimatedWalk.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedWalk.visible = false;
         this.ninieAnimatedWalk.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -95,10 +97,11 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
                 Texture.from("NeneJump14"),
                 Texture.from("NeneJump15"),
                 
-            ], true
+            ], false
         );
 
         this.ninieAnimatedJump.play();
+        this.ninieAnimatedJump.loop = false;
         this.ninieAnimatedJump.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedJump.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -121,10 +124,11 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
                 Texture.from("NeneRun14"),
                 Texture.from("NeneRun15"),
                 
-            ], true
+            ], false
         );
 
         this.ninieAnimatedRun.play();
+        this.ninieAnimatedRun.loop = false;
         this.ninieAnimatedRun.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedRun.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -147,10 +151,11 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
                 Texture.from("NeneDead14"),
                 Texture.from("NeneDead15"),
                 
-            ], true
+            ], false
         );
 
         this.ninieAnimatedDead.play();
+        this.ninieAnimatedDead.loop = false;
         this.ninieAnimatedDead.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedDead.visible = false;
         this.ninieAnimatedDead.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -169,7 +174,8 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = false;
-       
+        this.ninieAnimatedWalk.gotoAndPlay(0);
+               
     }
 
     public changeToJumpAnimation(){
@@ -179,6 +185,7 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = true;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = false;
+        this.ninieAnimatedJump.gotoAndPlay(0);
                     
     }
 

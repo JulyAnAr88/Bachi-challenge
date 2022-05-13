@@ -16,6 +16,8 @@ export class TickerScene extends Container implements IUpdateable{
     private hud: HUD;
 
     private gameSpeed = 150;
+    public static GAME_OVER = false;
+    public static FLOOR_LEVEL = 900;
 
     private playerNinix: Player;
     private mosquito: MosquitoEnemy;
@@ -69,26 +71,26 @@ export class TickerScene extends Container implements IUpdateable{
         this.snake.position.set(850,100);
 
         let agua = new BadWater();        
-        agua.getDialogAguasMalas().position.set(0, 935);
+        agua.getDialogAguasMalas().position.set(0, TickerScene.FLOOR_LEVEL + 35);
         this.world.addChild(agua.getDialogAguasMalas());
         
         let plat = new Platform("Tile2")
-        plat.position.set(0,900);
+        plat.position.set(0,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat);
         this.platforms.push(plat);
 
         let plat1 = new Platform("Tile2")
-        plat1.position.set(192,900);
+        plat1.position.set(192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat1);
         this.platforms.push(plat1);
 
         let plat1_1 = new Platform("Tile2")
-        plat1_1.position.set(plat1.position.x + 192,900);
+        plat1_1.position.set(plat1.position.x + 192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat1_1);
         this.platforms.push(plat1_1);
         
         let arbol = this.objeto;
-        arbol.position.set(150, 950 - arbol.height * 2.5);
+        arbol.position.set(150, (TickerScene.FLOOR_LEVEL + 50) - arbol.height * 2.5);
         this.fondoVariable.addChild(arbol.getObject());
         this.world.addChild(this.fondoVariable);
         this.entorno.push(arbol);
@@ -99,64 +101,64 @@ export class TickerScene extends Container implements IUpdateable{
         this.mosquitos.push(this.mosquito);
 
         let plat2 = new Platform("Tile3")
-        plat2.position.set(plat1_1.position.x + 192,900);
+        plat2.position.set(plat1_1.position.x + 192,TickerScene.FLOOR_LEVEL);
         console.log(plat2.position.x);
         this.world.addChild(plat2);
         this.platforms.push(plat2);
 
         let plat3 = new Platform("Tile1")
-        plat3.position.set(plat2.position.x + plat3.width*3,900);
+        plat3.position.set(plat2.position.x + plat3.width*3,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat3);
         this.platforms.push(plat3);
                 
         let plat4 = new Platform("Tile2")
-        plat4.position.set(plat3.position.x + 192,900);
+        plat4.position.set(plat3.position.x + 192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat4);
         this.platforms.push(plat4);
 
         let plat5 = new Platform("Tile7")
-        plat5.position.set(plat4.position.x + 192,900);
+        plat5.position.set(plat4.position.x + 192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat5);
         this.platforms.push(plat5);
 
         let plat6 = new Platform("Tile8")
-        plat6.position.set(plat5.position.x + 192,900);
+        plat6.position.set(plat5.position.x + 192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat6);
         this.platforms.push(plat6);
 
         let plat7 = new Platform("Tile1")
-        plat7.position.set(plat5.position.x + 192,750);
+        plat7.position.set(plat5.position.x + 192,TickerScene.FLOOR_LEVEL-150);
         this.world.addChild(plat7);
         this.platforms.push(plat7);
 
         let plat8 = new Platform("Tile5")
-        plat8.position.set(plat7.position.x + 192,900);
+        plat8.position.set(plat7.position.x + 192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat8);
         this.platforms.push(plat8);
 
         let plat9 = new Platform("Tile2")
-        plat9.position.set(plat7.position.x + 192,750);
+        plat9.position.set(plat7.position.x + 192,TickerScene.FLOOR_LEVEL-150);
         this.world.addChild(plat9);
         this.platforms.push(plat9);
 
         let plat10 = new Platform("Tile10")
-        plat10.position.set(plat8.position.x + 192,900);
+        plat10.position.set(plat8.position.x + 192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat10);
         this.platforms.push(plat10);
 
         let plat11 = new Platform("Tile3")
-        plat11.position.set(plat8.position.x + 192,750);
+        plat11.position.set(plat8.position.x + 192,TickerScene.FLOOR_LEVEL-150);
         this.world.addChild(plat11);
         this.platforms.push(plat11);
 
         let plat12 = new Platform("Tile11")
-        plat12.position.set(plat10.position.x + 192,900);
+        plat12.position.set(plat10.position.x + 192,TickerScene.FLOOR_LEVEL);
         this.world.addChild(plat12);
         this.platforms.push(plat12);
 
         this.playerNinix = new Player();
         this.playerNinix.x = 100;
-        this.playerNinix.y = 750;
+        this.playerNinix.y = TickerScene.FLOOR_LEVEL-150;
         this.playerNinix.scale.set(0.5);
         this.world.addChild(this.playerNinix);
 
@@ -170,6 +172,10 @@ export class TickerScene extends Container implements IUpdateable{
     
     
     update(deltaTime: number, _deltaFrame: number): void {
+
+        if (TickerScene.GAME_OVER) {
+            return;            
+        }
         
         this.timePassedPlataform += deltaTime;
         this.timePassedMosquito += deltaTime;
@@ -181,13 +187,13 @@ export class TickerScene extends Container implements IUpdateable{
         //this.aguasMalas.update(deltaTime);
         
 
-        console.log(6000 * 95/this.gameSpeed)
-        if(this.timePassedPlataform > 6000 * 100/this.gameSpeed){
+        console.log(3000 * 100/this.gameSpeed)
+        if(this.timePassedPlataform > 3000 * 100/this.gameSpeed){
             this.gameSpeed += 2.5;
             this.timePassedPlataform =0;
 
             let plat = new Platform("Tile2")
-            plat.position.set(WIDTH,900);
+            plat.position.set(WIDTH,TickerScene.FLOOR_LEVEL);
             this.world.addChild(plat);
             this.platforms.push(plat);           
 
@@ -300,7 +306,7 @@ export class TickerScene extends Container implements IUpdateable{
                             
             this.timePassedObstacle =0;
             let plat = new Obstacles(Math.round((Math.random()*10)) % 3);
-            plat.position.set(WIDTH, 900 - plat.height * 1.2);
+            plat.position.set(WIDTH, TickerScene.FLOOR_LEVEL - plat.height);
             this.fondoVariable.addChild(plat);
             this.obstacles.push(plat);
         }

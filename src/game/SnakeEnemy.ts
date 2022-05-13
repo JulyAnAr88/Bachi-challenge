@@ -41,6 +41,12 @@ export class SnakeEnemy extends PhysicsContainer implements IHitbox, IDamageZone
         this.hitCircle.drawCircle(30,35,25);
         this.hitCircle.position.set(-30,-30);
         this.addChild(this.hitCircle);*/
+
+        const zero: Graphics = new Graphics();
+        zero.beginFill(0xFF00FF);
+        zero.drawCircle(0, 0, 10);
+        zero.endFill;
+        //this.addChild(zero);
         
         this.hitbox = new Graphics();
         this.hitbox.beginFill(0x00FFFF, 0.3);

@@ -49,6 +49,11 @@ export class Player extends PhysicsContainer implements IHitbox{
                 break;
         }
         
+        const zero: Graphics = new Graphics();
+        zero.beginFill(0xFF00FF);
+        zero.drawCircle(0, 0, 10);
+        zero.endFill;
+        //this.addChild(zero);
 
         this.maxHealth = 100;
         this.currentHealth = this.maxHealth;
@@ -84,7 +89,8 @@ export class Player extends PhysicsContainer implements IHitbox{
     {
         if(this.isDead){
 
-            this.ninieAnimated.changeToDeadAnimation();            
+            this.ninieAnimated.changeToDeadAnimation();          
+            TickerScene.GAME_OVER = true;
             return;
         }
 
@@ -100,19 +106,23 @@ export class Player extends PhysicsContainer implements IHitbox{
             
             if (this.canJump)
             {
-                //console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
+                console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
                 this.speed.x = Player.MOVE_SPEED;
                 this.ninieAnimated.scale.x = 1;
                 this.ninieAnimated.changeToWalkAnimation();
 
                 if(this.timePassedWalk > 10){
-                    //console.log("ruuuun bitch");
-                    this.speed.x = Player.MOVE_SPEED * 1.2;
+                    //this.speed.x = Player.MOVE_SPEED * 1.2;
                     this.ninieAnimated.changeToRunAnimation();
                     this.timePassedWalk =0;
-                } 
+                    console.log("ruuuun bitch");
+            } 
+
 
             }
+
+            
+
         }else if (Keyboard.state.get("ArrowLeft") || Keyboard.state.get("KeyA")){
 
             if (this.canJump)

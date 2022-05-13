@@ -21,7 +21,7 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
                 );
                 this.objeto.play();
                 this.objeto.scale.set(2);
-                this.objeto.anchor.set(-0.2);
+                //this.objeto.anchor.set(0.5);
                 this.objeto.animationSpeed = 0.4;
                 this.addChild(this.objeto);
                 
@@ -35,7 +35,7 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
                 );
                 this.objeto.play();
                 this.objeto.scale.set(2);
-                this.objeto.anchor.set(-0.2);
+                //this.objeto.anchor.set(0.5);
                 this.objeto.animationSpeed = 0.4;
                 this.addChild(this.objeto);
                 break;
@@ -48,7 +48,7 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
                 );
                 this.objeto.play();
                 this.objeto.scale.set(2);
-                this.objeto.anchor.set(-0.2);
+                //this.objeto.anchor.set(0.5);
                 this.objeto.animationSpeed = 0.4;
                 this.addChild(this.objeto);
                 break;
@@ -57,9 +57,15 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
                 break;
         }
 
+        const zero: Graphics = new Graphics();
+        zero.beginFill(0xFF00FF);
+        zero.drawCircle(0, 0, 10);
+        zero.endFill;
+        //this.addChild(zero);
+
         this.hitbox = new Graphics();
         this.hitbox.beginFill(0x00FFFF, 0.3);
-        this.hitbox.drawRect(90,50,190,80);
+        this.hitbox.drawRect(25,25,210,90);
         this.hitbox.endFill();
         this.hitbox.visible = false;
         this.addChild(this.hitbox);

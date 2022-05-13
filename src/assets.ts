@@ -98,6 +98,7 @@ export const assets =[
     {url:"./nena/Idle (13).png",name:"NenaIdle13"},
     {url:"./nena/Idle (14).png",name:"NenaIdle14"},
     {url:"./nena/Idle (15).png",name:"NenaIdle15"},
+    {url:"./nena/Idle (16).png",name:"NenaIdle16"},
 
     {url:"./nena/Walk (1).png",name:"NenaWalk1"},
     {url:"./nena/Walk (2).png",name:"NenaWalk2"},
@@ -114,6 +115,11 @@ export const assets =[
     {url:"./nena/Walk (13).png",name:"NenaWalk13"},
     {url:"./nena/Walk (14).png",name:"NenaWalk14"},
     {url:"./nena/Walk (15).png",name:"NenaWalk15"},
+    {url:"./nena/Walk (16).png",name:"NenaWalk16"},
+    {url:"./nena/Walk (17).png",name:"NenaWalk17"},
+    {url:"./nena/Walk (18).png",name:"NenaWalk18"},
+    {url:"./nena/Walk (19).png",name:"NenaWalk19"},
+    {url:"./nena/Walk (20).png",name:"NenaWalk20"},
 
     {url:"./nena/Jump (1).png",name:"NenaJump1"},
     {url:"./nena/Jump (2).png",name:"NenaJump2"},
@@ -146,6 +152,11 @@ export const assets =[
     {url:"./nena/Run (13).png",name:"NenaRun13"},
     {url:"./nena/Run (14).png",name:"NenaRun14"},
     {url:"./nena/Run (15).png",name:"NenaRun15"},
+    {url:"./nena/Run (16).png",name:"NenaRun16"},
+    {url:"./nena/Run (17).png",name:"NenaRun17"},
+    {url:"./nena/Run (18).png",name:"NenaRun18"},
+    {url:"./nena/Run (19).png",name:"NenaRun19"},
+    {url:"./nena/Run (20).png",name:"NenaRun20"},
 
     {url:"./nena/Dead (1).png",name:"NenaDead1"},
     {url:"./nena/Dead (2).png",name:"NenaDead2"},

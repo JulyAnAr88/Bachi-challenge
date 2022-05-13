@@ -1,9 +1,7 @@
 import { AnimatedSprite, Texture } from "pixi.js";
 import { PhysicsContainer } from "../game/PhysicsContainer";
-import { IUpdateable } from "../utils/IUpdateable";
 
-
-export class Environment extends PhysicsContainer implements IUpdateable{
+export class Environment extends PhysicsContainer{
 
     private objeto: any;
 

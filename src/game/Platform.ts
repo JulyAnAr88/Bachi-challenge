@@ -12,6 +12,12 @@ export class Platform extends PhysicsContainer implements IHitbox {
         spr.scale.set(1.5);
         this.addChild(spr);
 
+        const zero: Graphics = new Graphics();
+        zero.beginFill(0xFF00FF);
+        zero.drawCircle(0, 0, 10);
+        zero.endFill;
+        //this.addChild(zero);
+
         this.hitbox = new Graphics();
         this.hitbox.beginFill(0x00FFFF, 0.3);
         this.hitbox.drawRect(0,0,192,192);

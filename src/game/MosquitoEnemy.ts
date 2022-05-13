@@ -34,13 +34,19 @@ export class MosquitoEnemy extends PhysicsContainer implements IHitbox, IDamageZ
         );
         this.mosquitoAnimated.play();
         this.mosquitoAnimated.animationSpeed = 0.4;
+        this.mosquitoAnimated.scale.set(2);
         /*this.mosquitoAnimated.anchor.set(0.2,0);
 
-        this.mosquitoAnimated = Sprite.from("Mosquito1");*/
-        this.mosquitoAnimated.scale.set(2);
-        this.addChild(this.mosquitoAnimated);
+        
+        this.addChild(this.mosquitoAnimated);*/
 
-        /*this.hitCircle = new Graphics();
+        const zero: Graphics = new Graphics();
+        zero.beginFill(0xFF00FF);
+        zero.drawCircle(0, 0, 10);
+        zero.endFill;
+        /*this.addChild(zero);
+
+        this.hitCircle = new Graphics();
         this.hitCircle.beginFill(0x0000FF,0.0);
         this.hitCircle.drawCircle(30,35,25);
         this.hitCircle.position.set(-30,-30);
