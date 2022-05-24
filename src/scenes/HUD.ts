@@ -1,6 +1,8 @@
+import { sound } from "@pixi/sound";
 import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text } from "pixi.js";
 import { HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
+import { ToggleButton } from "../ui/ToggleButton";
 import { IUpdateable } from "../utils/IUpdateable";
 import { Health } from "./Health";
 import { MenuDialog } from "./MenuDialog";
@@ -102,11 +104,16 @@ export class HUD extends Container implements IUpdateable{
 
         this.contador.position.set(this.buttonMenu.position.x - this.buttonMenu.width * 1.5, this.buttonMenu.height * 1/3);
         this.contador.addChild(this.message);
+
+        const toggleMute = new ToggleButton(Texture.from("MusicOn"), Texture.from("MusicOff"));
+        toggleMute.position.set(this.contador.position.x - toggleMute.width - 20, this.buttonMenu.height * 1/9);
+        //toggleMute.scale.set(2);
+        toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);
         
         
         
         
-        this.addChild(fondoPlayer, this.dialog, this.corazonLleno, this.buttonMenu,this.contador);
+        this.addChild(fondoPlayer, this.dialog, this.corazonLleno, this.buttonMenu,this.contador, toggleMute);
     }
 
 
@@ -167,6 +174,16 @@ export class HUD extends Container implements IUpdateable{
         dialogo.visible = true;
         dialogo.position.set(WIDTH * 1/3, HEIGHT * 1/7);
         this.addChild(dialogo);
+    }
+
+    public toggleMute(unMute:boolean) {
+        if (unMute) 
+        {
+            sound.unmuteAll();
+        }else
+        {
+            sound.muteAll();
+        }
     }
 
     public countdown(deltaTime: number): string{
