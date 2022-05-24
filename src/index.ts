@@ -1,6 +1,8 @@
+import { WebfontLoaderPlugin } from 'pixi-webfont-loader';
 import { Application, Loader, Ticker } from 'pixi.js'
 import { assets } from './assets';
 import { ScenePlayerSelect } from './scenes/ScenePlayerSelect';
+//import { SoundScene } from './scenes/SoundScene';
 //import { StartMenu } from './scenes/StartMenu';
 //import { TickerScene } from './scenes/TickerScene';
 import { Keyboard } from './utils/Keyboard';
@@ -41,6 +43,7 @@ window.addEventListener("resize", ()=>{
 });
 window.dispatchEvent(new Event("resize"));
 
+Loader.registerPlugin(WebfontLoaderPlugin);
 Loader.shared.add(assets);
 
 let currentScene:any = undefined;

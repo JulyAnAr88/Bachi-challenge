@@ -1,6 +1,9 @@
+import { sound } from "@pixi/sound";
 import { Container, Sprite, Texture } from "pixi.js";
-import { ChangeScene, WIDTH } from "..";
+import { ChangeScene, HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
+import { ToggleButton } from "../ui/ToggleButton";
+import { MenuConfig } from "./MenuConfig";
 import { ScenePlayerSelect } from "./ScenePlayerSelect";
 
 
@@ -22,6 +25,8 @@ export class StartMenu extends Container {
         tituloGame.scale.set(0.5);
         tituloGame.anchor.set(0.5);
         tituloGame.position.set(WIDTH/2, tituloGame.height/1.5);
+
+        
 
         this.buttonRight = new Button(
             Texture.from("buttoncomenzar"),
@@ -55,23 +60,51 @@ export class StartMenu extends Container {
         this.buttonExit.scale.set(0.3);
         this.buttonExit.interactive= true;
         this.buttonExit.buttonMode= true;
-    
+        
         dialog.position.x = tituloGame.position.x * 3/4;
         dialog.position.y = tituloGame.position.y * 2.5;
         dialog.addChild(this.buttonRight, this.buttonConfig, this.buttonExit);
+        
+        sound.find("Chamarrito");
 
-
-        this.addChild(fondo, tituloGame, dialog);
+        const toggleMute = new ToggleButton(Texture.from("MusicOn"), Texture.from("MusicOff"));
+        toggleMute.position.set(dialog.position.x * 2, tituloGame.position.y * 4);
+        toggleMute.scale.set(2);
+        toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);
+     
+        this.addChild(fondo, tituloGame, dialog, toggleMute);
+        this.cortina();
 
     }
     onButtonRightClick():void {
         ChangeScene(new ScenePlayerSelect());
     }
+
     onButtonExitClick():void {
         
     }
 
     private onButtonConfigClick():void {
+        let menuConfig = new MenuConfig();
+        menuConfig.position.set(WIDTH * 1/3, HEIGHT * 1/7);
+        this.addChild(menuConfig);
         
+    }
+
+    public toggleMute(unMute:boolean) {
+        if (unMute) 
+        {
+            sound.unmuteAll();
+        }else
+        {
+            sound.muteAll();
+        }
+    }
+
+    public cortina(){
+        sound.play("Chamarrito", {
+            loop:true,
+            singleInstance:true,
+            });
     }
 }

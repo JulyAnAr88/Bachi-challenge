@@ -1,13 +1,13 @@
 export interface IPlayerAnimation{
 
-    changeToWalkAnimation():void;
+    changeToWalkAnimation(dS: number):void;
 
     changeToJumpAnimation():void;
 
-    changeToIdleAnimation():void;
+    changeToIdleAnimation(dS: number):void;
 
-    changeToRunAnimation():void;
+    changeToRunAnimation(dS: number):void;
 
-    changeToDeadAnimation():void;
+    changeToDeadAnimation(dS: number):void;
     
 }

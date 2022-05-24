@@ -1,8 +1,13 @@
 
 export const assets =[
 
-    {url:"./fondo.png",name:"Background"},
-
+    {url: "./fondo.png", name:"Background"},
+    {url: "./parallax/layer_01.png", name: "Background 0"},
+	{url: "./parallax/layer_02.png", name: "Background 1"},
+	{url: "./parallax/layer_05.png", name: "Background 2"},
+	{url: "./parallax/layer_07.png", name: "Background 3"},
+	{url: "./parallax/layer_08.png", name: "Background 4"},
+	
     {url:"./nene/Idle (1).png",name:"NeneIdle1"},
     {url:"./nene/Idle (2).png",name:"NeneIdle2"},
     {url:"./nene/Idle (3).png",name:"NeneIdle3"},
@@ -248,20 +253,51 @@ export const assets =[
     {url:"./UI/timmyBt_pressed.png",name:"buttontimmyPress"},
     {url:"./UI/eligePlayer.png",name:"TituloElige"},
     {url:"./UI/tituloGame.png",name:"TituloGame"},
+    {url:"./UI/changePjBt_pressed.png",name:"buttonChangePjPress"},
+    {url:"./UI/changePjBt.png",name:"buttonChangePj"},
+    {url:"./UI/config1Bt_pressed.png",name:"buttonConfig1Press"},
+    {url:"./UI/config1Bt.png",name:"buttonConfig1"},
+    {url:"./UI/config2Bt_pressed.png",name:"buttonConfig2Press"},
+    {url:"./UI/config2Bt.png",name:"buttonConfig2"},
+    {url:"./UI/returnBt_pressed.png",name:"buttonReturnPress"},
+    {url:"./UI/returnBt.png",name:"buttonReturn"},
+    {url:"./UI/musicOn.png",name:"MusicOn"},
+    {url:"./UI/musicOff.png",name:"MusicOff"},
+    {url:"./UI/minusPress.png",name:"MinusPress"},
+    {url:"./UI/minus.png",name:"Minus"},
+    {url:"./UI/plus.png",name:"Plus"},
+    {url:"./UI/plusPress.png",name:"PlusPress"},
+    {url:"./UI/salirX.png",name:"Salir"},
+    {url:"./UI/salirX_pressed.png",name:"SalirPress"},
     {url:"./UI/fondoPP.jpg",name:"FondoUI"},
 
 
     {url:"./Object/Bush (4).png",name:"Arbusto"},
     {url:"./Object/Bush (1).png",name:"Arbusto1"},
+    {url:"./Object/bachi.png",name:"Bachi"},
     {url:"./Object/Stone.png",name:"Stone"},
     {url:"./Object/Sign_1.png",name:"Señal1"},
     {url:"./Object/Sign_2.png",name:"Señal2"},
     {url:"./Object/Tree_1.png",name:"Tronco"},
     {url:"./Object/Tree_2.png",name:"Arbol1"},
     {url:"./Object/Tree_3.png",name:"Arbol2"},
+    {url:"./Object/bachi.png",name:"bachi"},
     {url:"./Object/flagGreen.png",name:"BanderaVerde1"},
     {url:"./Object/flagGreen2.png",name:"BanderaVerde2"},
     {url:"./Object/flagGreenHanging.png",name:"BanderaVerdeCaida"},
+    {url:"./Object/flagRed.png",name:"BanderaRoja1"},
+    {url:"./Object/flagRed2.png",name:"BanderaRoja2"},
+    {url:"./Object/flagRedHanging.png",name:"BanderaRojaCaida"},
+
+    {url:"https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap",name:"Bowl"},
+    {url:"./fonts/BowlbyOneSC-Regular.otf",name:"BowlCap"},
+    {url:"./fonts/CompleteinHim.ttf",name:"CompleteHim"},
+
+    {url: "./sounds/Chamarrito.mp3", name: "Chamarrito"},
+    {url: "./sounds/voiceF.mp3", name: "voiceF"},
+    {url: "./sounds/voiceM.mp3", name: "voiceM"},
+    {url: "./sounds/victory.mp3", name: "victory"},
+    {url: "./sounds/gameover.mp3", name: "gameover"},
 
     
 

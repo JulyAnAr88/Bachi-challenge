@@ -65,7 +65,7 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
 
         this.hitbox = new Graphics();
         this.hitbox.beginFill(0x00FFFF, 0.3);
-        this.hitbox.drawRect(25,25,210,90);
+        this.hitbox.drawRect(30,25,180,90);
         this.hitbox.endFill();
         this.hitbox.visible = false;
         this.addChild(this.hitbox);

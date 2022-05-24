@@ -1,4 +1,4 @@
-import { AnimatedSprite, Texture } from "pixi.js";
+import { Sprite} from "pixi.js";
 import { PhysicsContainer } from "../game/PhysicsContainer";
 
 export class Environment extends PhysicsContainer{
@@ -10,60 +10,34 @@ export class Environment extends PhysicsContainer{
 
         switch (nroObjeto) {
             case 0:
-                this.objeto = new AnimatedSprite (
-                    [
-                        Texture.from("Arbol1")
-                        
-                    ], true
-                );
-                this.objeto.play();
-                this.objeto.scale.set(2.5);
-                this.objeto.anchor.set(-0.2);
-                this.objeto.animationSpeed = 0.4;
-                this.addChild(this.objeto);
-                
+                this.objeto = Sprite.from("Arbol1");
+                this.objeto.scale.set(2.8);
+                                
                 break;
             case 1:
-                this.objeto = new AnimatedSprite (
-                    [
-                        Texture.from("Arbol2")
-                        
-                    ], true
-                );
-                this.objeto.play();
-                this.objeto.scale.set(2.5);
-                this.objeto.anchor.set(-0.2);
-                this.objeto.animationSpeed = 0.4;
-                this.addChild(this.objeto);
+                this.objeto = Sprite.from("Arbol2")
+             
+                this.objeto.scale.set(2.8);
+                
                 break;
             case 2:
-                this.objeto = new AnimatedSprite (
-                    [
-                        Texture.from("Arbusto")
-                        
-                    ], true
-                );
-                this.objeto.play();
-                this.objeto.scale.set(2.5);
-                this.objeto.anchor.set(-0.2);
-                this.objeto.animationSpeed = 0.4;
-                this.addChild(this.objeto);
+                this.objeto = Sprite.from("Arbusto");
+    
+                this.objeto.scale.set(2.8);
+                
                 break;
             
             default:
                 break;
         }
 
+        this.addChild(this.objeto);
+
 
     }
     
-    public getObject():AnimatedSprite{
+    public getObject():Sprite{
         return this.objeto;
     }
-
-    public override update(deltaMS:number){
-        super.update(deltaMS/100);
-    }
-
     
 }

@@ -151,12 +151,12 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
                 Texture.from("NenaDead14"),
                 Texture.from("NenaDead15"),
                 
-            ], false
+            ], true
         );
 
         this.ninieAnimatedDead.play();
         this.ninieAnimatedDead.loop = false;
-        this.ninieAnimatedDead.animationSpeed = PlayerAnimationBecky.SPEED;
+        this.ninieAnimatedDead.animationSpeed = PlayerAnimationBecky.SPEED * 1/6;
         this.ninieAnimatedDead.visible = false;
         this.ninieAnimatedDead.anchor.set(PlayerAnimationBecky.ANCHORX,PlayerAnimationBecky.ANCHORY);
 
@@ -214,6 +214,7 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = true;
+        this.ninieAnimatedDead.gotoAndPlay(0);
 
     }
 

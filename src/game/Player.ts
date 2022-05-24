@@ -1,7 +1,8 @@
+import { sound } from "@pixi/sound";
 import { Graphics, ObservablePoint, Rectangle } from "pixi.js";
 import { ScenePlayerSelect } from "../scenes/ScenePlayerSelect";
-import { TickerScene } from "../scenes/TickerScene";
 import { Keyboard } from "../utils/Keyboard";
+import { GameState } from "./GameState";
 import { IHitbox } from "./IHitbox";
 import { PhysicsContainer } from "./PhysicsContainer";
 import { PlayerAnimationBecky } from "./PlayerAnimationBecky";
@@ -16,8 +17,6 @@ export class Player extends PhysicsContainer implements IHitbox{
 
     public canJump = true;
     private ninieAnimated: any;
-    //private ninieAnimatedIWalk: AnimatedSprite;
-    //private ninieAnimatedJump: AnimatedSprite;
     private hitbox:Graphics;
 
     private isDead = false;
@@ -26,22 +25,23 @@ export class Player extends PhysicsContainer implements IHitbox{
 
     private timePassedWalk=0;
 
-    //private isWalking = false;
     
-
-
     constructor(){
         super();
 
+        
         switch (ScenePlayerSelect.PLAY_SELECT) {
             case 1:
                 
-                this.ninieAnimated = new PlayerAnimationTimmy(0.4, 0.25, 0);
+                this.ninieAnimated = new PlayerAnimationTimmy(0.5, 0.25, 0);
+                
+                
                 
                 break;
             case 0:
                 
                 this.ninieAnimated = new PlayerAnimationBecky(0.4, 0.25, 0);
+                
                 
                 break;
         
@@ -74,53 +74,61 @@ export class Player extends PhysicsContainer implements IHitbox{
         this.acceleration.y = Player.GRAVITY;
         
         Keyboard.down.on("ArrowUp", this.jump, this);
-        Keyboard.down.on("KeyW", this.jump, this);
+        Keyboard.down.on("Space", this.jump, this);
+
+        sound.find("gameover");
        
     }
 
     public override destroy(options:any) {
         super.destroy(options);
         Keyboard.down.off("ArrowUp",this.jump);
-        Keyboard.down.off("KeyW",this.jump);
+        Keyboard.down.off("Space",this.jump);
     }
 
 
     public override update(deltaMS:number)
     {
+        
         if(this.isDead){
 
             this.ninieAnimated.changeToDeadAnimation();          
-            TickerScene.GAME_OVER = true;
+            GameState.GAME_OVER = true;
+            sound.play("gameover", {
+                loop:false,
+                singleInstance:true,
+                });
+
             return;
         }
 
         super.update(deltaMS/1000);
         
-        this.ninieAnimated.update(deltaMS / 1000/60);
+        this.ninieAnimated.update(deltaMS / 1000);
 
         this.timePassedWalk += deltaMS/100;
 
-        if (Keyboard.state.get("ArrowRight") || Keyboard.state.get("KeyD")){
+       if (Keyboard.state.get("ArrowRight") || Keyboard.state.get("KeyD")){
 
-            TickerScene.ARRANCAR = true;
-            
+            GameState.PLAY = true;
+            //console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
             if (this.canJump)
             {
-                console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
+                
                 this.speed.x = Player.MOVE_SPEED;
                 this.ninieAnimated.scale.x = 1;
-                this.ninieAnimated.changeToWalkAnimation();
+                this.ninieAnimated.changeToWalkAnimation(deltaMS);
 
-                if(this.timePassedWalk > 10){
+                /*if(this.timePassedWalk > 20){
                     //this.speed.x = Player.MOVE_SPEED * 1.2;
-                    this.ninieAnimated.changeToRunAnimation();
+                    this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
                     this.timePassedWalk =0;
                     console.log("ruuuun bitch");
+
+            }*/
+
             } 
-
-
-            }
-
+            
             
 
         }else if (Keyboard.state.get("ArrowLeft") || Keyboard.state.get("KeyA")){
@@ -130,19 +138,21 @@ export class Player extends PhysicsContainer implements IHitbox{
                 //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
                 this.speed.x = -Player.MOVE_SPEED;
                 this.ninieAnimated.scale.x = -1;
-                this.ninieAnimated.changeToWalkAnimation();
+                this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
 
                 if(this.timePassedWalk > 10){
                     //console.log("ruuuun bitch");
 
                     this.speed.x = -Player.MOVE_SPEED;
-                    this.ninieAnimated.changeToRunAnimation();
+                    this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
                     this.timePassedWalk =0;
                 } 
 
             }
         }else{
-                this.speed.x = 0;
+
+            //this.ninieAnimated.changeToIdleAnimation(deltaMS/ 10/60);
+            this.speed.x = 0;
         }
     }     
     
@@ -156,6 +166,7 @@ export class Player extends PhysicsContainer implements IHitbox{
             this.speed.y = -Player.JUMP_SPEED;
         }
     }
+
 
     public getHitbox():Rectangle
     {
@@ -199,6 +210,14 @@ export class Player extends PhysicsContainer implements IHitbox{
 
     public getCurrentHealth():number{
         return this.currentHealth;
+    }
+
+    public fixRunSpeed(gameSpeed: number) {
+        this.ninieAnimated.animationSpeed = gameSpeed / 4000
+    }
+
+    public complain(){
+        
     }
 
 }

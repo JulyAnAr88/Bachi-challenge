@@ -1,0 +1,5 @@
+export class GameState {
+
+    public static PLAY = false;
+    public static GAME_OVER = false;
+}

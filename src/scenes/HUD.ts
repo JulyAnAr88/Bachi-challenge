@@ -1,8 +1,9 @@
-import { Container, NineSlicePlane, Sprite, Texture } from "pixi.js";
-import { WIDTH } from "..";
+import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text } from "pixi.js";
+import { HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
 import { IUpdateable } from "../utils/IUpdateable";
 import { Health } from "./Health";
+import { MenuDialog } from "./MenuDialog";
 import { ScenePlayerSelect } from "./ScenePlayerSelect";
 
 export class HUD extends Container implements IUpdateable{
@@ -13,12 +14,28 @@ export class HUD extends Container implements IUpdateable{
     private dialog = new Container();
 
     private textNamePlayer:any;
-      
+    private contador: Container;
+    /*private secondUnity: number;
+    
+    private minuteDecena: number;*/
+    private cont = 0;
+    private second = 0;
+    private message: Text;
+    private minute = 0;
+    
+
+    private textStyle = new TextStyle({
+        fill: "white",
+        fontFamily: "CompleteinHim",
+        fontSize: 50,
+        lineJoin: "round",
+        strokeThickness: 4
+    });
+    
 
     constructor (){
         super();
 
-        
         const fondoPlayer: Sprite = Sprite.from("FondoPlayer");
         fondoPlayer.position.x = 10;
         fondoPlayer.position.y = 10;
@@ -77,15 +94,31 @@ export class HUD extends Container implements IUpdateable{
         this.buttonMenu.scale.set(1.7);
         this.buttonMenu.interactive= true;
         this.buttonMenu.buttonMode= true;
+
+        let str = "0:0";
+        this.contador = new Container;
+
+        this.message = new Text(str, this.textStyle);
+
+        this.contador.position.set(this.buttonMenu.position.x - this.buttonMenu.width * 1.5, this.buttonMenu.height * 1/3);
+        this.contador.addChild(this.message);
         
         
         
-        this.addChild(fondoPlayer, this.dialog, this.corazonLleno, this.buttonMenu);
+        
+        this.addChild(fondoPlayer, this.dialog, this.corazonLleno, this.buttonMenu,this.contador);
     }
 
 
     update(_deltaTime: number, _deltaFrame?: number): void {
+
+        /*let str = this.countdown(deltaTime);
+        this.message = new Text(str, this.textStyle);
+        console.log(str);
+        this.contador.addChild(this.message);
+        this.addChild(this.contador);   */
         
+      
         if((100) > this.damage && this.damage >= (100 * 5/6)){
             this.corazonLleno.actualizarMedioCorazón(3);
             
@@ -106,8 +139,17 @@ export class HUD extends Container implements IUpdateable{
             this.corazonLleno.actualizarMedioCorazón(1);
             
         }
-        if (this.damage == 0) {
-            this.corazonLleno.actualizarCorazónVacio(1);
+        if (this.damage <= 0) {
+            
+            if(this.corazonLleno.getCurrent() > 0.5){
+                
+                this.corazonLleno.morirse(this.corazonLleno.getCurrent());
+            }else{
+                
+                this.corazonLleno.actualizarCorazónVacio(1);
+                
+            }
+            
             
         }
 
@@ -121,7 +163,32 @@ export class HUD extends Container implements IUpdateable{
 
 
     private onButtonClick() {
+        let dialogo = new MenuDialog();
+        dialogo.visible = true;
+        dialogo.position.set(WIDTH * 1/3, HEIGHT * 1/7);
+        this.addChild(dialogo);
+    }
+
+    public countdown(deltaTime: number): string{
+        let str = "";
+                        
+        this.cont += Math.trunc(deltaTime / 1000);
+
+        if (this.cont > 59) {
+            this.second += 1;
+            this.cont = 0;        
+
+            if (this.second > 59){
+                this.minute += 1;
+               
+                str = this.minute + ":" + this.second;
+                console.log("if "+str);
+                this.message = new Text(str, this.textStyle);
+                this.second = 0; 
+            } 
+        }    
         
-        
+
+        return str;
     }
 }

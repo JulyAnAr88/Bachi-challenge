@@ -3,7 +3,8 @@ import { ChangeScene, WIDTH } from "..";
 import { PlayerAnimationBecky } from "../game/PlayerAnimationBecky";
 import { PlayerAnimationTimmy } from "../game/PlayerAnimationTimmy";
 import { Button } from "../ui/Button";
-import { TickerScene } from "./TickerScene";
+import { GameScene } from "./GameScene";
+//import { TickerScene } from "./TickerScene";
 
 export class ScenePlayerSelect extends Container {
 
@@ -76,12 +77,14 @@ export class ScenePlayerSelect extends Container {
 
     onButtonTimmyClick() {
         ScenePlayerSelect.PLAY_SELECT = 1;
-        ChangeScene(new TickerScene());
+        //ChangeScene(new TickerScene());
+        ChangeScene(new GameScene());
     }
 
 
     onButtonBeckyClick() {
         ScenePlayerSelect.PLAY_SELECT = 0;
-        ChangeScene(new TickerScene());
+        //ChangeScene(new TickerScene());
+        ChangeScene(new GameScene());
     }
 }
