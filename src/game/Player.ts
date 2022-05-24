@@ -72,9 +72,25 @@ export class Player extends PhysicsContainer implements IHitbox{
       
 
         this.acceleration.y = Player.GRAVITY;
+
+        switch (GameState.KEYBOARD_CONFIG) {
+            case 0:
+                                
+                Keyboard.down.on("Space", this.jump, this);
+                
+                break;
+            case 1:
+             
+                Keyboard.down.on("ArrowUp", this.jump, this);                
+                
+                break;
         
-        Keyboard.down.on("ArrowUp", this.jump, this);
-        Keyboard.down.on("Space", this.jump, this);
+            default:
+                break;
+        }
+        
+        
+        
 
         sound.find("gameover");
        
@@ -108,52 +124,113 @@ export class Player extends PhysicsContainer implements IHitbox{
 
         this.timePassedWalk += deltaMS/100;
 
-       if (Keyboard.state.get("ArrowRight") || Keyboard.state.get("KeyD")){
+        switch (GameState.KEYBOARD_CONFIG) {
+            case 0:
+                                
+                if ( Keyboard.state.get("KeyD")){
 
-            GameState.PLAY = true;
-            //console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
-            if (this.canJump)
-            {
+                    GameState.PLAY = true;
+                    //console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
+                    if (this.canJump)
+                    {
+                        
+                        this.speed.x = Player.MOVE_SPEED;
+                        this.ninieAnimated.scale.x = 1;
+                        this.ninieAnimated.changeToWalkAnimation(deltaMS);
+        
+                        /*if(this.timePassedWalk > 20){
+                            //this.speed.x = Player.MOVE_SPEED * 1.2;
+                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
+                            this.timePassedWalk =0;
+                            console.log("ruuuun bitch");
+        
+                    }*/
+        
+                    } 
+                    
+                    
+        
+                }else if ( Keyboard.state.get("KeyA")){
+        
+                    if (this.canJump)
+                    {
+                        //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
+                        this.speed.x = -Player.MOVE_SPEED;
+                        this.ninieAnimated.scale.x = -1;
+                        this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
+        
+                        if(this.timePassedWalk > 10){
+                            //console.log("ruuuun bitch");
+        
+                            this.speed.x = -Player.MOVE_SPEED;
+                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
+                            this.timePassedWalk =0;
+                        } 
+        
+                    }
+                }else{
+        
+                    //this.ninieAnimated.changeToIdleAnimation(deltaMS/ 10/60);
+                    this.speed.x = 0;
+                }
                 
-                this.speed.x = Player.MOVE_SPEED;
-                this.ninieAnimated.scale.x = 1;
-                this.ninieAnimated.changeToWalkAnimation(deltaMS);
+                break;
+            case 1:
+             
+                if (Keyboard.state.get("ArrowRight")){
 
-                /*if(this.timePassedWalk > 20){
-                    //this.speed.x = Player.MOVE_SPEED * 1.2;
-                    this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
-                    this.timePassedWalk =0;
-                    console.log("ruuuun bitch");
-
-            }*/
-
-            } 
-            
-            
-
-        }else if (Keyboard.state.get("ArrowLeft") || Keyboard.state.get("KeyA")){
-
-            if (this.canJump)
-            {
-                //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
-                this.speed.x = -Player.MOVE_SPEED;
-                this.ninieAnimated.scale.x = -1;
-                this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
-
-                if(this.timePassedWalk > 10){
-                    //console.log("ruuuun bitch");
-
-                    this.speed.x = -Player.MOVE_SPEED;
-                    this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
-                    this.timePassedWalk =0;
-                } 
-
-            }
-        }else{
-
-            //this.ninieAnimated.changeToIdleAnimation(deltaMS/ 10/60);
-            this.speed.x = 0;
+                    GameState.PLAY = true;
+                    //console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
+                    if (this.canJump)
+                    {
+                        
+                        this.speed.x = Player.MOVE_SPEED;
+                        this.ninieAnimated.scale.x = 1;
+                        this.ninieAnimated.changeToWalkAnimation(deltaMS);
+        
+                        /*if(this.timePassedWalk > 20){
+                            //this.speed.x = Player.MOVE_SPEED * 1.2;
+                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
+                            this.timePassedWalk =0;
+                            console.log("ruuuun bitch");
+        
+                    }*/
+        
+                    } 
+                    
+                    
+        
+                }else if (Keyboard.state.get("ArrowLeft") ){
+        
+                    if (this.canJump)
+                    {
+                        //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
+                        this.speed.x = -Player.MOVE_SPEED;
+                        this.ninieAnimated.scale.x = -1;
+                        this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
+        
+                        if(this.timePassedWalk > 10){
+                            //console.log("ruuuun bitch");
+        
+                            this.speed.x = -Player.MOVE_SPEED;
+                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
+                            this.timePassedWalk =0;
+                        } 
+        
+                    }
+                }else{
+        
+                    //this.ninieAnimated.changeToIdleAnimation(deltaMS/ 10/60);
+                    this.speed.x = 0;
+                }
+                
+                break;
+        
+            default:
+                break;
         }
+
+       
     }     
     
  

@@ -1,6 +1,7 @@
 import { sound } from "@pixi/sound";
 import { Container, TextStyle, Texture, Text, NineSlicePlane } from "pixi.js";
 import { HEIGHT, WIDTH } from "..";
+import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
 
 export class MenuConfig extends Container{
@@ -107,10 +108,10 @@ export class MenuConfig extends Container{
         this.visible = false;
     }
     onButtonKey1Click() {
-        
+        GameState.KEYBOARD_CONFIG = 0;
     }
     onButtonKey2Click() {
-        
+        GameState.KEYBOARD_CONFIG = 1;
     }
 
     public volumeDown() {

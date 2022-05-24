@@ -77,10 +77,7 @@ export class GameScene extends Container implements IUpdateable{
         this.background0 = [];
         this.background1 = [];
         
-        /*= new TilingSprite(Texture.from("Background"), WIDTH, HEIGHT);
-        this.background.scale.set(1,1.45);
-        this.addChild(this.background);*/
-
+        
         for (let i = 4; i > 2; i--) {
 			const aux = new TilingSprite(
 				Texture.from("Background " + i),
@@ -679,7 +676,7 @@ export class GameScene extends Container implements IUpdateable{
         for (let i = 0; i < this.background0.length; i++) {
 			const background = this.background0[i];
 			const factor = i / 4;
-			background.tilePosition.x -= adjustedSpeed * factor * deltaTime / 10000;
+			background.tilePosition.x -= adjustedSpeed * factor * deltaTime / 100000;
 			//background.tilePosition.x -= TickerScene.GAME_SPEED_BASE * deltaTime * factor;
 		}
 
@@ -689,7 +686,7 @@ export class GameScene extends Container implements IUpdateable{
             /*console.log("adjustedSpeed1: " + adjustedSpeed);
             console.log("factor1: " + factor);*/
             
-			background.tilePosition.x -= adjustedSpeed * factor * deltaTime / 1000;
+			background.tilePosition.x -= adjustedSpeed * factor * deltaTime / 5000;
 			//background.tilePosition.x -= TickerScene.GAME_SPEED_BASE * deltaTime * factor;
             //console.log("background1 " + (i-1) +": "+ background.tilePosition.x);
 		}

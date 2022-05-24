@@ -1,9 +1,9 @@
 import { WebfontLoaderPlugin } from 'pixi-webfont-loader';
 import { Application, Loader, Ticker } from 'pixi.js'
 import { assets } from './assets';
-import { ScenePlayerSelect } from './scenes/ScenePlayerSelect';
+//import { ScenePlayerSelect } from './scenes/ScenePlayerSelect';
 //import { SoundScene } from './scenes/SoundScene';
-//import { StartMenu } from './scenes/StartMenu';
+import { StartMenu } from './scenes/StartMenu';
 //import { TickerScene } from './scenes/TickerScene';
 import { Keyboard } from './utils/Keyboard';
 
@@ -50,7 +50,7 @@ let currentScene:any = undefined;
 
 Loader.shared.onComplete.add(()=>{
 
-	currentScene = new ScenePlayerSelect();
+	currentScene = new StartMenu();
 	app.stage.addChild(currentScene);
 	Ticker.shared.add(function(deltaFrame) {
 		if (currentScene.update){
