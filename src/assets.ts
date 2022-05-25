@@ -256,9 +256,9 @@ export const assets =[
     {url:"./UI/tituloGame.png",name:"TituloGame"},
     {url:"./UI/changePjBt_pressed.png",name:"buttonChangePjPress"},
     {url:"./UI/changePjBt.png",name:"buttonChangePj"},
-    {url:"./UI/config1Bt_pressed.png",name:"buttonConfig1Press"},
+    {url:"./UI/config1Bt_press.png",name:"buttonConfig1Press"},
     {url:"./UI/config1Bt.png",name:"buttonConfig1"},
-    {url:"./UI/config2Bt_pressed.png",name:"buttonConfig2Press"},
+    {url:"./UI/config2Bt_press.png",name:"buttonConfig2Press"},
     {url:"./UI/config2Bt.png",name:"buttonConfig2"},
     {url:"./UI/returnBt_pressed.png",name:"buttonReturnPress"},
     {url:"./UI/returnBt.png",name:"buttonReturn"},
@@ -298,8 +298,6 @@ export const assets =[
     {url: "./sounds/voiceF.mp3", name: "voiceF"},
     {url: "./sounds/voiceM.mp3", name: "voiceM"},
     {url: "./sounds/victory.mp3", name: "victory"},
-    {url: "./sounds/gameover.mp3", name: "gameover"},
-
-    
+    {url: "./sounds/gameover.mp3", name: "gameover"},    
 
 ]
