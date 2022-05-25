@@ -45,8 +45,7 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
             ], true
         );
 
-        this.ninieAnimatedIdle.play();
-        //this.ninieAnimatedIdle.loop = true;
+        this.ninieAnimatedIdle.play();        
         this.ninieAnimatedIdle.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedIdle.visible = PlayerAnimationTimmy.VISIBLE;
         this.ninieAnimatedIdle.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -74,7 +73,6 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         );
 
         this.ninieAnimatedWalk.play();
-        //this.ninieAnimatedWalk.loop = true;
         this.ninieAnimatedWalk.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedWalk.visible = false;
         this.ninieAnimatedWalk.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -101,7 +99,6 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         );
 
         this.ninieAnimatedJump.play();
-        //this.ninieAnimatedJump.loop = false;
         this.ninieAnimatedJump.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedJump.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -128,7 +125,6 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         );
 
         this.ninieAnimatedRun.play();
-        //this.ninieAnimatedRun.loop = true;
         this.ninieAnimatedRun.animationSpeed = PlayerAnimationTimmy.SPEED;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedRun.anchor.set(PlayerAnimationTimmy.ANCHORX,PlayerAnimationTimmy.ANCHORY);
@@ -166,15 +162,13 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
 
     }
 
-    public changeToWalkAnimation(_dS: number){
+    public changeToWalkAnimation(){
            
         this.ninieAnimatedWalk.visible = true;
         this.ninieAnimatedIdle.visible = false;
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = false;
-        /*this.ninieAnimatedWalk.gotoAndPlay(0);
-        this.ninieAnimatedWalk.update((dS));*/
                
     }
 
@@ -185,7 +179,6 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = true;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = false;
-        this.ninieAnimatedJump.gotoAndPlay(0);
         this.ninieAnimatedJump.update(PlayerAnimationTimmy.SPEED);
                     
     }
@@ -197,7 +190,6 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = false;
-        this.ninieAnimatedIdle.gotoAndPlay(0);
         this.ninieAnimatedIdle.update((dS * 60));
                     
     }
@@ -209,7 +201,6 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = true;
         this.ninieAnimatedDead.visible = false;
-        this.ninieAnimatedRun.gotoAndPlay(0);
         this.ninieAnimatedRun.update((dS * 60));
                     
     }
@@ -220,9 +211,7 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedIdle.visible = false;
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = false;
-        this.ninieAnimatedDead.visible = true;
-        this.ninieAnimatedDead.gotoAndPlay(0);
-        
+        this.ninieAnimatedDead.visible = true;        
     }
 
 }

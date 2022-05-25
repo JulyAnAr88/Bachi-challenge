@@ -45,8 +45,7 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
             ], true
         );
 
-        this.ninieAnimatedIdle.play();
-        this.ninieAnimatedIdle.loop = true;
+        this.ninieAnimatedIdle.play();        
         this.ninieAnimatedIdle.animationSpeed = PlayerAnimationBecky.SPEED;
         this.ninieAnimatedIdle.visible = PlayerAnimationBecky.VISIBLE;
         this.ninieAnimatedIdle.anchor.set(PlayerAnimationBecky.ANCHORX,PlayerAnimationBecky.ANCHORY);
@@ -70,11 +69,10 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
                 Texture.from("NenaWalk14"),
                 Texture.from("NenaWalk15"),
                 
-            ], false
+            ], true
         );
 
         this.ninieAnimatedWalk.play();
-        this.ninieAnimatedWalk.loop = false;
         this.ninieAnimatedWalk.animationSpeed = PlayerAnimationBecky.SPEED;
         this.ninieAnimatedWalk.visible = false;
         this.ninieAnimatedWalk.anchor.set(PlayerAnimationBecky.ANCHORX,PlayerAnimationBecky.ANCHORY);
@@ -97,11 +95,10 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
                 Texture.from("NenaJump14"),
                 Texture.from("NenaJump15"),
                 
-            ], false
+            ], true
         );
 
         this.ninieAnimatedJump.play();
-        this.ninieAnimatedJump.loop = false;
         this.ninieAnimatedJump.animationSpeed = PlayerAnimationBecky.SPEED;
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedJump.anchor.set(PlayerAnimationBecky.ANCHORX,PlayerAnimationBecky.ANCHORY);
@@ -124,11 +121,10 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
                 Texture.from("NenaRun14"),
                 Texture.from("NenaRun15"),
                 
-            ], false
+            ], true
         );
 
         this.ninieAnimatedRun.play();
-        this.ninieAnimatedRun.loop = false;
         this.ninieAnimatedRun.animationSpeed = PlayerAnimationBecky.SPEED;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedRun.anchor.set(PlayerAnimationBecky.ANCHORX,PlayerAnimationBecky.ANCHORY);
@@ -167,8 +163,7 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
     }
 
     public changeToWalkAnimation(){
-    
-       
+           
         this.ninieAnimatedWalk.visible = true;
         this.ninieAnimatedIdle.visible = false;
         this.ninieAnimatedJump.visible = false;
@@ -184,27 +179,27 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = true;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = false;
-                    
+        this.ninieAnimatedJump.update(PlayerAnimationBecky.SPEED);
     }
 
-    public changeToIdleAnimation(){
+    public changeToIdleAnimation(dS: number){
 
         this.ninieAnimatedWalk.visible = false;
         this.ninieAnimatedIdle.visible = true;
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = false;
-                    
+        this.ninieAnimatedIdle.update((dS * 60));
     }
 
-    public changeToRunAnimation(){
+    public changeToRunAnimation(dS: number){
 
         this.ninieAnimatedWalk.visible = false;
         this.ninieAnimatedIdle.visible = false;
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = true;
         this.ninieAnimatedDead.visible = false;
-                    
+        this.ninieAnimatedRun.update((dS * 60));
     }
 
     public changeToDeadAnimation(){
@@ -214,8 +209,6 @@ export class PlayerAnimationBecky extends PhysicsContainer implements IPlayerAni
         this.ninieAnimatedJump.visible = false;
         this.ninieAnimatedRun.visible = false;
         this.ninieAnimatedDead.visible = true;
-        this.ninieAnimatedDead.gotoAndPlay(0);
-
     }
 
 }

@@ -2,6 +2,7 @@
 export const assets =[
 
     {url: "./fondo.png", name:"Background"},
+    {url: "./favicon.svg", name:"favicon"},
     {url: "./parallax/layer_01.png", name: "Background 0"},
 	{url: "./parallax/layer_02.png", name: "Background 1"},
 	{url: "./parallax/layer_05.png", name: "Background 2"},
