@@ -26,21 +26,21 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
 
         this.ninieAnimatedIdle = new AnimatedSprite(
             [
-                Texture.from("NeneIdle1"),
-                Texture.from("NeneIdle2"),
-                Texture.from("NeneIdle3"),
-                Texture.from("NeneIdle4"),
-                Texture.from("NeneIdle5"),
-                Texture.from("NeneIdle6"),
-                Texture.from("NeneIdle7"),
-                Texture.from("NeneIdle8"),
-                Texture.from("NeneIdle9"),
-                Texture.from("NeneIdle10"),
-                Texture.from("NeneIdle11"),
-                Texture.from("NeneIdle12"),
-                Texture.from("NeneIdle13"),
-                Texture.from("NeneIdle14"),
-                Texture.from("NeneIdle15"),
+                Texture.from("nene/Idle (1).png"),
+                Texture.from("nene/Idle (2).png"),
+                Texture.from("nene/Idle (3).png"),
+                Texture.from("nene/Idle (4).png"),
+                Texture.from("nene/Idle (6).png"),
+                Texture.from("nene/Idle (7).png"),
+                Texture.from("nene/Idle (8).png"),
+                Texture.from("nene/Idle (9).png"),
+                Texture.from("nene/Idle (10).png"),
+                Texture.from("nene/Idle (11).png"),
+                Texture.from("nene/Idle (12).png"),
+                Texture.from("nene/Idle (13).png"),
+                Texture.from("nene/Idle (14).png"),
+                Texture.from("nene/Idle (15).png"),
+
                 
             ], true
         );
@@ -53,21 +53,20 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
 
         this.ninieAnimatedWalk = new AnimatedSprite (
             [
-                Texture.from("NeneWalk1"),
-                Texture.from("NeneWalk2"),
-                Texture.from("NeneWalk3"),
-                Texture.from("NeneWalk4"),
-                Texture.from("NeneWalk5"),
-                Texture.from("NeneWalk6"),
-                Texture.from("NeneWalk7"),
-                Texture.from("NeneWalk8"),
-                Texture.from("NeneWalk9"),
-                Texture.from("NeneWalk10"),
-                Texture.from("NeneWalk11"),
-                Texture.from("NeneWalk12"),
-                Texture.from("NeneWalk13"),
-                Texture.from("NeneWalk14"),
-                Texture.from("NeneWalk15"),
+                Texture.from("nene/Walk (1).png"),
+                Texture.from("nene/Walk (2).png"),
+                Texture.from("nene/Walk (3).png"),
+                Texture.from("nene/Walk (4).png"),
+                Texture.from("nene/Walk (6).png"),
+                Texture.from("nene/Walk (7).png"),
+                Texture.from("nene/Walk (8).png"),
+                Texture.from("nene/Walk (9).png"),
+                Texture.from("nene/Walk (10).png"),
+                Texture.from("nene/Walk (11).png"),
+                Texture.from("nene/Walk (12).png"),
+                Texture.from("nene/Walk (13).png"),
+                Texture.from("nene/Walk (14).png"),
+                Texture.from("nene/Walk (15).png"),
                 
             ], true
         );
@@ -79,21 +78,20 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
 
         this.ninieAnimatedJump = new AnimatedSprite (
             [
-                Texture.from("NeneJump1"),
-                Texture.from("NeneJump2"),
-                Texture.from("NeneJump3"),
-                Texture.from("NeneJump4"),
-                Texture.from("NeneJump5"),
-                Texture.from("NeneJump6"),
-                Texture.from("NeneJump7"),
-                Texture.from("NeneJump8"),
-                Texture.from("NeneJump9"),
-                Texture.from("NeneJump10"),
-                Texture.from("NeneJump11"),
-                Texture.from("NeneJump12"),
-                Texture.from("NeneJump13"),
-                Texture.from("NeneJump14"),
-                Texture.from("NeneJump15"),
+                Texture.from("nene/Jump (1).png"),
+                Texture.from("nene/Jump (2).png"),
+                Texture.from("nene/Jump (3).png"),
+                Texture.from("nene/Jump (4).png"),
+                Texture.from("nene/Jump (6).png"),
+                Texture.from("nene/Jump (7).png"),
+                Texture.from("nene/Jump (8).png"),
+                Texture.from("nene/Jump (9).png"),
+                Texture.from("nene/Jump (10).png"),
+                Texture.from("nene/Jump (11).png"),
+                Texture.from("nene/Jump (12).png"),
+                Texture.from("nene/Jump (13).png"),
+                Texture.from("nene/Jump (14).png"),
+                Texture.from("nene/Jump (15).png"),
                 
             ], true
         );
@@ -105,21 +103,20 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
 
         this.ninieAnimatedRun = new AnimatedSprite (
             [
-                Texture.from("NeneRun1"),
-                Texture.from("NeneRun2"),
-                Texture.from("NeneRun3"),
-                Texture.from("NeneRun4"),
-                Texture.from("NeneRun5"),
-                Texture.from("NeneRun6"),
-                Texture.from("NeneRun7"),
-                Texture.from("NeneRun8"),
-                Texture.from("NeneRun9"),
-                Texture.from("NeneRun10"),
-                Texture.from("NeneRun11"),
-                Texture.from("NeneRun12"),
-                Texture.from("NeneRun13"),
-                Texture.from("NeneRun14"),
-                Texture.from("NeneRun15"),
+                Texture.from("nene/Run (1).png"),
+                Texture.from("nene/Run (2).png"),
+                Texture.from("nene/Run (3).png"),
+                Texture.from("nene/Run (4).png"),
+                Texture.from("nene/Run (6).png"),
+                Texture.from("nene/Run (7).png"),
+                Texture.from("nene/Run (8).png"),
+                Texture.from("nene/Run (9).png"),
+                Texture.from("nene/Run (10).png"),
+                Texture.from("nene/Run (11).png"),
+                Texture.from("nene/Run (12).png"),
+                Texture.from("nene/Run (13).png"),
+                Texture.from("nene/Run (14).png"),
+                Texture.from("nene/Run (15).png"),
                 
             ], true
         );
@@ -131,22 +128,21 @@ export class PlayerAnimationTimmy extends PhysicsContainer implements IPlayerAni
 
         this.ninieAnimatedDead = new AnimatedSprite (
             [
-                Texture.from("NeneDead1"),
-                Texture.from("NeneDead2"),
-                Texture.from("NeneDead3"),
-                Texture.from("NeneDead4"),
-                Texture.from("NeneDead5"),
-                Texture.from("NeneDead6"),
-                Texture.from("NeneDead7"),
-                Texture.from("NeneDead8"),
-                Texture.from("NeneDead9"),
-                Texture.from("NeneDead10"),
-                Texture.from("NeneDead11"),
-                Texture.from("NeneDead12"),
-                Texture.from("NeneDead13"),
-                Texture.from("NeneDead14"),
-                Texture.from("NeneDead15"),
-                
+                Texture.from("nene/Dead (1).png"),
+                Texture.from("nene/Dead (2).png"),
+                Texture.from("nene/Dead (3).png"),
+                Texture.from("nene/Dead (4).png"),
+                Texture.from("nene/Dead (6).png"),
+                Texture.from("nene/Dead (7).png"),
+                Texture.from("nene/Dead (8).png"),
+                Texture.from("nene/Dead (9).png"),
+                Texture.from("nene/Dead (10).png"),
+                Texture.from("nene/Dead (11).png"),
+                Texture.from("nene/Dead (12).png"),
+                Texture.from("nene/Dead (13).png"),
+                Texture.from("nene/Dead (14).png"),
+                Texture.from("nene/Dead (15).png"),
+                                
             ], true
         );
 

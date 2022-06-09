@@ -6,7 +6,7 @@ export class FinalMetaDialog extends Container{
         super();
 
         const messageDialog = new NineSlicePlane(
-            Texture.from("FondoPlayer"),
+            Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
         messageDialog.width = WIDTH * 1/2;

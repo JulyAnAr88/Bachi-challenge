@@ -17,22 +17,19 @@ export class SnakeEnemy extends PhysicsContainer implements IHitbox, IDamageZone
 
         this.snakeAnimated = new AnimatedSprite (
             [
-                Texture.from("Snake1"),
-                Texture.from("Snake2"),
-                Texture.from("Snake3"),
-                Texture.from("Snake4"),
-                Texture.from("Snake5"),
-                Texture.from("Snake6"),
-                Texture.from("Snake7"),
-                Texture.from("Snake8"),
+                Texture.from("Enemies/snake/tile000.png"),
+                Texture.from("Enemies/snake/tile001.png"),
+                Texture.from("Enemies/snake/tile002.png"),
+                Texture.from("Enemies/snake/tile003.png"),
+                Texture.from("Enemies/snake/tile004.png"),
+                Texture.from("Enemies/snake/tile005.png"),
+                Texture.from("Enemies/snake/tile006.png"),
+                Texture.from("Enemies/snake/tile007.png"),
                                 
             ], true
         );
         this.snakeAnimated.play();
         this.snakeAnimated.animationSpeed = 0.3;
-        /*this.mosquitoAnimated.anchor.set(0.2,0);
-
-        this.mosquitoAnimated = Sprite.from("Mosquito1");*/
         this.snakeAnimated.scale.set(2);
         this.addChild(this.snakeAnimated);
 
@@ -70,9 +67,4 @@ export class SnakeEnemy extends PhysicsContainer implements IHitbox, IDamageZone
     public makeDamage():number{
         return this.damage;
     }
-
-    /*public override update(deltaMS:number){
-        super.update(deltaMS/1000);
-        this.snakeAnimated.update(deltaMS / 1000/60);
-    }*/
 }

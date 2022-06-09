@@ -17,21 +17,21 @@ export class Health extends Container{
         super();
                 
     
-        this.corazonLleno = Sprite.from("HeartFull");
+        this.corazonLleno = Sprite.from("HUD/hud_heartFullx3.png");
         this.corazonLleno.position.set(0,0);
         this.current = 3;
         
-        this.corazon2_5 = Sprite.from("HeartFullx2.5");
+        this.corazon2_5 = Sprite.from("HUD/hud_heartFullx2.5.png");
         
-        this.corazon2 = Sprite.from("HeartFullx2");
+        this.corazon2 = Sprite.from("HUD/hud_heartFullx2.png");
         
-        this.corazon1_5 = Sprite.from("HeartFullx1.5");
+        this.corazon1_5 = Sprite.from("HUD/hud_heartFullx1.5.png");
 
-        this.corazon1 = Sprite.from("HeartFullx1");
+        this.corazon1 = Sprite.from("HUD/hud_heartFullx1.png");
         
-        this.corazon0_5 = Sprite.from("HeartFullx0.5");
+        this.corazon0_5 = Sprite.from("HUD/hud_heartFullx0.5.png");
 
-        this.corazon0 = Sprite.from("HeartFullx0");
+        this.corazon0 = Sprite.from("HUD/hud_heartFullx0.png");
                 
         
         this.addChild(this.corazonLleno);

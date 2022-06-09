@@ -38,7 +38,7 @@ export class HUD extends Container implements IUpdateable{
     constructor (){
         super();
 
-        const fondoPlayer: Sprite = Sprite.from("FondoPlayer");
+        const fondoPlayer: Sprite = Sprite.from("HUD/fondoPlayer.png");
         fondoPlayer.position.x = 10;
         fondoPlayer.position.y = 10;
         fondoPlayer.scale.set(2.8);
@@ -52,23 +52,38 @@ export class HUD extends Container implements IUpdateable{
         this.dialog.position.y = this.corazonLleno.position.y + 62;
             
         const namePlayer = new NineSlicePlane(
-            Texture.from("FondoPlayer"),
+            Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
         namePlayer.width = this.corazonLleno.width * 2;
         namePlayer.height = fondoPlayer.height;
         namePlayer.scale.set(0.5);
 
+        const textStyle = new TextStyle({
+            align: "center",
+            dropShadow: true,
+            dropShadowAlpha: 0.8,
+            dropShadowAngle: -3.5,
+            dropShadowBlur: 3,
+            dropShadowDistance: 2,
+            fill: "red",
+            fontFamily: "BowlCap",
+            fontSize: 90,
+            lineJoin: "round",
+            wordWrap: true,
+            wordWrapWidth: 450
+        })
         
         switch (ScenePlayerSelect.PLAY_SELECT) {
             case 0:
 
-                this.textNamePlayer = Sprite.from("Becky")                
+                this.textNamePlayer = new Text('Becky', textStyle);
+   
                 
                 break;
             case 1:
 
-                this.textNamePlayer = Sprite.from("Timmy")
+                this.textNamePlayer = new Text('Timmy', textStyle);
                                 
                 break;
         
@@ -77,18 +92,16 @@ export class HUD extends Container implements IUpdateable{
         }
     
         this.textNamePlayer.position.x = namePlayer.position.x + namePlayer.width/12;
-        this.textNamePlayer.position.y = namePlayer.position.y + namePlayer.height/14;
-        this.textNamePlayer.anchor.set(0.2);
-        this.textNamePlayer.scale.set(0.35);
+        this.textNamePlayer.position.y = namePlayer.position.y;
              
         namePlayer.addChild(this.textNamePlayer);
 
         this.dialog.addChild(namePlayer);        
         
         this.buttonMenu = new Button(
-            Texture.from("BotonMenu"),
-            Texture.from("BotonMenuPressed"),
-            Texture.from("BotonMenuPressed"),
+            Texture.from("HUD/tan.png"),
+            Texture.from("HUD/tan_pressed.png"),
+            Texture.from("HUD/tan_pressed.png"),
            "Menu");
         this.buttonMenu.on("buttonClick",this.onButtonClick, this);       
         this.buttonMenu.position.x = WIDTH - this.buttonMenu.width * 2;

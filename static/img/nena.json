@@ -1,0 +1,2799 @@
+{
+  "frames": {
+    "nena/Dead (29).png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 424,
+        "h": 280
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 171,
+        "y": 216,
+        "w": 424,
+        "h": 280
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (7).png": {
+      "frame": {
+        "x": 430,
+        "y": 2,
+        "w": 284,
+        "h": 422
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 71,
+        "y": 5,
+        "w": 284,
+        "h": 422
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (1).png": {
+      "frame": {
+        "x": 856,
+        "y": 2,
+        "w": 285,
+        "h": 438
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 77,
+        "y": 14,
+        "w": 285,
+        "h": 438
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (28).png": {
+      "frame": {
+        "x": 1298,
+        "y": 2,
+        "w": 424,
+        "h": 286
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 171,
+        "y": 207,
+        "w": 424,
+        "h": 286
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (16).png": {
+      "frame": {
+        "x": 1726,
+        "y": 2,
+        "w": 287,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 76,
+        "y": 15,
+        "w": 287,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (14).png": {
+      "frame": {
+        "x": 2167,
+        "y": 2,
+        "w": 289,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 75,
+        "y": 15,
+        "w": 289,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (15).png": {
+      "frame": {
+        "x": 2608,
+        "y": 2,
+        "w": 289,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 75,
+        "y": 15,
+        "w": 289,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (7).png": {
+      "frame": {
+        "x": 3049,
+        "y": 2,
+        "w": 290,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 65,
+        "y": 5,
+        "w": 290,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (13).png": {
+      "frame": {
+        "x": 3487,
+        "y": 2,
+        "w": 291,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 74,
+        "y": 16,
+        "w": 291,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (27).png": {
+      "frame": {
+        "x": 3927,
+        "y": 2,
+        "w": 423,
+        "h": 293
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 172,
+        "y": 197,
+        "w": 423,
+        "h": 293
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (8).png": {
+      "frame": {
+        "x": 2,
+        "y": 286,
+        "w": 291,
+        "h": 424
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 6,
+        "w": 291,
+        "h": 424
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (12).png": {
+      "frame": {
+        "x": 430,
+        "y": 291,
+        "w": 293,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 16,
+        "w": 293,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (11).png": {
+      "frame": {
+        "x": 870,
+        "y": 292,
+        "w": 294,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 17,
+        "w": 294,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (2).png": {
+      "frame": {
+        "x": 1309,
+        "y": 293,
+        "w": 294,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 16,
+        "w": 294,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (8).png": {
+      "frame": {
+        "x": 1749,
+        "y": 295,
+        "w": 294,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 66,
+        "y": 6,
+        "w": 294,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (10).png": {
+      "frame": {
+        "x": 2190,
+        "y": 295,
+        "w": 296,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 72,
+        "y": 17,
+        "w": 296,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (6).png": {
+      "frame": {
+        "x": 2629,
+        "y": 296,
+        "w": 296,
+        "h": 430
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 7,
+        "w": 296,
+        "h": 430
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (9).png": {
+      "frame": {
+        "x": 3063,
+        "y": 297,
+        "w": 298,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 71,
+        "y": 18,
+        "w": 298,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (26).png": {
+      "frame": {
+        "x": 3501,
+        "y": 297,
+        "w": 422,
+        "h": 300
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 173,
+        "y": 187,
+        "w": 422,
+        "h": 300
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (22).png": {
+      "frame": {
+        "x": 3927,
+        "y": 299,
+        "w": 398,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 175,
+        "y": 161,
+        "w": 398,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (6).png": {
+      "frame": {
+        "x": 2,
+        "y": 588,
+        "w": 298,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 60,
+        "y": 7,
+        "w": 298,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (9).png": {
+      "frame": {
+        "x": 442,
+        "y": 590,
+        "w": 298,
+        "h": 439
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 8,
+        "w": 298,
+        "h": 439
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (9).png": {
+      "frame": {
+        "x": 885,
+        "y": 591,
+        "w": 299,
+        "h": 429
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 74,
+        "y": 7,
+        "w": 299,
+        "h": 429
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (8).png": {
+      "frame": {
+        "x": 1318,
+        "y": 593,
+        "w": 300,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 18,
+        "w": 300,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (3).png": {
+      "frame": {
+        "x": 1756,
+        "y": 595,
+        "w": 302,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 69,
+        "y": 18,
+        "w": 302,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (7).png": {
+      "frame": {
+        "x": 2194,
+        "y": 596,
+        "w": 302,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 69,
+        "y": 18,
+        "w": 302,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (25).png": {
+      "frame": {
+        "x": 2632,
+        "y": 596,
+        "w": 419,
+        "h": 306
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 175,
+        "y": 178,
+        "w": 419,
+        "h": 306
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (10).png": {
+      "frame": {
+        "x": 3055,
+        "y": 599,
+        "w": 303,
+        "h": 440
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 69,
+        "y": 10,
+        "w": 303,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (21).png": {
+      "frame": {
+        "x": 3499,
+        "y": 601,
+        "w": 383,
+        "h": 309
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 167,
+        "y": 161,
+        "w": 383,
+        "h": 309
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (6).png": {
+      "frame": {
+        "x": 3886,
+        "y": 609,
+        "w": 305,
+        "h": 433
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 19,
+        "w": 305,
+        "h": 433
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (10).png": {
+      "frame": {
+        "x": 2,
+        "y": 890,
+        "w": 306,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 76,
+        "y": 8,
+        "w": 306,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (5).png": {
+      "frame": {
+        "x": 440,
+        "y": 892,
+        "w": 306,
+        "h": 438
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 8,
+        "w": 306,
+        "h": 438
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (5).png": {
+      "frame": {
+        "x": 882,
+        "y": 894,
+        "w": 307,
+        "h": 432
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 67,
+        "y": 20,
+        "w": 307,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Idle (4).png": {
+      "frame": {
+        "x": 1318,
+        "y": 897,
+        "w": 309,
+        "h": 432
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 66,
+        "y": 20,
+        "w": 309,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (5).png": {
+      "frame": {
+        "x": 1754,
+        "y": 901,
+        "w": 308,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 9,
+        "w": 308,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (11).png": {
+      "frame": {
+        "x": 2193,
+        "y": 902,
+        "w": 310,
+        "h": 390
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 109,
+        "y": 62,
+        "w": 310,
+        "h": 390
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (11).png": {
+      "frame": {
+        "x": 2587,
+        "y": 906,
+        "w": 307,
+        "h": 442
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 11,
+        "w": 307,
+        "h": 442
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (12).png": {
+      "frame": {
+        "x": 3033,
+        "y": 906,
+        "w": 307,
+        "h": 441
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 66,
+        "y": 10,
+        "w": 307,
+        "h": 441
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (13).png": {
+      "frame": {
+        "x": 3478,
+        "y": 918,
+        "w": 309,
+        "h": 440
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 61,
+        "y": 9,
+        "w": 309,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (24).png": {
+      "frame": {
+        "x": 3922,
+        "y": 918,
+        "w": 415,
+        "h": 315
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 179,
+        "y": 168,
+        "w": 415,
+        "h": 315
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (14).png": {
+      "frame": {
+        "x": 2,
+        "y": 1202,
+        "w": 309,
+        "h": 439
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 9,
+        "w": 309,
+        "h": 439
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (15).png": {
+      "frame": {
+        "x": 445,
+        "y": 1205,
+        "w": 310,
+        "h": 439
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 9,
+        "w": 310,
+        "h": 439
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (11).png": {
+      "frame": {
+        "x": 888,
+        "y": 1210,
+        "w": 311,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 78,
+        "y": 11,
+        "w": 311,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (12).png": {
+      "frame": {
+        "x": 1327,
+        "y": 1213,
+        "w": 311,
+        "h": 440
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 70,
+        "y": 9,
+        "w": 311,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (16).png": {
+      "frame": {
+        "x": 1771,
+        "y": 1216,
+        "w": 311,
+        "h": 439
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 8,
+        "w": 311,
+        "h": 439
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (13).png": {
+      "frame": {
+        "x": 2214,
+        "y": 1217,
+        "w": 312,
+        "h": 442
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 8,
+        "w": 312,
+        "h": 442
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (17).png": {
+      "frame": {
+        "x": 2660,
+        "y": 1217,
+        "w": 312,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 8,
+        "w": 312,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (4).png": {
+      "frame": {
+        "x": 3100,
+        "y": 1231,
+        "w": 313,
+        "h": 441
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 4,
+        "w": 313,
+        "h": 441
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (1).png": {
+      "frame": {
+        "x": 3545,
+        "y": 1237,
+        "w": 314,
+        "h": 442
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 5,
+        "w": 314,
+        "h": 442
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (20).png": {
+      "frame": {
+        "x": 3991,
+        "y": 1237,
+        "w": 374,
+        "h": 337
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 159,
+        "y": 135,
+        "w": 374,
+        "h": 337
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (4).png": {
+      "frame": {
+        "x": 2,
+        "y": 1515,
+        "w": 314,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 10,
+        "w": 314,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (14).png": {
+      "frame": {
+        "x": 442,
+        "y": 1519,
+        "w": 314,
+        "h": 442
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 8,
+        "w": 314,
+        "h": 442
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (10).png": {
+      "frame": {
+        "x": 888,
+        "y": 1525,
+        "w": 317,
+        "h": 390
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 102,
+        "y": 62,
+        "w": 317,
+        "h": 390
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (3).png": {
+      "frame": {
+        "x": 1282,
+        "y": 1528,
+        "w": 315,
+        "h": 442
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 7,
+        "w": 315,
+        "h": 442
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (2).png": {
+      "frame": {
+        "x": 1728,
+        "y": 1531,
+        "w": 317,
+        "h": 440
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 10,
+        "w": 317,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (15).png": {
+      "frame": {
+        "x": 2172,
+        "y": 1533,
+        "w": 317,
+        "h": 439
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 8,
+        "w": 317,
+        "h": 439
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (29).png": {
+      "frame": {
+        "x": 2615,
+        "y": 1533,
+        "w": 318,
+        "h": 417
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 84,
+        "y": 29,
+        "w": 318,
+        "h": 417
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (18).png": {
+      "frame": {
+        "x": 3036,
+        "y": 1548,
+        "w": 318,
+        "h": 438
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 10,
+        "w": 318,
+        "h": 438
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (12).png": {
+      "frame": {
+        "x": 3478,
+        "y": 1555,
+        "w": 319,
+        "h": 391
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 96,
+        "y": 61,
+        "w": 319,
+        "h": 391
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (30).png": {
+      "frame": {
+        "x": 3873,
+        "y": 1615,
+        "w": 319,
+        "h": 428
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 20,
+        "w": 319,
+        "h": 428
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (16).png": {
+      "frame": {
+        "x": 2,
+        "y": 1833,
+        "w": 319,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 7,
+        "w": 319,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (4).png": {
+      "frame": {
+        "x": 441,
+        "y": 1837,
+        "w": 319,
+        "h": 438
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 11,
+        "w": 319,
+        "h": 438
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (1).png": {
+      "frame": {
+        "x": 883,
+        "y": 1847,
+        "w": 320,
+        "h": 431
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 62,
+        "y": 14,
+        "w": 320,
+        "h": 431
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (9).png": {
+      "frame": {
+        "x": 1318,
+        "y": 1847,
+        "w": 324,
+        "h": 390
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 95,
+        "y": 62,
+        "w": 324,
+        "h": 390
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (5).png": {
+      "frame": {
+        "x": 1712,
+        "y": 1852,
+        "w": 321,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 1,
+        "w": 321,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (3).png": {
+      "frame": {
+        "x": 2153,
+        "y": 1854,
+        "w": 321,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 12,
+        "w": 321,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (23).png": {
+      "frame": {
+        "x": 2591,
+        "y": 1855,
+        "w": 411,
+        "h": 322
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 183,
+        "y": 159,
+        "w": 411,
+        "h": 322
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (17).png": {
+      "frame": {
+        "x": 3006,
+        "y": 1870,
+        "w": 323,
+        "h": 426
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 8,
+        "w": 323,
+        "h": 426
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (13).png": {
+      "frame": {
+        "x": 3436,
+        "y": 1878,
+        "w": 327,
+        "h": 392
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 83,
+        "y": 60,
+        "w": 327,
+        "h": 392
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (6).png": {
+      "frame": {
+        "x": 3832,
+        "y": 1938,
+        "w": 325,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 2,
+        "w": 325,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (28).png": {
+      "frame": {
+        "x": 2,
+        "y": 2156,
+        "w": 329,
+        "h": 427
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 24,
+        "w": 329,
+        "h": 427
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (19).png": {
+      "frame": {
+        "x": 433,
+        "y": 2160,
+        "w": 325,
+        "h": 438
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 12,
+        "w": 325,
+        "h": 438
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (7).png": {
+      "frame": {
+        "x": 875,
+        "y": 2171,
+        "w": 328,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 33,
+        "y": 2,
+        "w": 328,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (2).png": {
+      "frame": {
+        "x": 1316,
+        "y": 2177,
+        "w": 329,
+        "h": 439
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 16,
+        "w": 329,
+        "h": 439
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (2).png": {
+      "frame": {
+        "x": 1759,
+        "y": 2179,
+        "w": 329,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 14,
+        "w": 329,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (18).png": {
+      "frame": {
+        "x": 2198,
+        "y": 2181,
+        "w": 330,
+        "h": 424
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 10,
+        "w": 330,
+        "h": 424
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (8).png": {
+      "frame": {
+        "x": 2626,
+        "y": 2197,
+        "w": 331,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 3,
+        "w": 331,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (3).png": {
+      "frame": {
+        "x": 3066,
+        "y": 2209,
+        "w": 331,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 14,
+        "w": 331,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (20).png": {
+      "frame": {
+        "x": 3506,
+        "y": 2267,
+        "w": 331,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 14,
+        "w": 331,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (14).png": {
+      "frame": {
+        "x": 3947,
+        "y": 2267,
+        "w": 333,
+        "h": 392
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 72,
+        "y": 60,
+        "w": 333,
+        "h": 392
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (9).png": {
+      "frame": {
+        "x": 2,
+        "y": 2489,
+        "w": 334,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 3,
+        "w": 334,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (8).png": {
+      "frame": {
+        "x": 443,
+        "y": 2489,
+        "w": 336,
+        "h": 391
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 81,
+        "y": 61,
+        "w": 336,
+        "h": 391
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (10).png": {
+      "frame": {
+        "x": 838,
+        "y": 2503,
+        "w": 337,
+        "h": 437
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 4,
+        "w": 337,
+        "h": 437
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (19).png": {
+      "frame": {
+        "x": 1279,
+        "y": 2510,
+        "w": 337,
+        "h": 424
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 13,
+        "w": 337,
+        "h": 424
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Walk (1).png": {
+      "frame": {
+        "x": 1707,
+        "y": 2512,
+        "w": 337,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 16,
+        "w": 337,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (27).png": {
+      "frame": {
+        "x": 2146,
+        "y": 2515,
+        "w": 339,
+        "h": 431
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 20,
+        "w": 339,
+        "h": 431
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (11).png": {
+      "frame": {
+        "x": 2581,
+        "y": 2532,
+        "w": 340,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 5,
+        "w": 340,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (26).png": {
+      "frame": {
+        "x": 3021,
+        "y": 2544,
+        "w": 340,
+        "h": 433
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 17,
+        "w": 340,
+        "h": 433
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (25).png": {
+      "frame": {
+        "x": 3458,
+        "y": 2602,
+        "w": 341,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 15,
+        "w": 341,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (15).png": {
+      "frame": {
+        "x": 3896,
+        "y": 2604,
+        "w": 342,
+        "h": 391
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 62,
+        "y": 61,
+        "w": 342,
+        "h": 391
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (2).png": {
+      "frame": {
+        "x": 2,
+        "y": 2827,
+        "w": 342,
+        "h": 432
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 17,
+        "w": 342,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (7).png": {
+      "frame": {
+        "x": 438,
+        "y": 2829,
+        "w": 347,
+        "h": 392
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 60,
+        "w": 347,
+        "h": 392
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (3).png": {
+      "frame": {
+        "x": 834,
+        "y": 2844,
+        "w": 343,
+        "h": 428
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 29,
+        "w": 343,
+        "h": 428
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (12).png": {
+      "frame": {
+        "x": 1266,
+        "y": 2851,
+        "w": 343,
+        "h": 436
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 6,
+        "w": 343,
+        "h": 436
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (16).png": {
+      "frame": {
+        "x": 1706,
+        "y": 2853,
+        "w": 343,
+        "h": 431
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 8,
+        "w": 343,
+        "h": 431
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (24).png": {
+      "frame": {
+        "x": 2141,
+        "y": 2858,
+        "w": 343,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 13,
+        "w": 343,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (15).png": {
+      "frame": {
+        "x": 2580,
+        "y": 2876,
+        "w": 344,
+        "h": 432
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 8,
+        "w": 344,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (17).png": {
+      "frame": {
+        "x": 3016,
+        "y": 2888,
+        "w": 344,
+        "h": 432
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 9,
+        "w": 344,
+        "h": 432
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (23).png": {
+      "frame": {
+        "x": 3452,
+        "y": 2947,
+        "w": 344,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 12,
+        "w": 344,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (14).png": {
+      "frame": {
+        "x": 3891,
+        "y": 2950,
+        "w": 345,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 7,
+        "w": 345,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (20).png": {
+      "frame": {
+        "x": 2,
+        "y": 3173,
+        "w": 345,
+        "h": 425
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 17,
+        "w": 345,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (18).png": {
+      "frame": {
+        "x": 431,
+        "y": 3191,
+        "w": 345,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 9,
+        "w": 345,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (19).png": {
+      "frame": {
+        "x": 869,
+        "y": 3198,
+        "w": 345,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 10,
+        "w": 345,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (13).png": {
+      "frame": {
+        "x": 1307,
+        "y": 3200,
+        "w": 346,
+        "h": 435
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 7,
+        "w": 346,
+        "h": 435
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (20).png": {
+      "frame": {
+        "x": 1746,
+        "y": 3205,
+        "w": 346,
+        "h": 433
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 11,
+        "w": 346,
+        "h": 433
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (6).png": {
+      "frame": {
+        "x": 2183,
+        "y": 3205,
+        "w": 357,
+        "h": 392
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 60,
+        "w": 357,
+        "h": 392
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (21).png": {
+      "frame": {
+        "x": 2579,
+        "y": 3224,
+        "w": 347,
+        "h": 431
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 12,
+        "w": 347,
+        "h": 431
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Jump (22).png": {
+      "frame": {
+        "x": 3014,
+        "y": 3236,
+        "w": 346,
+        "h": 434
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 11,
+        "w": 346,
+        "h": 434
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Run (1).png": {
+      "frame": {
+        "x": 3452,
+        "y": 3295,
+        "w": 353,
+        "h": 425
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 20,
+        "w": 353,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 416,
+        "h": 454
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (4).png": {
+      "frame": {
+        "x": 3881,
+        "y": 3299,
+        "w": 356,
+        "h": 410
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 44,
+        "w": 356,
+        "h": 410
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (16).png": {
+      "frame": {
+        "x": 2,
+        "y": 3522,
+        "w": 358,
+        "h": 389
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 76,
+        "y": 65,
+        "w": 358,
+        "h": 389
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (19).png": {
+      "frame": {
+        "x": 395,
+        "y": 3540,
+        "w": 378,
+        "h": 362
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 134,
+        "y": 109,
+        "w": 378,
+        "h": 362
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (5).png": {
+      "frame": {
+        "x": 777,
+        "y": 3547,
+        "w": 366,
+        "h": 391
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 61,
+        "w": 366,
+        "h": 391
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (17).png": {
+      "frame": {
+        "x": 1172,
+        "y": 3550,
+        "w": 371,
+        "h": 387
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 92,
+        "y": 74,
+        "w": 371,
+        "h": 387
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (18).png": {
+      "frame": {
+        "x": 1563,
+        "y": 3555,
+        "w": 377,
+        "h": 379
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 112,
+        "y": 89,
+        "w": 377,
+        "h": 379
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "nena/Dead (30).png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 424,
+        "h": 280
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 171,
+        "y": 216,
+        "w": 424,
+        "h": 280
+      },
+      "sourceSize": {
+        "w": 601,
+        "h": 502
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "nena.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 4352,
+      "h": 3934
+    },
+    "scale": 1
+  }
+}

@@ -26,12 +26,12 @@ export class ScenePlayerSelect extends Container {
         tituloElige.anchor.set(0.5);
         tituloElige.position.set(WIDTH/2, tituloElige.height/1.5);
 
-        const fondoPlayer = Sprite.from("FondoPlayer2");
+        const fondoPlayer = Sprite.from("HUD/fondoPlayer2.png");
         fondoPlayer.position.x = fondoPlayer.width * 4.5;
         fondoPlayer.position.y = tituloElige.position.y + 200;
         fondoPlayer.scale.set(2.2);
 
-        const fondoPlayer1: Sprite = Sprite.from("FondoPlayer2");
+        const fondoPlayer1: Sprite = Sprite.from("HUD/fondoPlayer2.png");
         fondoPlayer1.position.x = fondoPlayer.position.x + fondoPlayer.width * 1.5;
         fondoPlayer1.position.y = tituloElige.position.y + 200;
         fondoPlayer1.scale.set(2.2);

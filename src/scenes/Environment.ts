@@ -10,18 +10,18 @@ export class Environment extends PhysicsContainer{
 
         switch (nroObjeto) {
             case 0:
-                this.objeto = Sprite.from("Arbol1");
+                this.objeto = Sprite.from("Object/Tree_2.png");
                 this.objeto.scale.set(2.8);
                                 
                 break;
             case 1:
-                this.objeto = Sprite.from("Arbol2")
+                this.objeto = Sprite.from("Object/Tree_3.png")
              
                 this.objeto.scale.set(2.8);
                 
                 break;
             case 2:
-                this.objeto = Sprite.from("Arbusto");
+                this.objeto = Sprite.from("Object/Bush (4).png");
     
                 this.objeto.scale.set(2.8);
                 

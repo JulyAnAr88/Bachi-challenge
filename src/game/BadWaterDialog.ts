@@ -41,8 +41,8 @@ export class BadWaterDialog extends PhysicsContainer implements IHitbox, IDamage
 
         this.objeto = new AnimatedSprite (
                 [
-                    Texture.from("Agua"),
-                    Texture.from("Agua1")
+                    Texture.from("Tiles/Agua.png"),
+                    Texture.from("Tiles/Agua1.png")
                     
                 ], true
         );

@@ -21,15 +21,15 @@ export class Flag extends PhysicsContainer implements IHitbox {
         this.hitbox.visible = false;
         
         
-        this.banderaCaida = Sprite.from("BanderaVerdeCaida");
+        this.banderaCaida = Sprite.from("Object/flagGreenHanging.png");
         this.banderaCaida.scale.set(2.5);
         this.addChild(this.banderaCaida);
         this.banderaCaida.addChild(this.hitbox);
         
         this.bandera = new AnimatedSprite (
                 [
-                    Texture.from("BanderaVerde1"),
-                    Texture.from("BanderaVerde2")
+                    Texture.from("Object/flagGreen.png"),
+                    Texture.from("Object/flagGreen2.png")
                     
                 ], true
         );

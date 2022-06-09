@@ -15,7 +15,7 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
             case 0:
                 this.objeto = new AnimatedSprite (
                     [
-                        Texture.from("Stone")
+                        Texture.from("Object/Stone.png")
                         
                     ], true
                 );
@@ -29,7 +29,7 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
             case 1:
                 this.objeto = new AnimatedSprite (
                     [
-                        Texture.from("Tronco")
+                        Texture.from("Object/Tree_1.png")
                         
                     ], true
                 );
@@ -42,7 +42,7 @@ export class Obstacles extends PhysicsContainer implements IUpdateable, IHitbox{
             case 2:
                 this.objeto = new AnimatedSprite (
                     [
-                        Texture.from("Arbusto1")
+                        Texture.from("Object/Bush (4).png")
                         
                     ], true
                 );

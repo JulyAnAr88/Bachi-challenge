@@ -17,18 +17,19 @@ export class MosquitoEnemy extends PhysicsContainer implements IHitbox, IDamageZ
 
         this.mosquitoAnimated = new AnimatedSprite (
             [
-                Texture.from("Mosquito1"),
-                Texture.from("Mosquito2"),
-                Texture.from("Mosquito3"),
-                Texture.from("Mosquito4"),
-                Texture.from("Mosquito5"),
-                Texture.from("Mosquito6"),
-                Texture.from("Mosquito7"),
-                Texture.from("Mosquito8"),
-                Texture.from("Mosquito9"),
-                Texture.from("Mosquito10"),
-                Texture.from("Mosquito11"),
-                Texture.from("Mosquito12"),
+                Texture.from("Enemies/mosquitos/tile000.png"),
+                Texture.from("Enemies/mosquitos/tile001.png"),
+                Texture.from("Enemies/mosquitos/tile002.png"),
+                Texture.from("Enemies/mosquitos/tile003.png"),
+                Texture.from("Enemies/mosquitos/tile004.png"),
+                Texture.from("Enemies/mosquitos/tile005.png"),
+                Texture.from("Enemies/mosquitos/tile006.png"),
+                Texture.from("Enemies/mosquitos/tile007.png"),
+                Texture.from("Enemies/mosquitos/tile008.png"),
+                Texture.from("Enemies/mosquitos/tile009.png"),
+                Texture.from("Enemies/mosquitos/tile010.png"),
+                Texture.from("Enemies/mosquitos/tile011.png"),
+                Texture.from("Enemies/mosquitos/tile012.png"),
                 
             ], true
         );

@@ -14,9 +14,9 @@ export class Bachi extends PhysicsContainer implements IHitbox{
     {
         super();
 
-        this.banderaCaida = Sprite.from("BanderaRojaCaida");
+        this.banderaCaida = Sprite.from("Object/flagRedHanging.png");
 
-        this.bachi = Sprite.from("Bachi");
+        this.bachi = Sprite.from("Object/bachi.png");
         //this.bachi.scale.set(0.3);
         this.bachi.position.set(this.banderaCaida.width + 50,0);
         this.dialog.addChild(this.bachi);
@@ -34,8 +34,8 @@ export class Bachi extends PhysicsContainer implements IHitbox{
         
         this.bandera = new AnimatedSprite (
                 [
-                    Texture.from("BanderaRoja1"),
-                    Texture.from("BanderaRoja2")
+                    Texture.from("Object/flagRed.png"),
+                    Texture.from("Object/flagRed2.png")
                     
                 ], true
         );

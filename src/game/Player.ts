@@ -35,13 +35,10 @@ export class Player extends PhysicsContainer implements IHitbox{
                 
                 this.ninieAnimated = new PlayerAnimationTimmy(0.5, 0.25, 0);
                 
-                
-                
                 break;
             case 0:
                 
                 this.ninieAnimated = new PlayerAnimationBecky(0.4, 0.25, 0);
-                
                 
                 break;
         
@@ -69,7 +66,6 @@ export class Player extends PhysicsContainer implements IHitbox{
         this.addChild(this.ninieAnimated);
         
         this.ninieAnimated.addChild(this.hitbox);
-      
 
         this.acceleration.y = Player.GRAVITY;
 
@@ -88,9 +84,7 @@ export class Player extends PhysicsContainer implements IHitbox{
             default:
                 break;
         }
-        
-        
-        
+               
 
         sound.find("gameover");
        
@@ -108,8 +102,10 @@ export class Player extends PhysicsContainer implements IHitbox{
         
         if(this.isDead){
 
+            sound.unmuteAll();
             this.ninieAnimated.changeToDeadAnimation();          
             GameState.GAME_OVER = true;
+            
             sound.play("gameover", {
                 loop:false,
                 singleInstance:true,

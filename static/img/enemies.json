@@ -1,0 +1,1599 @@
+{
+  "frames": {
+    "Enemies/snake/tile021.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 80,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile019.png": {
+      "frame": {
+        "x": 86,
+        "y": 2,
+        "w": 80,
+        "h": 79
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 80,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile043.png": {
+      "frame": {
+        "x": 2,
+        "y": 86,
+        "w": 80,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 80,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile046.png": {
+      "frame": {
+        "x": 86,
+        "y": 86,
+        "w": 80,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 80,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile013.png": {
+      "frame": {
+        "x": 169,
+        "y": 2,
+        "w": 76,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 0,
+        "w": 76,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile037.png": {
+      "frame": {
+        "x": 170,
+        "y": 86,
+        "w": 76,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 0,
+        "w": 76,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile020.png": {
+      "frame": {
+        "x": 2,
+        "y": 169,
+        "w": 76,
+        "h": 77
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 76,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile044.png": {
+      "frame": {
+        "x": 83,
+        "y": 169,
+        "w": 76,
+        "h": 77
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 76,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile016.png": {
+      "frame": {
+        "x": 164,
+        "y": 170,
+        "w": 61,
+        "h": 79
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 42,
+        "w": 61,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile015.png": {
+      "frame": {
+        "x": 164,
+        "y": 235,
+        "w": 65,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 48,
+        "w": 65,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile000.png": {
+      "frame": {
+        "x": 2,
+        "y": 249,
+        "w": 55,
+        "h": 83
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 13,
+        "w": 55,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile004.png": {
+      "frame": {
+        "x": 247,
+        "y": 170,
+        "w": 55,
+        "h": 83
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 13,
+        "w": 55,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile012.png": {
+      "frame": {
+        "x": 250,
+        "y": 2,
+        "w": 56,
+        "h": 81
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 41,
+        "w": 56,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile017.png": {
+      "frame": {
+        "x": 250,
+        "y": 87,
+        "w": 67,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 54,
+        "w": 67,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile014.png": {
+      "frame": {
+        "x": 310,
+        "y": 2,
+        "w": 55,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 41,
+        "w": 55,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile009.png": {
+      "frame": {
+        "x": 89,
+        "y": 249,
+        "w": 62,
+        "h": 71
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 15,
+        "w": 62,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile010.png": {
+      "frame": {
+        "x": 306,
+        "y": 158,
+        "w": 74,
+        "h": 59
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 21,
+        "w": 74,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile034.png": {
+      "frame": {
+        "x": 306,
+        "y": 236,
+        "w": 74,
+        "h": 59
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 21,
+        "w": 74,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile002.png": {
+      "frame": {
+        "x": 2,
+        "y": 308,
+        "w": 53,
+        "h": 82
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 14,
+        "w": 53,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile003.png": {
+      "frame": {
+        "x": 233,
+        "y": 257,
+        "w": 55,
+        "h": 75
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 21,
+        "w": 55,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile014.png": {
+      "frame": {
+        "x": 292,
+        "y": 314,
+        "w": 77,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 27,
+        "w": 77,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile038.png": {
+      "frame": {
+        "x": 88,
+        "y": 315,
+        "w": 77,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 27,
+        "w": 77,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile011.png": {
+      "frame": {
+        "x": 2,
+        "y": 365,
+        "w": 61,
+        "h": 67
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 19,
+        "w": 61,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 71,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile005.png": {
+      "frame": {
+        "x": 169,
+        "y": 311,
+        "w": 56,
+        "h": 72
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 24,
+        "w": 56,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 71,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile010.png": {
+      "frame": {
+        "x": 229,
+        "y": 336,
+        "w": 53,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 10,
+        "w": 53,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile013.png": {
+      "frame": {
+        "x": 286,
+        "y": 371,
+        "w": 68,
+        "h": 59
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 62,
+        "w": 68,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 192
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile009.png": {
+      "frame": {
+        "x": 67,
+        "y": 372,
+        "w": 54,
+        "h": 74
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 6,
+        "w": 54,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile033.png": {
+      "frame": {
+        "x": 358,
+        "y": 371,
+        "w": 54,
+        "h": 74
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 6,
+        "w": 54,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile006.png": {
+      "frame": {
+        "x": 321,
+        "y": 86,
+        "w": 51,
+        "h": 78
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 10,
+        "w": 51,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile001.png": {
+      "frame": {
+        "x": 369,
+        "y": 2,
+        "w": 62,
+        "h": 64
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 32,
+        "w": 62,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile008.png": {
+      "frame": {
+        "x": 369,
+        "y": 141,
+        "w": 50,
+        "h": 79
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 7,
+        "w": 50,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/mosquitos/tile007.png": {
+      "frame": {
+        "x": 369,
+        "y": 224,
+        "w": 64,
+        "h": 60
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 28,
+        "w": 64,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 73,
+        "h": 96
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile011.png": {
+      "frame": {
+        "x": 145,
+        "y": 387,
+        "w": 80,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 34,
+        "w": 80,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile035.png": {
+      "frame": {
+        "x": 403,
+        "y": 70,
+        "w": 80,
+        "h": 46
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 34,
+        "w": 80,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile015.png": {
+      "frame": {
+        "x": 423,
+        "y": 120,
+        "w": 66,
+        "h": 53
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 27,
+        "w": 66,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile039.png": {
+      "frame": {
+        "x": 373,
+        "y": 288,
+        "w": 66,
+        "h": 53
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 27,
+        "w": 66,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile006.png": {
+      "frame": {
+        "x": 436,
+        "y": 345,
+        "w": 80,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 38,
+        "w": 80,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile030.png": {
+      "frame": {
+        "x": 437,
+        "y": 190,
+        "w": 80,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 38,
+        "w": 80,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile008.png": {
+      "frame": {
+        "x": 67,
+        "y": 430,
+        "w": 59,
+        "h": 55
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 25,
+        "w": 59,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile017.png": {
+      "frame": {
+        "x": 2,
+        "y": 436,
+        "w": 59,
+        "h": 55
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 25,
+        "w": 59,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile041.png": {
+      "frame": {
+        "x": 358,
+        "y": 429,
+        "w": 59,
+        "h": 55
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 25,
+        "w": 59,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile000.png": {
+      "frame": {
+        "x": 229,
+        "y": 416,
+        "w": 76,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 38,
+        "w": 76,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile024.png": {
+      "frame": {
+        "x": 275,
+        "y": 434,
+        "w": 76,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 38,
+        "w": 76,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile001.png": {
+      "frame": {
+        "x": 130,
+        "y": 437,
+        "w": 74,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 38,
+        "w": 74,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile025.png": {
+      "frame": {
+        "x": 443,
+        "y": 274,
+        "w": 74,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 38,
+        "w": 74,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile003.png": {
+      "frame": {
+        "x": 435,
+        "y": 2,
+        "w": 71,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 38,
+        "w": 71,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile005.png": {
+      "frame": {
+        "x": 421,
+        "y": 429,
+        "w": 71,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 38,
+        "w": 71,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile007.png": {
+      "frame": {
+        "x": 482,
+        "y": 320,
+        "w": 71,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 38,
+        "w": 71,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile027.png": {
+      "frame": {
+        "x": 483,
+        "y": 120,
+        "w": 71,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 38,
+        "w": 71,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile029.png": {
+      "frame": {
+        "x": 483,
+        "y": 195,
+        "w": 71,
+        "h": 42
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 38,
+        "w": 71,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile031.png": {
+      "frame": {
+        "x": 275,
+        "y": 480,
+        "w": 71,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 38,
+        "w": 71,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile002.png": {
+      "frame": {
+        "x": 130,
+        "y": 483,
+        "w": 70,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 38,
+        "w": 70,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile026.png": {
+      "frame": {
+        "x": 2,
+        "y": 495,
+        "w": 70,
+        "h": 42
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 38,
+        "w": 70,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile004.png": {
+      "frame": {
+        "x": 487,
+        "y": 48,
+        "w": 68,
+        "h": 43
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 37,
+        "w": 68,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile028.png": {
+      "frame": {
+        "x": 421,
+        "y": 475,
+        "w": 68,
+        "h": 43
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 37,
+        "w": 68,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile012.png": {
+      "frame": {
+        "x": 350,
+        "y": 488,
+        "w": 58,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 32,
+        "w": 58,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile036.png": {
+      "frame": {
+        "x": 493,
+        "y": 475,
+        "w": 58,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 32,
+        "w": 58,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile047.png": {
+      "frame": {
+        "x": 204,
+        "y": 496,
+        "w": 64,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 48,
+        "w": 64,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile032.png": {
+      "frame": {
+        "x": 67,
+        "y": 430,
+        "w": 59,
+        "h": 55
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 25,
+        "w": 59,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile018.png": {
+      "frame": {
+        "x": 306,
+        "y": 158,
+        "w": 74,
+        "h": 59
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 21,
+        "w": 74,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile016.png": {
+      "frame": {
+        "x": 350,
+        "y": 488,
+        "w": 58,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 32,
+        "w": 58,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile022.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 80,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile023.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 80,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile045.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 80,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 80,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile042.png": {
+      "frame": {
+        "x": 306,
+        "y": 236,
+        "w": 74,
+        "h": 59
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 21,
+        "w": 74,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Enemies/snake/tile040.png": {
+      "frame": {
+        "x": 493,
+        "y": 475,
+        "w": 58,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 32,
+        "w": 58,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 80,
+        "h": 80
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.7",
+    "image": "enemies.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 553,
+      "h": 539
+    },
+    "scale": 1
+  }
+}

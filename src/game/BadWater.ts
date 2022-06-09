@@ -24,8 +24,8 @@ export class BadWater extends PhysicsContainer implements IHitbox, IDamageZone {
 
         this.objeto = new AnimatedSprite (
                 [
-                    Texture.from("Agua"),
-                    Texture.from("Agua1")
+                    Texture.from("Tiles/Agua.png"),
+                    Texture.from("Tiles/Agua1.png")
                     
                 ], true
         );

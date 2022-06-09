@@ -18,7 +18,7 @@ export class MenuDialog extends Container{
         super();
 
         this.menuDialog = new NineSlicePlane(
-            Texture.from("FondoPlayer"),
+            Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
         this.menuDialog.width = WIDTH * 1/3;
