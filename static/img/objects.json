@@ -240,58 +240,10 @@
         "y": 0.5
       }
     },
-    "Object/Bush (2).png": {
+    "Tiles/Agua.png": {
       "frame": {
         "x": 539,
         "y": 281,
-        "w": 133,
-        "h": 65
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 133,
-        "h": 65
-      },
-      "sourceSize": {
-        "w": 133,
-        "h": 65
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Object/Tree_1.png": {
-      "frame": {
-        "x": 460,
-        "y": 350,
-        "w": 133,
-        "h": 50
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 15,
-        "w": 133,
-        "h": 50
-      },
-      "sourceSize": {
-        "w": 133,
-        "h": 65
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Tiles/Agua.png": {
-      "frame": {
-        "x": 460,
-        "y": 404,
         "w": 128,
         "h": 99
       },
@@ -315,7 +267,7 @@
     "Tiles/Agua1.png": {
       "frame": {
         "x": 460,
-        "y": 507,
+        "y": 384,
         "w": 128,
         "h": 99
       },
@@ -338,8 +290,8 @@
     },
     "Tiles/Tile (1).png": {
       "frame": {
-        "x": 2,
-        "y": 672,
+        "x": 460,
+        "y": 487,
         "w": 128,
         "h": 128
       },
@@ -362,7 +314,7 @@
     },
     "Tiles/Tile (10).png": {
       "frame": {
-        "x": 134,
+        "x": 2,
         "y": 672,
         "w": 128,
         "h": 128
@@ -386,7 +338,7 @@
     },
     "Tiles/Tile (11).png": {
       "frame": {
-        "x": 266,
+        "x": 134,
         "y": 672,
         "w": 128,
         "h": 128
@@ -410,8 +362,8 @@
     },
     "Tiles/Tile (12).png": {
       "frame": {
-        "x": 398,
-        "y": 655,
+        "x": 266,
+        "y": 672,
         "w": 128,
         "h": 128
       },
@@ -434,8 +386,8 @@
     },
     "Tiles/Tile (13).png": {
       "frame": {
-        "x": 530,
-        "y": 610,
+        "x": 398,
+        "y": 655,
         "w": 128,
         "h": 128
       },
@@ -458,8 +410,8 @@
     },
     "Tiles/Tile (14).png": {
       "frame": {
-        "x": 688,
-        "y": 2,
+        "x": 530,
+        "y": 619,
         "w": 128,
         "h": 93
       },
@@ -483,7 +435,7 @@
     "Tiles/Tile (15).png": {
       "frame": {
         "x": 688,
-        "y": 99,
+        "y": 2,
         "w": 128,
         "h": 93
       },
@@ -507,7 +459,7 @@
     "Tiles/Tile (16).png": {
       "frame": {
         "x": 688,
-        "y": 196,
+        "y": 99,
         "w": 128,
         "h": 93
       },
@@ -530,8 +482,8 @@
     },
     "Tiles/Tile (2).png": {
       "frame": {
-        "x": 676,
-        "y": 293,
+        "x": 688,
+        "y": 196,
         "w": 128,
         "h": 128
       },
@@ -554,8 +506,8 @@
     },
     "Tiles/Tile (3).png": {
       "frame": {
-        "x": 662,
-        "y": 425,
+        "x": 671,
+        "y": 328,
         "w": 128,
         "h": 128
       },
@@ -579,7 +531,7 @@
     "Tiles/Tile (4).png": {
       "frame": {
         "x": 662,
-        "y": 557,
+        "y": 460,
         "w": 128,
         "h": 128
       },
@@ -602,8 +554,8 @@
     },
     "Tiles/Tile (5).png": {
       "frame": {
-        "x": 2,
-        "y": 804,
+        "x": 662,
+        "y": 592,
         "w": 128,
         "h": 128
       },
@@ -626,8 +578,8 @@
     },
     "Tiles/Tile (6).png": {
       "frame": {
-        "x": 134,
-        "y": 804,
+        "x": 530,
+        "y": 716,
         "w": 128,
         "h": 128
       },
@@ -649,30 +601,6 @@
       }
     },
     "Tiles/Tile (7).png": {
-      "frame": {
-        "x": 266,
-        "y": 804,
-        "w": 128,
-        "h": 128
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 128,
-        "h": 128
-      },
-      "sourceSize": {
-        "w": 128,
-        "h": 128
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Tiles/Tile (8).png": {
       "frame": {
         "x": 398,
         "y": 787,
@@ -696,10 +624,10 @@
         "y": 0.5
       }
     },
-    "Tiles/Tile (9).png": {
+    "Tiles/Tile (8).png": {
       "frame": {
-        "x": 662,
-        "y": 689,
+        "x": 2,
+        "y": 804,
         "w": 128,
         "h": 128
       },
@@ -720,20 +648,44 @@
         "y": 0.5
       }
     },
-    "Object/Stone.png": {
+    "Tiles/Tile (9).png": {
       "frame": {
-        "x": 530,
-        "y": 742,
-        "w": 107,
-        "h": 64
+        "x": 134,
+        "y": 804,
+        "w": 128,
+        "h": 128
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 128,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "Object/Tree_1.png": {
+      "frame": {
+        "x": 266,
+        "y": 804,
+        "w": 117,
+        "h": 45
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 13,
-        "y": 1,
-        "w": 107,
-        "h": 64
+        "x": 8,
+        "y": 20,
+        "w": 117,
+        "h": 45
       },
       "sourceSize": {
         "w": 133,
@@ -744,48 +696,24 @@
         "y": 0.5
       }
     },
-    "Object/Crate.png": {
+    "Object/Stone.png": {
       "frame": {
-        "x": 530,
-        "y": 821,
-        "w": 77,
-        "h": 77
+        "x": 266,
+        "y": 853,
+        "w": 109,
+        "h": 65
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
+        "x": 12,
         "y": 0,
-        "w": 77,
-        "h": 77
+        "w": 109,
+        "h": 65
       },
       "sourceSize": {
-        "w": 77,
-        "h": 77
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Object/Bush (3).png": {
-      "frame": {
-        "x": 597,
-        "y": 350,
-        "w": 73,
-        "h": 47
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 73,
-        "h": 47
-      },
-      "sourceSize": {
-        "w": 73,
-        "h": 47
+        "w": 133,
+        "h": 65
       },
       "pivot": {
         "x": 0.5,
@@ -794,22 +722,22 @@
     },
     "Object/Bush (4).png": {
       "frame": {
-        "x": 611,
-        "y": 821,
+        "x": 592,
+        "y": 384,
         "w": 73,
         "h": 46
       },
       "rotated": false,
-      "trimmed": true,
+      "trimmed": false,
       "spriteSourceSize": {
-        "x": 105,
-        "y": 229,
+        "x": 0,
+        "y": 0,
         "w": 73,
         "h": 46
       },
       "sourceSize": {
-        "w": 282,
-        "h": 275
+        "w": 73,
+        "h": 46
       },
       "pivot": {
         "x": 0.5,
@@ -819,7 +747,7 @@
     "Object/Sign_1.png": {
       "frame": {
         "x": 592,
-        "y": 404,
+        "y": 434,
         "w": 63,
         "h": 65
       },
@@ -843,7 +771,7 @@
     "Object/Sign_2.png": {
       "frame": {
         "x": 592,
-        "y": 473,
+        "y": 503,
         "w": 62,
         "h": 64
       },
@@ -858,54 +786,6 @@
       "sourceSize": {
         "w": 62,
         "h": 64
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Object/Mushroom_2.png": {
-      "frame": {
-        "x": 460,
-        "y": 610,
-        "w": 50,
-        "h": 41
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 50,
-        "h": 41
-      },
-      "sourceSize": {
-        "w": 50,
-        "h": 41
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "Object/Mushroom_1.png": {
-      "frame": {
-        "x": 592,
-        "y": 541,
-        "w": 49,
-        "h": 41
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 49,
-        "h": 41
-      },
-      "sourceSize": {
-        "w": 49,
-        "h": 41
       },
       "pivot": {
         "x": 0.5,

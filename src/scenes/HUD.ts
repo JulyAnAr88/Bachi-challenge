@@ -1,5 +1,5 @@
 import { sound } from "@pixi/sound";
-import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text } from "pixi.js";
+import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text, BitmapText } from "pixi.js";
 import { HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
 import { ToggleButton } from "../ui/ToggleButton";
@@ -17,23 +17,11 @@ export class HUD extends Container implements IUpdateable{
 
     private textNamePlayer:any;
     private contador: Container;
-    /*private secondUnity: number;
+ 
+    private message: BitmapText;
     
-    private minuteDecena: number;*/
-    private cont = 0;
-    private second = 0;
-    private message: Text;
-    private minute = 0;
-    
-
-    private textStyle = new TextStyle({
-        fill: "white",
-        fontFamily: "CompleteinHim",
-        fontSize: 50,
-        lineJoin: "round",
-        strokeThickness: 4
-    });
-    
+    private str = "00:00"; 
+        
 
     constructor (){
         super();
@@ -110,12 +98,13 @@ export class HUD extends Container implements IUpdateable{
         this.buttonMenu.interactive= true;
         this.buttonMenu.buttonMode= true;
 
-        let str = "0:0";
+        
         this.contador = new Container;
 
-        this.message = new Text(str, this.textStyle);
+        //this.message = new Text(this.str, this.textStyle);
+        this.message = new BitmapText(this.str,{fontName:"Mi BitmapFont"})
 
-        this.contador.position.set(this.buttonMenu.position.x - this.buttonMenu.width * 1.5, this.buttonMenu.height * 1/3);
+        this.contador.position.set(this.buttonMenu.position.x - this.buttonMenu.width * 2, this.buttonMenu.height * 1/3);
         this.contador.addChild(this.message);
 
         const toggleMute = new ToggleButton(Texture.from("MusicOn"), Texture.from("MusicOff"));
@@ -130,13 +119,13 @@ export class HUD extends Container implements IUpdateable{
     }
 
 
-    update(_deltaTime: number, _deltaFrame?: number): void {
+    update(deltaTime: number, _deltaFrame?: number): void {
 
-        /*let str = this.countdown(deltaTime);
-        this.message = new Text(str, this.textStyle);
-        console.log(str);
+        this.removeChild(this.contador);
+        let str = this.countdown(deltaTime);
+        this.message.text = str;
         this.contador.addChild(this.message);
-        this.addChild(this.contador);   */
+        this.addChild(this.contador);
         
       
         if((100) > this.damage && this.damage >= (100 * 5/6)){
@@ -200,23 +189,22 @@ export class HUD extends Container implements IUpdateable{
     }
 
     public countdown(deltaTime: number): string{
-        let str = "";
-                        
-        this.cont += Math.trunc(deltaTime / 1000);
+        const date = new Date(deltaTime);
 
-        if (this.cont > 59) {
-            this.second += 1;
-            this.cont = 0;        
+        var minutes = date.getUTCMinutes();
+        var seconds = date.getUTCSeconds();
+        var min = minutes.toString();
+        var sec = seconds.toString();
 
-            if (this.second > 59){
-                this.minute += 1;
-               
-                str = this.minute + ":" + this.second;
-                console.log("if "+str);
-                this.message = new Text(str, this.textStyle);
-                this.second = 0; 
-            } 
-        }    
+    if (minutes < 10)
+        min = "0" + minutes.toString();
+
+    if (seconds < 10)
+        sec = "0" + seconds;
+
+        var str = min + ":" + sec;
+
+        console.log("count "+str);          
         
 
         return str;

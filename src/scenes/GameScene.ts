@@ -591,7 +591,7 @@ export class GameScene extends Container implements IUpdateable{
         this.platforms.push(plat71_0);
 
         this.bachi = new Bachi();
-        this.bachi.position.set(plat71_0.position.x + (plat0_0.width)*4,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
+        this.bachi.position.set(/*plat71_0.position.x + (plat0_0.width)*4*/700,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
         this.world.addChild(this.bachi);
         this.bachiAndFlag.push(this.bachi);
 
@@ -796,7 +796,9 @@ export class GameScene extends Container implements IUpdateable{
                 });
                 this.metaFinalDialog.position.set(WIDTH * 1/4, HEIGHT * 1/6);
                 this.world.addChild(this.metaFinalDialog);
-                GameScene.GAME_SPEED_BASE = 0;
+                /*ChangeScene(new FinalMetaDialog());
+                GameScene.GAME_SPEED_BASE = 0;*/
+                GameState.GAME_OVER = true;
         }
 
         if (bachi.getHitbox().right < 0){

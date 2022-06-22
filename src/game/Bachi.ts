@@ -17,7 +17,7 @@ export class Bachi extends PhysicsContainer implements IHitbox{
         this.banderaCaida = Sprite.from("Object/flagRedHanging.png");
 
         this.bachi = Sprite.from("Object/bachi.png");
-        //this.bachi.scale.set(0.3);
+        this.bachi.scale.set(2);
         this.bachi.position.set(this.banderaCaida.width + 50,0);
         this.dialog.addChild(this.bachi);
 

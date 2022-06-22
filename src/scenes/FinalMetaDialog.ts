@@ -22,7 +22,7 @@ export class FinalMetaDialog extends Container{
             dropShadowDistance: 2,
             fill: "red",
             fontFamily: "BowlCap",
-            fontSize: 135,
+            fontSize: 130,
             lineJoin: "round",
             lineHeight: 75,
             wordWrap: true,

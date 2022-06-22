@@ -1,10 +1,12 @@
 import { WebfontLoaderPlugin } from 'pixi-webfont-loader';
-import { Application, Loader, Ticker } from 'pixi.js'
+import { Application, BitmapFont, Loader, TextStyle, Ticker } from 'pixi.js'
+import { Group } from 'tweedle.js';
 import { assets } from './assets';
+
+/*import { StartMenu } from './scenes/StartMenu';
+import { SoundScene } from './scenes/SoundScene';
+import { TickerScene } from './scenes/TickerScene';*/
 import { ScenePlayerSelect } from './scenes/ScenePlayerSelect';
-//import { SoundScene } from './scenes/SoundScene';
-//import { StartMenu } from './scenes/StartMenu';
-//import { TickerScene } from './scenes/TickerScene';
 import { Keyboard } from './utils/Keyboard';
 
 export const WIDTH = 1920;
@@ -50,11 +52,22 @@ let currentScene:any = undefined;
 
 Loader.shared.onComplete.add(()=>{
 
+	const textStyle = new TextStyle({
+		fill: "white",
+        fontFamily: "CompleteinHim",
+        fontSize: 50,
+        lineJoin: "round",
+        strokeThickness: 4
+	})
+	BitmapFont.from("Mi BitmapFont", textStyle,{chars:BitmapFont.ASCII});
+
 	currentScene = new ScenePlayerSelect();
 	app.stage.addChild(currentScene);
 	Ticker.shared.add(function(deltaFrame) {
 		if (currentScene.update){
-		currentScene.update(Ticker.shared.deltaMS,deltaFrame)};
+			currentScene.update(Ticker.shared.deltaMS,deltaFrame);
+			Group.shared.update();
+		};
 	});
 
 })
