@@ -22,7 +22,7 @@ export class GameScene extends Container implements IUpdateable{
     private hud: HUD;
 
     private static GAME_SPEED_BASE = 0;
-    public static FLOOR_LEVEL = 900;
+    public static FLOOR_LEVEL = 950;
 
     private playerNinix: Player;
     private mosquito: MosquitoEnemy;
@@ -47,8 +47,6 @@ export class GameScene extends Container implements IUpdateable{
             
     private world: Container;
     private fondoVariable: Container;
-    //private background: TilingSprite;
-
     
     private timePassedMosquito = 0;
     private timePassedSnake = 0;
@@ -591,7 +589,7 @@ export class GameScene extends Container implements IUpdateable{
         this.platforms.push(plat71_0);
 
         this.bachi = new Bachi();
-        this.bachi.position.set(/*plat71_0.position.x + (plat0_0.width)*4*/700,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
+        this.bachi.position.set(plat71_0.position.x + (plat0_0.width)*4/*700*/,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
         this.world.addChild(this.bachi);
         this.bachiAndFlag.push(this.bachi);
 
@@ -626,6 +624,7 @@ export class GameScene extends Container implements IUpdateable{
         this.playerNinix.y = GameScene.FLOOR_LEVEL - plat0_0.height * 3;
         this.playerNinix.scale.set(0.5);
         this.world.addChild(this.playerNinix);
+
 
         this.hud = new HUD();
 

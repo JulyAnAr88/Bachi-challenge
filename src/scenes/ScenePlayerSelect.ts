@@ -1,9 +1,8 @@
 import { Container, Sprite, Texture } from "pixi.js";
 import { Tween } from "tweedle.js";
 import { ChangeScene, WIDTH } from "..";
-import { PlayerAnimationBecky } from "../game/PlayerAnimationBecky";
-//import { PlayerAnimationTimmy } from "../game/PlayerAnimationTimmy";
 import { Button } from "../ui/Button";
+import { AnimationBecky } from "./AnimationBecky";
 import { AnimationTimmy } from "./AnimationTimmy";
 import { GameScene } from "./GameScene";
 //import { TickerScene } from "./TickerScene";
@@ -15,7 +14,7 @@ export class ScenePlayerSelect extends Container {
     private buttonTimmy:Button;
     //private playerTimmy: PlayerAnimationTimmy;
     private playerTimmy: AnimationTimmy;
-    private playerBecky: PlayerAnimationBecky;
+    private playerBecky: AnimationBecky;
     
 
     constructor(){
@@ -63,65 +62,78 @@ export class ScenePlayerSelect extends Container {
         this.buttonTimmy.interactive= true;
         this.buttonTimmy.buttonMode= true;
 
-        this.playerTimmy = new AnimationTimmy(0.4, "idle");
+        this.playerTimmy = new AnimationTimmy(0.5, "idle");
         this.playerTimmy.x = fondoPlayer1.position.x + fondoPlayer1.width* 3/4;
         this.playerTimmy.y = fondoPlayer1.position.y + fondoPlayer1.height/8;
         this.playerTimmy.scale.set(-0.55,0.55);
 
-        this.playerBecky = new PlayerAnimationBecky(0.4, 0.25, 0);        
+        this.playerBecky = new AnimationBecky(0.5, "idle");        
         this.playerBecky.x = fondoPlayer.position.x + fondoPlayer.width/3;
         this.playerBecky.y = fondoPlayer.position.y + fondoPlayer.height/7;
         this.playerBecky.scale.set(0.5);
 
-        const coin = Sprite.from("Object/Stone.png");
-        coin.anchor.set(0.5);
-        coin.x = 300;
-        coin.y = 300;
-        
 
-        new Tween(coin)
-            .to({x: 1300, y: 500},2000)
-            .start()
-            .onComplete(()=>{
-                console.log("complete");
-            });/**/
-
-        this.addChild(fondo, tituloElige, fondoPlayer, fondoPlayer1, this.buttonBecky, this.buttonTimmy, this.playerTimmy, this.playerBecky,coin);
+        this.addChild(fondo, tituloElige, fondoPlayer, fondoPlayer1, this.buttonBecky, this.buttonTimmy, this.playerTimmy, this.playerBecky);
     }
 
 
     onButtonTimmyClick() {
 
         this.playerTimmy.scale.set(0.55);
-        this.playerTimmy.setState("jump");
-         console.log("x "+this.playerTimmy.x + ", y: "+this.playerTimmy.y);
-
         
-        const coin = Sprite.from("Object/Stone.png");
-        coin.anchor.set(0.5);
-        coin.x = 300;
-        coin.y = 300;
-        this.addChild(coin);
-
-        new Tween(coin)
-            .to({x: 1300, y: 500},2000)
+        this.playerTimmy.setState("walk", 0.5, true);
+        new Tween(this.playerTimmy)
+            .to({x: this.playerTimmy.x + 40},700)
             .start()
-            .delay(500)
             .onComplete(()=>{
-                console.log("complete");
-                ScenePlayerSelect.PLAY_SELECT = 1;
-                ChangeScene(new GameScene());
-            });
-          /* .easing(Easing.Elastic.Out)*/
-           
-            console.log("x "+this.playerTimmy.x + ", y: "+this.playerTimmy.y);
+                this.playerTimmy.setState("jump", 0.3, false);
+                new Tween(this.playerTimmy)
+                    .to({x: this.playerTimmy.x + 150, y: this.playerTimmy.y + 300},800)
+                    .start()
+                    .onComplete(()=>{
+                        this.playerTimmy.setState("run", 0.5, true);
+                        new Tween(this.playerTimmy)
+                            .to({x: WIDTH + this.playerTimmy.width},2000)
+                            .start()
+                            .onComplete(()=>{
+                        
+                                console.log("complete");
+                                ScenePlayerSelect.PLAY_SELECT = 1;
+                                ChangeScene(new GameScene());
+                            });
+                    });
+        });
         
     }
 
 
     onButtonBeckyClick() {
-        ScenePlayerSelect.PLAY_SELECT = 0;
-        //ChangeScene(new TickerScene());
-        ChangeScene(new GameScene());
+              
+        this.playerBecky.setState("walk", 0.5, true);
+        new Tween(this.playerBecky)
+            .to({x: this.playerBecky.x + 40},700)
+            .start()
+            .onComplete(()=>{
+                this.playerBecky.setState("jump", 0.3, false);
+                new Tween(this.playerBecky)
+                    .to({x: this.playerBecky.x + 150, y: this.playerBecky.y + 300},800)
+                    .start()
+                    .onComplete(()=>{
+                        this.playerBecky.setState("run", 0.5, true);
+                        new Tween(this.playerBecky)
+                            .to({x: WIDTH + this.playerBecky.width},2000)
+                            .start()
+                            .onComplete(()=>{
+                        
+                                console.log("complete");
+                                ScenePlayerSelect.PLAY_SELECT = 0;
+                                ChangeScene(new GameScene());
+                            });
+                    });
+        });
+    }
+
+    public update()
+    {
     }
 }

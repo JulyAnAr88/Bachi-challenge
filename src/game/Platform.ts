@@ -9,7 +9,7 @@ export class Platform extends PhysicsContainer implements IHitbox {
     {
         super();
         const spr = Sprite.from(sprite);
-        spr.scale.set(1.5);
+        spr.scale.set(1.25);
         this.addChild(spr);
 
         const zero: Graphics = new Graphics();

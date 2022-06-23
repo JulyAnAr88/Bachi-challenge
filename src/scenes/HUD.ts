@@ -204,9 +204,6 @@ export class HUD extends Container implements IUpdateable{
 
         var str = min + ":" + sec;
 
-        console.log("count "+str);          
-        
-
         return str;
     }
 }

@@ -1,9 +1,7 @@
 import { Container, Sprite } from "pixi.js";
 
 export class Health extends Container{
-
-    //private dialog = new Container();
-    
+   
     private corazonLleno: Sprite;
     private corazon1: Sprite;
     private corazon2: Sprite;
@@ -35,17 +33,6 @@ export class Health extends Container{
                 
         
         this.addChild(this.corazonLleno);
-
-        
-        
-        /*this.addChild(this.dialog);
-        this.corazones.push(corazonLleno4);
-
-        for (let i = 0; i < this.corazones.length; i++) {
-            
-            this.dialog.addChild(this.corazones[i]);
-        }
-        */
   
         
     

@@ -6,18 +6,22 @@ import { StateAnimation } from "../game/StateAnimation";
 export class AnimationTimmy extends PhysicsContainer {
 
 
-    private timmy:StateAnimation;
+    private player:StateAnimation;
     private state: string;
+    private speedAnim: number;
+    private loop= true;
 
     constructor(speed:number, state: string) {
         super();
 
         this.state = state;
+        this.speedAnim = speed;
 
-        this.timmy = new StateAnimation();
-        this.addChild(this.timmy)
+        this.player = new StateAnimation();
+        //this.player.pivot.set(3,1);
+        this.addChild(this.player)
 
-        this.timmy.addState("run", [
+        this.player.addState("run", [
             Texture.from("nene/Run (1).png"),
             Texture.from("nene/Run (2).png"),
             Texture.from("nene/Run (3).png"),
@@ -32,9 +36,26 @@ export class AnimationTimmy extends PhysicsContainer {
             Texture.from("nene/Run (13).png"),
             Texture.from("nene/Run (14).png"),
             Texture.from("nene/Run (15).png"),
-        ], speed, true);
+        ], this.speedAnim, true);
 
-        this.timmy.addState("jump",
+        this.player.addState("walk", [
+            Texture.from("nene/Walk (1).png"),
+                Texture.from("nene/Walk (2).png"),
+                Texture.from("nene/Walk (3).png"),
+                Texture.from("nene/Walk (4).png"),
+                Texture.from("nene/Walk (6).png"),
+                Texture.from("nene/Walk (7).png"),
+                Texture.from("nene/Walk (8).png"),
+                Texture.from("nene/Walk (9).png"),
+                Texture.from("nene/Walk (10).png"),
+                Texture.from("nene/Walk (11).png"),
+                Texture.from("nene/Walk (12).png"),
+                Texture.from("nene/Walk (13).png"),
+                Texture.from("nene/Walk (14).png"),
+                Texture.from("nene/Walk (15).png"),
+        ], this.speedAnim, true);
+
+        this.player.addState("jump",
         [
             Texture.from("nene/Jump (1).png"),
             Texture.from("nene/Jump (2).png"),
@@ -50,9 +71,9 @@ export class AnimationTimmy extends PhysicsContainer {
             Texture.from("nene/Jump (13).png"),
             Texture.from("nene/Jump (14).png"),
             Texture.from("nene/Jump (15).png"),
-        ],speed)
+        ], this.speedAnim, true)
 
-        this.timmy.addState("idle",
+        this.player.addState("idle",
         [
             Texture.from("nene/Idle (1).png"),
             Texture.from("nene/Idle (2).png"),
@@ -68,18 +89,38 @@ export class AnimationTimmy extends PhysicsContainer {
             Texture.from("nene/Idle (13).png"),
             Texture.from("nene/Idle (14).png"),
             Texture.from("nene/Idle (15).png"),
-        ],speed)
+        ], this.speedAnim, true)
 
-        this.timmy.playState(this.state, true);
+        this.player.addState("dead",
+        [
+            Texture.from("nene/Dead (1).png"),
+                Texture.from("nene/Dead (2).png"),
+                Texture.from("nene/Dead (3).png"),
+                Texture.from("nene/Dead (4).png"),
+                Texture.from("nene/Dead (6).png"),
+                Texture.from("nene/Dead (7).png"),
+                Texture.from("nene/Dead (8).png"),
+                Texture.from("nene/Dead (9).png"),
+                Texture.from("nene/Dead (10).png"),
+                Texture.from("nene/Dead (11).png"),
+                Texture.from("nene/Dead (12).png"),
+                Texture.from("nene/Dead (13).png"),
+                Texture.from("nene/Dead (14).png"),
+                Texture.from("nene/Dead (15).png"),
+        ], this.speedAnim, false)
+
+        this.player.playState(this.state, this.loop);
     }
 
     public override update(frame:number)
     {
-        this.timmy.update(frame);
+        this.player.update(frame);
     }
 
-    public setState(state: string){
+    public setState(state: string, speed:number, loop: boolean ){
         this.state = state;
-        this.timmy.playState(this.state, true);
+        this.speedAnim = speed;
+        this.loop = loop;
+        this.player.playState(this.state, this.loop);
     }
 }

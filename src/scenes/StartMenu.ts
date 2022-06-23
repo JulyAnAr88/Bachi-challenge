@@ -1,6 +1,5 @@
 import { sound } from "@pixi/sound";
 import { Container, Sprite, Texture } from "pixi.js";
-import { Tween } from "tweedle.js";
 import { ChangeScene, HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
 import { ToggleButton } from "../ui/ToggleButton";
@@ -73,16 +72,8 @@ export class StartMenu extends Container {
         toggleMute.scale.set(2);
         toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);
 
-        const coin = Sprite.from("Object/Stone.png");
-        coin.anchor.set(0.5);
-        coin.x = 300;
-        coin.y = 300;
         
-        new Tween(coin)
-            .to({x: 300, y: 500},2000)
-            .start();
-     
-        this.addChild(fondo, tituloGame, dialog, toggleMute,coin);
+        this.addChild(fondo, tituloGame, dialog, toggleMute);
         this.cortina();
 
     }

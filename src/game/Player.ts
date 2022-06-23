@@ -1,12 +1,12 @@
 import { sound } from "@pixi/sound";
 import { Graphics, ObservablePoint, Rectangle } from "pixi.js";
+import { AnimationBecky } from "../scenes/AnimationBecky";
+import { AnimationTimmy } from "../scenes/AnimationTimmy";
 import { ScenePlayerSelect } from "../scenes/ScenePlayerSelect";
 import { Keyboard } from "../utils/Keyboard";
 import { GameState } from "./GameState";
 import { IHitbox } from "./IHitbox";
 import { PhysicsContainer } from "./PhysicsContainer";
-import { PlayerAnimationBecky } from "./PlayerAnimationBecky";
-import { PlayerAnimationTimmy } from "./PlayerAnimationTimmy";
 
 
 export class Player extends PhysicsContainer implements IHitbox{
@@ -33,12 +33,12 @@ export class Player extends PhysicsContainer implements IHitbox{
         switch (ScenePlayerSelect.PLAY_SELECT) {
             case 1:
                 
-                this.ninieAnimated = new PlayerAnimationTimmy(0.5, 0.25, 0);
+                this.ninieAnimated = new AnimationTimmy(0.5, "idle");
                 
                 break;
             case 0:
                 
-                this.ninieAnimated = new PlayerAnimationBecky(0.4, 0.25, 0);
+                this.ninieAnimated = new AnimationBecky(0.5, "idle");
                 
                 break;
         
@@ -50,14 +50,14 @@ export class Player extends PhysicsContainer implements IHitbox{
         zero.beginFill(0xFF00FF);
         zero.drawCircle(0, 0, 10);
         zero.endFill;
-        //this.addChild(zero);
+        this.addChild(zero);
 
         this.maxHealth = 100;
         this.currentHealth = this.maxHealth;
 
         this.hitbox = new Graphics();
         this.hitbox.beginFill(0xFF00FF, 0.3);
-        this.hitbox.drawRect(-120,0,250,500);
+        this.hitbox.drawRect(0,0,250,500);
         this.hitbox.endFill();
         this.hitbox.visible = false;
         this.hitbox.x = 0;
@@ -103,7 +103,8 @@ export class Player extends PhysicsContainer implements IHitbox{
         if(this.isDead){
 
             sound.unmuteAll();
-            this.ninieAnimated.changeToDeadAnimation();          
+            //this.ninieAnimated.changeToDeadAnimation();          
+            this.ninieAnimated.setState("dead", false);          
             GameState.GAME_OVER = true;
             
             sound.play("gameover", {
@@ -132,9 +133,11 @@ export class Player extends PhysicsContainer implements IHitbox{
                         
                         this.speed.x = Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = 1;
+                        
+                        this.ninieAnimated.setState("walk",true);
+                        /*
                         this.ninieAnimated.changeToWalkAnimation(deltaMS);
-        
-                        /*if(this.timePassedWalk > 20){
+                        if(this.timePassedWalk > 20){
                             //this.speed.x = Player.MOVE_SPEED * 1.2;
                             this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
                             this.timePassedWalk =0;
@@ -153,13 +156,15 @@ export class Player extends PhysicsContainer implements IHitbox{
                         //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
                         this.speed.x = -Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = -1;
-                        this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
+                        //this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
+                        this.ninieAnimated.setState("walk",true);
         
                         if(this.timePassedWalk > 10){
                             //console.log("ruuuun bitch");
         
                             this.speed.x = -Player.MOVE_SPEED;
-                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
+                            //this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
+                            this.ninieAnimated.setState("run",true);
                             this.timePassedWalk =0;
                         } 
         
@@ -182,9 +187,10 @@ export class Player extends PhysicsContainer implements IHitbox{
                         
                         this.speed.x = Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = 1;
-                        this.ninieAnimated.changeToWalkAnimation(deltaMS);
+                        this.ninieAnimated.setState("walk",true);
         
-                        /*if(this.timePassedWalk > 20){
+                        /*this.ninieAnimated.changeToWalkAnimation(deltaMS);
+                        if(this.timePassedWalk > 20){
                             //this.speed.x = Player.MOVE_SPEED * 1.2;
                             this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
                             this.timePassedWalk =0;
@@ -203,13 +209,15 @@ export class Player extends PhysicsContainer implements IHitbox{
                         //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
                         this.speed.x = -Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = -1;
-                        this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
+                        //this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
+                        this.ninieAnimated.setState("walk",true);
         
                         if(this.timePassedWalk > 10){
                             //console.log("ruuuun bitch");
         
                             this.speed.x = -Player.MOVE_SPEED;
-                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
+                            //this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
+                            this.ninieAnimated.setState("run",true);
                             this.timePassedWalk =0;
                         } 
         
@@ -235,7 +243,8 @@ export class Player extends PhysicsContainer implements IHitbox{
         if (this.canJump)
         {
             this.canJump = false;
-            this.ninieAnimated.changeToJumpAnimation();
+            //this.ninieAnimated.changeToJumpAnimation();
+            this.ninieAnimated.setState("jump",false);
             this.speed.y = -Player.JUMP_SPEED;
         }
     }
