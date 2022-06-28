@@ -1,6 +1,5 @@
 import { Container, Texture, TilingSprite } from "pixi.js";
 import { Player } from "../game/Player";
-import { HEIGHT, WIDTH } from "..";
 import { IUpdateable } from "../utils/IUpdateable";
 import { Platform } from "../game/Platform";
 import { checkCollision } from "../game/IHitbox";
@@ -16,6 +15,7 @@ import { Bachi } from "../game/Bachi";
 import { MetaDialog1 } from "./MetaDialog1";
 import { sound } from "@pixi/sound";
 import { FinalMetaDialog } from "./FinalMetaDialog";
+import { SceneManager } from "../utils/SceneManager";
 
 export class GameScene extends Container implements IUpdateable{
     
@@ -79,8 +79,8 @@ export class GameScene extends Container implements IUpdateable{
         for (let i = 4; i > 2; i--) {
 			const aux = new TilingSprite(
 				Texture.from("Background " + i),
-				WIDTH,
-				HEIGHT
+				SceneManager.WIDTH,
+				SceneManager.HEIGHT
 			);
 			this.world.addChild(aux);
 			this.background0.push(aux);
@@ -89,8 +89,8 @@ export class GameScene extends Container implements IUpdateable{
         for (let i = 2; i > -1; i--) {
 			const aux = new TilingSprite(
 				Texture.from("Background " + i),
-				WIDTH,
-				HEIGHT
+				SceneManager.WIDTH,
+				SceneManager.HEIGHT
 			);
 			this.world.addChild(aux);
 			this.background1.push(aux);
@@ -655,16 +655,14 @@ export class GameScene extends Container implements IUpdateable{
             return; 
         }
 
-        //const diff = (this.score / 10) + 1;
-        //console.log("player x: " + this.playerNinix.position.x);
 
-        if (this.playerNinix.position.x > (WIDTH * 4/6)) {
-            this.playerNinix.position.x = WIDTH * 4/6;            
+        if (this.playerNinix.position.x > (SceneManager.WIDTH * 4/6)) {
+            this.playerNinix.position.x = SceneManager.WIDTH * 4/6;            
         }else if (this.playerNinix.position.x < 0) {
             this.playerNinix.position.x = 0;
         }
-        if (this.playerNinix.position.y > (HEIGHT -280)) {
-            this.playerNinix.position.y = HEIGHT -280;            
+        if (this.playerNinix.position.y > (SceneManager.HEIGHT -280)) {
+            this.playerNinix.position.y = SceneManager.HEIGHT -280;            
         }
 
 
@@ -678,34 +676,22 @@ export class GameScene extends Container implements IUpdateable{
 			const background = this.background0[i];
 			const factor = i / 4;
 			background.tilePosition.x -= adjustedSpeed * factor * deltaTime / 100000;
-			//background.tilePosition.x -= TickerScene.GAME_SPEED_BASE * deltaTime * factor;
 		}
 
         for (let i = 0; i < this.background1.length ; i++) {
 			const background = this.background1[i];
 			const factor = (i+1)/ 4;
-            /*console.log("adjustedSpeed1: " + adjustedSpeed);
-            console.log("factor1: " + factor);*/
             
 			background.tilePosition.x -= adjustedSpeed * factor * deltaTime / 5000;
-			//background.tilePosition.x -= TickerScene.GAME_SPEED_BASE * deltaTime * factor;
-            //console.log("background1 " + (i-1) +": "+ background.tilePosition.x);
 		}
 
-        //console.log("tileposition: " + this.background1[2].tilePosition.x);
+        
 
         let timeMosquito = this.segMosquito/GameScene.GAME_SPEED_BASE;
         let timeSnake = this.segSnake/GameScene.GAME_SPEED_BASE;
         let timeObstacle = this.segObstacle/GameScene.GAME_SPEED_BASE;
         let timeEnvironment = this.segEnvir/GameScene.GAME_SPEED_BASE;
-        //private timeFlag = 3550 * 300/this.gameSpeed;
-
-        /**console.log("timeplat: "+timePlatform);
-        console.log("timeenviro: "+timeEnvironment);
-        console.log("timesnake: "+timeSnake);
-        console.log("timemosqui: "+timeMosquito);
-        console.log("timeobstaculo: "+timeObstacle);
-        console.log("gamespeed: "+TickerScene.GAME_SPEED_BASE);*/
+       
         
         
         this.timePassedMosquito += deltaTime;
@@ -765,7 +751,7 @@ export class GameScene extends Container implements IUpdateable{
         if (overlap != null)
         {
             bandera.animar();     
-            this.metaDialog1.position.set(WIDTH * 2/5, HEIGHT * 1/10);
+            this.metaDialog1.position.set(SceneManager.WIDTH * 2/5, SceneManager.HEIGHT * 1/10);
             this.world.addChild(this.metaDialog1);
 
             setTimeout(() => {
@@ -793,7 +779,7 @@ export class GameScene extends Container implements IUpdateable{
                 loop:false,
                 singleInstance:true,
                 });
-                this.metaFinalDialog.position.set(WIDTH * 1/4, HEIGHT * 1/6);
+                this.metaFinalDialog.position.set(SceneManager.WIDTH * 1/4, SceneManager.HEIGHT * 1/6);
                 this.world.addChild(this.metaFinalDialog);
                 /*ChangeScene(new FinalMetaDialog());
                 GameScene.GAME_SPEED_BASE = 0;*/
@@ -816,7 +802,7 @@ export class GameScene extends Container implements IUpdateable{
            this.timePassedMosquito =0;
 
             
-            mosquito.position.set(WIDTH, Math.random()*470);
+            mosquito.position.set(SceneManager.WIDTH, Math.random()*470);
                                               
             this.world.addChild(mosquito);
             this.mosquitos.push(mosquito);
@@ -861,7 +847,7 @@ export class GameScene extends Container implements IUpdateable{
             this.timePassedSnake =0;
  
             let snake = new SnakeEnemy();
-            snake.position.set(WIDTH, GameScene.FLOOR_LEVEL - snake.width);
+            snake.position.set(SceneManager.WIDTH, GameScene.FLOOR_LEVEL - snake.width);
             snake.speed.x = -GameScene.GAME_SPEED_BASE * 10;
         
                                    
@@ -899,7 +885,7 @@ export class GameScene extends Container implements IUpdateable{
                             
             this.timePassedObstacle =0;
             let obstacle = new Obstacles(Math.trunc((Math.random()*10)) % 3);
-            obstacle.position.set(WIDTH, GameScene.FLOOR_LEVEL - obstacle.height);
+            obstacle.position.set(SceneManager.WIDTH, GameScene.FLOOR_LEVEL - obstacle.height);
             this.fondoVariable.addChild(obstacle);
             this.obstacles.push(obstacle);
         }
@@ -922,7 +908,7 @@ export class GameScene extends Container implements IUpdateable{
                
             this.timePassedObject =0;   
             let objeto = new Environment(Math.trunc((Math.random()*10)) % 3);
-            objeto.position.set(WIDTH, GameScene.FLOOR_LEVEL - objeto.height );                        
+            objeto.position.set(SceneManager.WIDTH, GameScene.FLOOR_LEVEL - objeto.height );                        
                      
             this.fondoVariable.addChild(objeto);
             this.entorno.push(objeto);

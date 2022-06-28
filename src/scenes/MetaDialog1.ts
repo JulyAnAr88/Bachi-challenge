@@ -1,5 +1,5 @@
 import { Container, NineSlicePlane, TextStyle, Texture, Text } from "pixi.js";
-import { HEIGHT, WIDTH } from "..";
+import { SceneManager } from "../utils/SceneManager";
 
 export class MetaDialog1 extends Container{
     constructor(){
@@ -9,8 +9,8 @@ export class MetaDialog1 extends Container{
             Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
-        messageDialog.width = WIDTH * 1/4;
-        messageDialog.height = HEIGHT * 1/7;
+        messageDialog.width = SceneManager.WIDTH * 1/4;
+        messageDialog.height = SceneManager.HEIGHT * 1/7;
         //namePlayer.scale.set(0.5);
 
         const textStyle = new TextStyle({

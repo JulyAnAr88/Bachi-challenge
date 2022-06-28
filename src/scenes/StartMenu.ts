@@ -1,14 +1,15 @@
 import { sound } from "@pixi/sound";
 import { Container, Sprite, Texture } from "pixi.js";
-import { ChangeScene, HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
 import { ToggleButton } from "../ui/ToggleButton";
+import { SceneBase } from "../utils/SceneBase";
+import { SceneManager } from "../utils/SceneManager";
 import { MenuConfig } from "./MenuConfig";
 import { ScenePlayerSelect } from "./ScenePlayerSelect";
 
 
-export class StartMenu extends Container {
-
+export class StartMenu extends SceneBase {
+    
     private buttonExit:Button;
     private buttonConfig:Button;
     private buttonRight:Button;
@@ -24,7 +25,7 @@ export class StartMenu extends Container {
         const tituloGame= Sprite.from("TituloGame");
         tituloGame.scale.set(0.5);
         tituloGame.anchor.set(0.5);
-        tituloGame.position.set(WIDTH/2, tituloGame.height/1.5);
+        tituloGame.position.set(SceneManager.WIDTH/2, tituloGame.height/1.5);
 
         
 
@@ -78,7 +79,7 @@ export class StartMenu extends Container {
 
     }
     onButtonRightClick():void {
-        ChangeScene(new ScenePlayerSelect());
+        SceneManager.changeScene(new ScenePlayerSelect());
     }
 
     onButtonExitClick():void {
@@ -87,7 +88,7 @@ export class StartMenu extends Container {
 
     private onButtonConfigClick():void {
         let menuConfig = new MenuConfig();
-        menuConfig.position.set(WIDTH * 1/3, HEIGHT * 1/7);
+        menuConfig.position.set(SceneManager.WIDTH * 1/3, SceneManager.HEIGHT * 1/7);
         this.addChild(menuConfig);
         
     }
@@ -108,4 +109,9 @@ export class StartMenu extends Container {
             singleInstance:true,
             });
     }
+
+    public update(): void {
+        throw new Error("Method not implemented.");
+    }
+
 }

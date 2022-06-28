@@ -1,13 +1,14 @@
-import { Container, Sprite, Texture } from "pixi.js";
+import { Sprite, Texture } from "pixi.js";
 import { Tween } from "tweedle.js";
-import { ChangeScene, WIDTH } from "..";
 import { Button } from "../ui/Button";
+import { SceneBase } from "../utils/SceneBase";
+import { SceneManager } from "../utils/SceneManager";
 import { AnimationBecky } from "./AnimationBecky";
 import { AnimationTimmy } from "./AnimationTimmy";
 import { GameScene } from "./GameScene";
 //import { TickerScene } from "./TickerScene";
 
-export class ScenePlayerSelect extends Container {
+export class ScenePlayerSelect extends SceneBase {
 
     public static PLAY_SELECT: number;
     private buttonBecky:Button;
@@ -26,7 +27,7 @@ export class ScenePlayerSelect extends Container {
         const tituloElige= Sprite.from("TituloElige");
         tituloElige.scale.set(0.5);
         tituloElige.anchor.set(0.5);
-        tituloElige.position.set(WIDTH/2, tituloElige.height/1.5);
+        tituloElige.position.set(SceneManager.WIDTH/2, tituloElige.height/1.5);
 
         const fondoPlayer = Sprite.from("HUD/fondoPlayer2.png");
         fondoPlayer.position.x = fondoPlayer.width * 4.5;
@@ -93,13 +94,13 @@ export class ScenePlayerSelect extends Container {
                     .onComplete(()=>{
                         this.playerTimmy.setState("run", 0.5, true);
                         new Tween(this.playerTimmy)
-                            .to({x: WIDTH + this.playerTimmy.width},2000)
+                            .to({x: SceneManager.WIDTH + this.playerTimmy.width},2000)
                             .start()
                             .onComplete(()=>{
                         
                                 console.log("complete");
                                 ScenePlayerSelect.PLAY_SELECT = 1;
-                                ChangeScene(new GameScene());
+                                SceneManager.changeScene(new GameScene());
                             });
                     });
         });
@@ -121,13 +122,13 @@ export class ScenePlayerSelect extends Container {
                     .onComplete(()=>{
                         this.playerBecky.setState("run", 0.5, true);
                         new Tween(this.playerBecky)
-                            .to({x: WIDTH + this.playerBecky.width},2000)
+                            .to({x: SceneManager.WIDTH + this.playerBecky.width},2000)
                             .start()
                             .onComplete(()=>{
                         
                                 console.log("complete");
                                 ScenePlayerSelect.PLAY_SELECT = 0;
-                                ChangeScene(new GameScene());
+                                SceneManager.changeScene(new GameScene());
                             });
                     });
         });

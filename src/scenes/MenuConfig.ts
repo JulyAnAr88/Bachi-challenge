@@ -1,8 +1,8 @@
 import { sound } from "@pixi/sound";
 import { Container, TextStyle, Texture, Text, NineSlicePlane } from "pixi.js";
-import { HEIGHT, WIDTH } from "..";
 import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
+import { SceneManager } from "../utils/SceneManager";
 
 export class MenuConfig extends Container{
 
@@ -21,8 +21,8 @@ export class MenuConfig extends Container{
             Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
-        this.menuDialog.width = WIDTH * 1/3;
-        this.menuDialog.height = HEIGHT * 3/5;
+        this.menuDialog.width = SceneManager.WIDTH * 1/3;
+        this.menuDialog.height = SceneManager.HEIGHT * 3/5;
 
         
         this.btnSalir = new Button(

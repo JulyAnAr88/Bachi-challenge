@@ -1,6 +1,6 @@
 import { Container, NineSlicePlane, Texture } from "pixi.js";
-import { ChangeScene, HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
+import { SceneManager } from "../utils/SceneManager";
 import { MenuConfig } from "./MenuConfig";
 import { ScenePlayerSelect } from "./ScenePlayerSelect";
 import { StartMenu } from "./StartMenu";
@@ -21,8 +21,8 @@ export class MenuDialog extends Container{
             Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
-        this.menuDialog.width = WIDTH * 1/3;
-        this.menuDialog.height = HEIGHT * 4/7;
+        this.menuDialog.width = SceneManager.WIDTH * 1/3;
+        this.menuDialog.height = SceneManager.HEIGHT * 4/7;
 
         this.buttonReturn = new Button(
             Texture.from("buttonReturn"),
@@ -82,10 +82,10 @@ export class MenuDialog extends Container{
     }
 
     onButtonChangeCharacterClick():void {
-        ChangeScene(new ScenePlayerSelect());
+        SceneManager.changeScene(new ScenePlayerSelect());
     }
     onButtonExitClick():void {
-        ChangeScene(new StartMenu());
+        SceneManager.changeScene(new StartMenu());
     }
 
     private onButtonConfigClick():void {

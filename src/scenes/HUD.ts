@@ -1,9 +1,9 @@
 import { sound } from "@pixi/sound";
 import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text, BitmapText } from "pixi.js";
-import { HEIGHT, WIDTH } from "..";
 import { Button } from "../ui/Button";
 import { ToggleButton } from "../ui/ToggleButton";
 import { IUpdateable } from "../utils/IUpdateable";
+import { SceneManager } from "../utils/SceneManager";
 import { Health } from "./Health";
 import { MenuDialog } from "./MenuDialog";
 import { ScenePlayerSelect } from "./ScenePlayerSelect";
@@ -92,7 +92,7 @@ export class HUD extends Container implements IUpdateable{
             Texture.from("HUD/tan_pressed.png"),
            "Menu");
         this.buttonMenu.on("buttonClick",this.onButtonClick, this);       
-        this.buttonMenu.position.x = WIDTH - this.buttonMenu.width * 2;
+        this.buttonMenu.position.x = SceneManager.WIDTH - this.buttonMenu.width * 2;
         this.buttonMenu.position.y = this.buttonMenu.height * 1/3;
         this.buttonMenu.scale.set(1.7);
         this.buttonMenu.interactive= true;
@@ -174,7 +174,7 @@ export class HUD extends Container implements IUpdateable{
     private onButtonClick() {
         let dialogo = new MenuDialog();
         dialogo.visible = true;
-        dialogo.position.set(WIDTH * 1/3, HEIGHT * 1/7);
+        dialogo.position.set(SceneManager.WIDTH * 1/3, SceneManager.HEIGHT * 1/7);
         this.addChild(dialogo);
     }
 
