@@ -11,7 +11,7 @@ export namespace SceneManager{
     let app: Application;
 
     export function initialize(){
-        if (app){
+        if (app != undefined){
             console.error("Don't call initialize twice");
             return;
         }
@@ -20,7 +20,7 @@ export namespace SceneManager{
             view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
             resolution: window.devicePixelRatio || 1,
             autoDensity: true,
-            backgroundColor: 0x6495ed,
+            backgroundColor: 0xcfcba6,
             width: WIDTH,
             height: HEIGHT
         });
@@ -54,7 +54,7 @@ export namespace SceneManager{
 
     function update(framePassed:number){
         Group.shared.update();
-        currentScene?.update(framePassed, Ticker.shared.elapsedMS);
+        currentScene?.update(Ticker.shared.elapsedMS, framePassed);
     }
 
     export function changeScene(newScene:SceneBase){
@@ -63,5 +63,15 @@ export namespace SceneManager{
         }
         currentScene = newScene;
         app.stage.addChild(currentScene);
+    }
+
+    export function addScene(newScene:SceneBase){
+        
+        app.stage.addChild(newScene);
+        
+    }
+
+    export function getCurrentScene():SceneBase{
+        return currentScene;
     }
 }

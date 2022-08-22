@@ -1,26 +1,37 @@
 import { Sprite, Texture } from "pixi.js";
 import { Tween } from "tweedle.js";
+import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
 import { SceneBase } from "../utils/SceneBase";
 import { SceneManager } from "../utils/SceneManager";
 import { AnimationBecky } from "./AnimationBecky";
 import { AnimationTimmy } from "./AnimationTimmy";
 import { GameScene } from "./GameScene";
-//import { TickerScene } from "./TickerScene";
 
 export class ScenePlayerSelect extends SceneBase {
 
     public static PLAY_SELECT: number;
-    private buttonBecky:Button;
-    private buttonTimmy:Button;
-    //private playerTimmy: PlayerAnimationTimmy;
+    private buttonBecky: Button;
+    private buttonTimmy: Button;
     private playerTimmy: AnimationTimmy;
     private playerBecky: AnimationBecky;
-    
 
     constructor(){
         super();
     
+        /* const namePlayer = new TextInput({
+            input: {
+                fontSize: '25pt',
+                padding: '14px',
+                width: '500px',
+                color: '#26272E'
+            }, 
+            box: {
+                default: {fill: 0xE8E9F3, rounded: 16, stroke: {color: 0xCBCEE0, width: 4}},
+                focused: {fill: 0xE1E3EE, rounded: 16, stroke: {color: 0xABAFC6, width: 4}},
+                disabled: {fill: 0xDBDBDB, rounded: 16}
+            }
+        }); */
 
         const fondo= Sprite.from("FondoUI");
 
@@ -74,7 +85,7 @@ export class ScenePlayerSelect extends SceneBase {
         this.playerBecky.scale.set(0.5);
 
 
-        this.addChild(fondo, tituloElige, fondoPlayer, fondoPlayer1, this.buttonBecky, this.buttonTimmy, this.playerTimmy, this.playerBecky);
+        this.addChild(fondo, tituloElige, fondoPlayer, fondoPlayer1, this.buttonBecky, this.buttonTimmy, this.playerTimmy, this.playerBecky/* , this.namePlayer */);
     }
 
 
@@ -97,8 +108,7 @@ export class ScenePlayerSelect extends SceneBase {
                             .to({x: SceneManager.WIDTH + this.playerTimmy.width},2000)
                             .start()
                             .onComplete(()=>{
-                        
-                                console.log("complete");
+                                GameState.ISPAUSED = false;
                                 ScenePlayerSelect.PLAY_SELECT = 1;
                                 SceneManager.changeScene(new GameScene());
                             });
@@ -124,10 +134,9 @@ export class ScenePlayerSelect extends SceneBase {
                         new Tween(this.playerBecky)
                             .to({x: SceneManager.WIDTH + this.playerBecky.width},2000)
                             .start()
-                            .onComplete(()=>{
-                        
-                                console.log("complete");
+                            .onComplete(()=>{                        
                                 ScenePlayerSelect.PLAY_SELECT = 0;
+                                GameState.ISPAUSED = false;
                                 SceneManager.changeScene(new GameScene());
                             });
                     });

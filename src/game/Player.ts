@@ -50,6 +50,7 @@ export class Player extends PhysicsContainer implements IHitbox{
         zero.beginFill(0xFF00FF);
         zero.drawCircle(0, 0, 10);
         zero.endFill;
+        zero.visible = false;
         this.addChild(zero);
 
         this.maxHealth = 100;
@@ -103,7 +104,6 @@ export class Player extends PhysicsContainer implements IHitbox{
         if(this.isDead){
 
             sound.unmuteAll();
-            //this.ninieAnimated.changeToDeadAnimation();          
             this.ninieAnimated.setState("dead", false);          
             GameState.GAME_OVER = true;
             
@@ -119,60 +119,57 @@ export class Player extends PhysicsContainer implements IHitbox{
         
         this.ninieAnimated.update(deltaMS / 1000);
 
-        this.timePassedWalk += deltaMS/100;
+        this.timePassedWalk += deltaMS/1000;
 
         switch (GameState.KEYBOARD_CONFIG) {
             case 0:
                                 
                 if ( Keyboard.state.get("KeyD")){
-
+                    
                     GameState.PLAY = true;
-                    //console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
+                                       
                     if (this.canJump)
-                    {
-                        
+                    {                        
                         this.speed.x = Player.MOVE_SPEED;
-                        this.ninieAnimated.scale.x = 1;
-                        
+                        this.ninieAnimated.scale.x = 1;                        
                         this.ninieAnimated.setState("walk",true);
-                        /*
-                        this.ninieAnimated.changeToWalkAnimation(deltaMS);
-                        if(this.timePassedWalk > 20){
-                            //this.speed.x = Player.MOVE_SPEED * 1.2;
-                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
-                            this.timePassedWalk =0;
-                            console.log("ruuuun bitch");
-        
-                    }*/
-        
-                    } 
+                        
+                    }
                     
-                    
+                    if(this.canJump && this.timePassedWalk > 3){
+                            
+                        this.speed.x = Player.MOVE_SPEED * 1.2;
+                        this.ninieAnimated.setState("run",true);                          
+                    }       
+                    //
         
                 }else if ( Keyboard.state.get("KeyA")){
         
                     if (this.canJump)
                     {
                         //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
-                        this.speed.x = -Player.MOVE_SPEED;
+                        //this.speed.x = -Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = -1;
-                        //this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
                         this.ninieAnimated.setState("walk",true);
-        
-                        if(this.timePassedWalk > 10){
+
+                        //this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
+                                
+                        /* if(this.timePassedWalk > 10){
                             //console.log("ruuuun bitch");
         
                             this.speed.x = -Player.MOVE_SPEED;
                             //this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
                             this.ninieAnimated.setState("run",true);
                             this.timePassedWalk =0;
-                        } 
+                        }  */
         
                     }
-                }else{
-        
-                    //this.ninieAnimated.changeToIdleAnimation(deltaMS/ 10/60);
+                }else{       
+                    
                     this.speed.x = 0;
+                    this.timePassedWalk =0;
+                    this.ninieAnimated.setState("idle",true);
+                    
                 }
                 
                 break;
@@ -181,50 +178,43 @@ export class Player extends PhysicsContainer implements IHitbox{
                 if (Keyboard.state.get("ArrowRight")){
 
                     GameState.PLAY = true;
-                    //console.log("timeapretandowalk pa delante: " + this.timePassedWalk);
+                                       
                     if (this.canJump)
-                    {
-                        
+                    {                        
                         this.speed.x = Player.MOVE_SPEED;
-                        this.ninieAnimated.scale.x = 1;
+                        this.ninieAnimated.scale.x = 1;                        
                         this.ninieAnimated.setState("walk",true);
-        
-                        /*this.ninieAnimated.changeToWalkAnimation(deltaMS);
-                        if(this.timePassedWalk > 20){
-                            //this.speed.x = Player.MOVE_SPEED * 1.2;
-                            this.ninieAnimated.changeToRunAnimation(deltaMS/ 1/60);
-                            this.timePassedWalk =0;
-                            console.log("ruuuun bitch");
-        
-                    }*/
-        
-                    } 
+                        
+                    }
                     
-                    
+                    if(this.canJump && this.timePassedWalk > 3){
+                            
+                        this.speed.x = Player.MOVE_SPEED * 1.2;
+                        this.ninieAnimated.setState("run",true);                          
+                    }       
         
                 }else if (Keyboard.state.get("ArrowLeft") ){
         
                     if (this.canJump)
                     {
                         //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
-                        this.speed.x = -Player.MOVE_SPEED;
+                        //this.speed.x = -Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = -1;
                         //this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
                         this.ninieAnimated.setState("walk",true);
         
-                        if(this.timePassedWalk > 10){
+                        /* if(this.timePassedWalk > 10){
                             //console.log("ruuuun bitch");
         
                             this.speed.x = -Player.MOVE_SPEED;
                             //this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
                             this.ninieAnimated.setState("run",true);
                             this.timePassedWalk =0;
-                        } 
+                        }  */
         
                     }
                 }else{
-        
-                    //this.ninieAnimated.changeToIdleAnimation(deltaMS/ 10/60);
+                            
                     this.speed.x = 0;
                 }
                 
@@ -242,9 +232,8 @@ export class Player extends PhysicsContainer implements IHitbox{
     {
         if (this.canJump)
         {
-            this.canJump = false;
-            //this.ninieAnimated.changeToJumpAnimation();
-            this.ninieAnimated.setState("jump",false);
+            this.canJump = false;            
+            this.ninieAnimated.setState("jump",true);
             this.speed.y = -Player.JUMP_SPEED;
         }
     }

@@ -111,7 +111,6 @@ export class StartMenu extends SceneBase {
     }
 
     public update(): void {
-        throw new Error("Method not implemented.");
     }
 
 }

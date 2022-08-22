@@ -105,13 +105,16 @@ export class MenuConfig extends Container{
 
         }
     onButtonSalirClick() {
+        GameState.ISPAUSED = false;
         this.visible = false;
     }
     onButtonKey1Click() {
         GameState.KEYBOARD_CONFIG = 0;
+        this.visible = false;
     }
     onButtonKey2Click() {
         GameState.KEYBOARD_CONFIG = 1;
+        this.visible = false;
     }
 
     public volumeDown() {

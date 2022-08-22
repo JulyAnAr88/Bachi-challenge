@@ -1,7 +1,9 @@
-import { Container, NineSlicePlane, TextStyle, Texture, Text } from "pixi.js";
+import { NineSlicePlane, TextStyle, Texture, Text } from "pixi.js";
+import { SceneBase } from "../utils/SceneBase";
 import { SceneManager } from "../utils/SceneManager";
 
-export class MetaDialog1 extends Container{
+export class MetaDialog1 extends SceneBase{
+  
     constructor(){
         super();
 
@@ -30,9 +32,12 @@ export class MetaDialog1 extends Container{
         const message = new Text('¡Bien hecho!\nEstás a medio camino\n¡Sigue así!', textStyle);
         message.position.set(messageDialog.width * 1/22, messageDialog.height * 1/13);
         messageDialog.addChild(message);
-
+        
         this.addChild(messageDialog);
 
+    }
+    public update(): void {
+        
     }
 
 }

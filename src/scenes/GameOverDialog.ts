@@ -1,24 +1,24 @@
-import { NineSlicePlane, TextStyle, Texture, Text } from "pixi.js";
+import { NineSlicePlane, TextStyle, Texture, Text, Container } from "pixi.js";
 import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
-import { SceneBase } from "../utils/SceneBase";
 import { SceneManager } from "../utils/SceneManager";
 import { GameScene } from "./GameScene";
 import { StartMenu } from "./StartMenu";
 
-export class FinalMetaDialog extends SceneBase{
+export class GameOverDialog extends Container{
     private buttonRetry: Button;
     private buttonExit: Button;
+    private messageDialog: any;
   
     constructor(){
         super();
 
-        const messageDialog = new NineSlicePlane(
+        this.messageDialog = new NineSlicePlane(
             Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
-        messageDialog.width = SceneManager.WIDTH * 1/2;
-        messageDialog.height = SceneManager.HEIGHT * 0.4;
+        this.messageDialog.width = SceneManager.WIDTH * 0.52;
+        this.messageDialog.height = SceneManager.HEIGHT * 1/3;
         //namePlayer.scale.set(0.5);
 
         const textStyle = new TextStyle({
@@ -30,15 +30,14 @@ export class FinalMetaDialog extends SceneBase{
             dropShadowDistance: 2,
             fill: "red",
             fontFamily: "BowlCap",
-            fontSize: 105,
+            fontSize: 90,
             lineJoin: "round",
-            lineHeight: 120,
-            wordWrap: true,
-            wordWrapWidth: 450
+            lineHeight: 132,
+            wordWrap: false            
         })
-        const message = new Text('¡Excelente, llegaste!', textStyle);
-        message.position.set(messageDialog.width * 1/7, messageDialog.height * 1/16);
-        messageDialog.addChild(message);
+        const message = new Text('No lo lograste 😢', textStyle);
+        message.position.set(this.messageDialog.width * 1/22, this.messageDialog.height * 1/8);
+        this.messageDialog.addChild(message);
 
         const buttonTextStyle = new TextStyle({
             align: "center",
@@ -53,7 +52,7 @@ export class FinalMetaDialog extends SceneBase{
             lineJoin: "round",
             lineHeight: 22,
             wordWrap: true,
-            wordWrapWidth: 200
+            wordWrapWidth: 150
         })
 
         const boton = new NineSlicePlane(
@@ -71,11 +70,11 @@ export class FinalMetaDialog extends SceneBase{
             boton.texture,
             "Retry");
         this.buttonRetry.on("buttonClick",this.onButtonRetryClick, this);
-        this.buttonRetry.position.set(messageDialog.width * 1/15, message.height + 25);
+        this.buttonRetry.position.set(this.messageDialog.width * 1/15, message.height + 25);
         this.buttonRetry.scale.set(1.8, 1.9);
         this.buttonRetry.interactive= true;
         this.buttonRetry.buttonMode= true;
-        const messageRetry = new Text('Jugar de nuevo', buttonTextStyle);
+        const messageRetry = new Text('Volver a intentar', buttonTextStyle);
         messageRetry.position.set(this.buttonRetry.width * 1/7, this.buttonRetry.height * 1/11)
         this.buttonRetry.addChild(messageRetry);
 
@@ -93,10 +92,9 @@ export class FinalMetaDialog extends SceneBase{
         messageExit.position.set(this.buttonRetry.width * 1/5, this.buttonRetry.height * 1/7)
         this.buttonExit.addChild(messageExit);
 
-        this.addChild(messageDialog, this.buttonExit, this.buttonRetry);
+        this.addChild(this.messageDialog, this.buttonExit, this.buttonRetry);
 
     }
-
     onButtonRetryClick() {
         this.visible = false;
         GameState.PLAY = true;
@@ -113,7 +111,7 @@ export class FinalMetaDialog extends SceneBase{
     }
 
     public update(_deltaFrame: number): void {
-        //this.myGodray.time += deltaFrame/1000;
+        
     }
 
 }

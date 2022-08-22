@@ -1,5 +1,6 @@
 import { sound } from "@pixi/sound";
 import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text, BitmapText } from "pixi.js";
+import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
 import { ToggleButton } from "../ui/ToggleButton";
 import { IUpdateable } from "../utils/IUpdateable";
@@ -172,6 +173,7 @@ export class HUD extends Container implements IUpdateable{
 
 
     private onButtonClick() {
+        GameState.ISPAUSED = true;
         let dialogo = new MenuDialog();
         dialogo.visible = true;
         dialogo.position.set(SceneManager.WIDTH * 1/3, SceneManager.HEIGHT * 1/7);

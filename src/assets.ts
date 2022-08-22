@@ -42,6 +42,8 @@ export const assets =[
     {url:"./img/UI/minus.png",name:"Minus"},
     {url:"./img/UI/plus.png",name:"Plus"},
     {url:"./img/UI/plusPress.png",name:"PlusPress"},
+    {url:"./img/UI/botonPress.png",name:"botonPress"},
+    {url:"./img/UI/boton.png",name:"boton"},
     {url:"./img/UI/salirX.png",name:"Salir"},
     {url:"./img/UI/salirX_pressed.png",name:"SalirPress"},
     {url:"./img/UI/fondoPP.jpg",name:"FondoUI"},

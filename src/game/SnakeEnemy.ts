@@ -30,7 +30,7 @@ export class SnakeEnemy extends PhysicsContainer implements IHitbox, IDamageZone
         );
         this.snakeAnimated.play();
         this.snakeAnimated.animationSpeed = 0.3;
-        this.snakeAnimated.scale.set(2);
+        this.snakeAnimated.scale.set(-2,2);
         this.addChild(this.snakeAnimated);
 
         /*this.hitCircle = new Graphics();

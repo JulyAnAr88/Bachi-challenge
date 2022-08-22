@@ -2,8 +2,9 @@ import { sound } from "@pixi/sound";
 import { Container, Texture } from "pixi.js";
 import { ToggleButton } from "../ui/ToggleButton";
 import { IUpdateable } from "../utils/IUpdateable";
+import { SceneBase } from "../utils/SceneBase";
 
-export class SoundScene extends Container implements IUpdateable {
+export class SoundScene extends SceneBase implements IUpdateable {
 
     constructor()
     {

@@ -1,4 +1,5 @@
 import { Container, NineSlicePlane, Texture } from "pixi.js";
+import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
 import { SceneManager } from "../utils/SceneManager";
 import { MenuConfig } from "./MenuConfig";
@@ -78,10 +79,12 @@ export class MenuDialog extends Container{
 
     }
     onButtonReturnClick() {
+        GameState.ISPAUSED = false
         this.visible = false;
     }
 
     onButtonChangeCharacterClick():void {
+        GameState.PLAY = true;
         SceneManager.changeScene(new ScenePlayerSelect());
     }
     onButtonExitClick():void {
@@ -91,7 +94,6 @@ export class MenuDialog extends Container{
     private onButtonConfigClick():void {
         let menuConfig = new MenuConfig();
         this.removeChild(this.menuDialog);
-        //this.menuDialog.addChild(menuConfig);
         this.addChild(menuConfig);
     }
 }
