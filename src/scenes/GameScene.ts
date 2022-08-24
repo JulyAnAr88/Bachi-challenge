@@ -35,7 +35,6 @@ export class GameScene extends SceneBase implements IUpdateable{
     private bachi: Bachi; 
     private obstacle: Obstacles;
     private metaDialog1: MetaDialog1;
-    private metaFinalDialog: FinalMetaDialog;
     private gameOverDialog: GameOverDialog;
 
     private snakes:SnakeEnemy[];    
@@ -66,7 +65,7 @@ export class GameScene extends SceneBase implements IUpdateable{
 
     private myGodray = new GodrayFilter();
     
-    public score: number;
+    private timeList: String[] = [];
     
 
     constructor(){
@@ -76,7 +75,6 @@ export class GameScene extends SceneBase implements IUpdateable{
         this.world = new Container();
         this.fondoVariable = new Container();
         this.metaDialog1 = new MetaDialog1();
-        this.metaFinalDialog = new FinalMetaDialog();
         this.gameOverDialog = new GameOverDialog();
         
         this.background0 = [];
@@ -116,12 +114,30 @@ export class GameScene extends SceneBase implements IUpdateable{
 
         this.objeto = new Environment(0);
 
-        this.score = 0;
-
         this.snake = new SnakeEnemy();
         this.snake.position.set(850,100);
 
         this.world.addChild(this.fondoVariable);
+    
+        let plat0_00 = new Platform("Tiles/Tile (5).png")
+        plat0_00.position.set(-plat0_00.width,GameScene.FLOOR_LEVEL);
+        this.world.addChild(plat0_00);
+        this.platforms.push(plat0_00);
+
+        let plat0_01 = new Platform("Tiles/Tile (5).png")
+        plat0_01.position.set(-plat0_00.width,GameScene.FLOOR_LEVEL - plat0_00.height);
+        this.world.addChild(plat0_01);
+        this.platforms.push(plat0_01);
+        
+        let plat0_02 = new Platform("Tiles/Tile (10).png")
+        plat0_02.position.set(-plat0_00.width,GameScene.FLOOR_LEVEL - plat0_02.height*2);
+        this.world.addChild(plat0_02);
+        this.platforms.push(plat0_02);
+
+        let plat0_03 = new Platform("Tiles/Tile (3).png")
+        plat0_03.position.set(-plat0_00.width,GameScene.FLOOR_LEVEL - plat0_02.height*3);
+        this.world.addChild(plat0_03);
+        this.platforms.push(plat0_03);
 
         let plat0_0 = new Platform("Tiles/Tile (5).png")
         plat0_0.position.set(0,GameScene.FLOOR_LEVEL);
@@ -133,7 +149,7 @@ export class GameScene extends SceneBase implements IUpdateable{
         this.world.addChild(plat0_1);
         this.platforms.push(plat0_1);
         
-        let plat0_2 = new Platform("Tiles/Tile (2).png")
+        let plat0_2 = new Platform("Tiles/Tile (11).png")
         plat0_2.position.set(0,GameScene.FLOOR_LEVEL - plat0_2.height*2);
         this.world.addChild(plat0_2);
         this.platforms.push(plat0_2);
@@ -594,7 +610,7 @@ export class GameScene extends SceneBase implements IUpdateable{
         this.platforms.push(plat71_0);
 
         this.bachi = new Bachi();
-        this.bachi.position.set(/*plat71_0.position.x + (plat0_0.width)*4*/5700,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
+        this.bachi.position.set(/*plat71_0.position.x + (plat0_0.width)*4*/700,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
         this.world.addChild(this.bachi);
         this.bachiAndFlag.push(this.bachi);
 
@@ -625,7 +641,7 @@ export class GameScene extends SceneBase implements IUpdateable{
 
 
         this.playerNinix = new Player();
-        this.playerNinix.position.x = 10;
+        this.playerNinix.position.x = 50;
         this.playerNinix.y = GameScene.FLOOR_LEVEL - plat0_0.height * 4;
         this.playerNinix.scale.set(0.5);
         this.world.addChild(this.playerNinix);
@@ -644,9 +660,6 @@ export class GameScene extends SceneBase implements IUpdateable{
     
     
     update(deltaTime: number, _deltaMS: number): void {
-        console.log("pausa: "+ GameState.ISPAUSED);
-        console.log("play: "+ GameState.PLAY);
-        console.log("gameOver: "+ GameState.GAME_OVER);
         if(GameState.ISPAUSED){
             GameScene.GAME_SPEED_BASE = 0;
             return;
@@ -660,16 +673,15 @@ export class GameScene extends SceneBase implements IUpdateable{
                 
         if (GameState.GAME_OVER) {
             GameState.PLAY = false;
-            GameScene.GAME_SPEED_BASE = 0;
-            this.playerNinix.update(0);
+            GameScene.GAME_SPEED_BASE = 0;            
             this.gameOverDialog.position.set(SceneManager.WIDTH * 1/4, SceneManager.HEIGHT * 1/6);
             this.hud.addChild(this.gameOverDialog);
             return; 
         }
 
 
-         if (this.playerNinix.position.x < (SceneManager.WIDTH * 1/5)) {
-            this.playerNinix.position.x = SceneManager.WIDTH * 1/5;            
+         if (this.playerNinix.position.x < (SceneManager.WIDTH * 1/12)) {
+            this.playerNinix.position.x = SceneManager.WIDTH * 1/12;            
         }/*elseif (this.playerNinix.position.x < 0) {
             this.playerNinix.position.x = 0;
         } */ 
@@ -694,7 +706,8 @@ export class GameScene extends SceneBase implements IUpdateable{
 		}      
         
         this.playerNinix.update(deltaTime);
-
+        
+    
         for (let platform of this.platforms) {
             //platform.speed.x = -GameScene.GAME_SPEED_BASE;
             platform.update(deltaTime/1000);
@@ -785,11 +798,26 @@ export class GameScene extends SceneBase implements IUpdateable{
                 loop:false,
                 singleInstance:true,
                 });
-            this.metaFinalDialog.position.set(SceneManager.WIDTH * 1/4, SceneManager.HEIGHT * 1/6);
-            SceneManager.addScene(this.metaFinalDialog);
+            
+
+            let tiempo = HUD.TIME_NOW;
+            const timeObj = {tiempo};
+                console.log(tiempo);
+            this.timeList.push(timeObj.tiempo);
+        
+            this.timeList.forEach(time =>{
+                FinalMetaDialog.TIME_FINISH.push(time);
+            });
+                        
+            sessionStorage.setItem("time", JSON.stringify(FinalMetaDialog.TIME_FINISH));
+            
+            const metaFinalDialog = new FinalMetaDialog(this.timeList[this.timeList.length-1]);
+            metaFinalDialog.position.set(SceneManager.WIDTH * 1/4, SceneManager.HEIGHT * 1/6);
+            SceneManager.addScene(metaFinalDialog);
             this.filters = [this.myGodray];
             this.filterArea = new Rectangle(0, 0, SceneManager.WIDTH, SceneManager.HEIGHT);
             GameState.ISPAUSED = true;
+            
         }
 
         if (bachi.getHitbox().right < 0){

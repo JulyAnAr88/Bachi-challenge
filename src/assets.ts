@@ -47,6 +47,11 @@ export const assets =[
     {url:"./img/UI/salirX.png",name:"Salir"},
     {url:"./img/UI/salirX_pressed.png",name:"SalirPress"},
     {url:"./img/UI/fondoPP.jpg",name:"FondoUI"},
+    {url:"./img/UI/editing.png",name:"Edit"},
+    {url:"./img/UI/editingPress.png",name:"EditPress"},
+    
+    {url:"./img/marcoPlayer.png",name:"marcoPlayer"},
+    {url:"./img/marcoPlayerPress.png",name:"marcoPlayerPress"},
 
     {url:"./img/objects.json",name:"Objetos"},
 

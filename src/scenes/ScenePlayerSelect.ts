@@ -1,4 +1,4 @@
-import { Sprite, Texture } from "pixi.js";
+import { Sprite, TextStyle, Texture, Text } from "pixi.js";
 import { Tween } from "tweedle.js";
 import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
@@ -13,79 +13,97 @@ export class ScenePlayerSelect extends SceneBase {
     public static PLAY_SELECT: number;
     private buttonBecky: Button;
     private buttonTimmy: Button;
+    private buttonEdit: Button;
     private playerTimmy: AnimationTimmy;
     private playerBecky: AnimationBecky;
+    private namePlayer: Text;
+    private nameTextStyle: TextStyle;
+    private tituloElige: Sprite;
 
     constructor(){
         super();
-    
-        /* const namePlayer = new TextInput({
-            input: {
-                fontSize: '25pt',
-                padding: '14px',
-                width: '500px',
-                color: '#26272E'
-            }, 
-            box: {
-                default: {fill: 0xE8E9F3, rounded: 16, stroke: {color: 0xCBCEE0, width: 4}},
-                focused: {fill: 0xE1E3EE, rounded: 16, stroke: {color: 0xABAFC6, width: 4}},
-                disabled: {fill: 0xDBDBDB, rounded: 16}
-            }
-        }); */
 
         const fondo= Sprite.from("FondoUI");
 
-        const tituloElige= Sprite.from("TituloElige");
-        tituloElige.scale.set(0.5);
-        tituloElige.anchor.set(0.5);
-        tituloElige.position.set(SceneManager.WIDTH/2, tituloElige.height/1.5);
+        this.tituloElige= Sprite.from("TituloElige");
+        this.tituloElige.scale.set(0.5);
+        this.tituloElige.anchor.set(0.5);
+        this.tituloElige.position.set(SceneManager.WIDTH/2, this.tituloElige.height/1.5);
 
-        const fondoPlayer = Sprite.from("HUD/fondoPlayer2.png");
-        fondoPlayer.position.x = fondoPlayer.width * 4.5;
-        fondoPlayer.position.y = tituloElige.position.y + 200;
-        fondoPlayer.scale.set(2.2);
+        this.nameTextStyle = new TextStyle({
+            align: "center",
+            dropShadow: true,
+            dropShadowAlpha: 0.8,
+            dropShadowAngle: -3.5,
+            dropShadowBlur: 3,
+            dropShadowDistance: 2,
+            fill: "red",
+            fontFamily: "BowlCap",
+            fontSize: 55,
+            lineJoin: "round",
+            lineHeight: 22,
+            wordWrap: false
+        })
+        this.namePlayer = new Text('Dale un nombre', this.nameTextStyle);
+        this.namePlayer.position.set(this.tituloElige.position.x * 0.7, this.tituloElige.position.y + 130)
 
-        const fondoPlayer1: Sprite = Sprite.from("HUD/fondoPlayer2.png");
-        fondoPlayer1.position.x = fondoPlayer.position.x + fondoPlayer.width * 1.5;
-        fondoPlayer1.position.y = tituloElige.position.y + 200;
-        fondoPlayer1.scale.set(2.2);
+        this.buttonEdit = new Button(
+            Texture.from("Edit"),
+            Texture.from("EditPress"),
+            Texture.from("Edit"),
+            "Edit");
+        this.buttonEdit.on("buttonClick",this.onButtonEditClick, this);
+        this.buttonEdit.position.x = this.tituloElige.position.x + this.tituloElige.width * 1/3;
+        this.buttonEdit.position.y = this.tituloElige.position.y + 150;
+        this.buttonEdit.scale.set(0.1);
+        this.buttonEdit.interactive= true;
+        this.buttonEdit.buttonMode= true;
 
         this.buttonBecky = new Button(
-            Texture.from("buttonbecky"),
-            Texture.from("buttonbeckyPress"),
-            Texture.from("buttonbecky"),
+            Texture.from("marcoPlayer"),
+            Texture.from("marcoPlayerPress"),
+            Texture.from("marcoPlayer"),
             "Becky");
         this.buttonBecky.on("buttonClick",this.onButtonBeckyClick, this);
-        this.buttonBecky.position.x =  fondoPlayer.position.x;
-        this.buttonBecky.position.y = fondoPlayer.position.y + fondoPlayer.height + 20;
-        this.buttonBecky.scale.set(0.2);
+        this.buttonBecky.position.x =  this.buttonBecky.width * 4.5;
+        this.buttonBecky.position.y = this.tituloElige.position.y + 250;
+        this.buttonBecky.scale.set(2.2);
         this.buttonBecky.interactive= true;
         this.buttonBecky.buttonMode= true;
 
         this.buttonTimmy = new Button(
-            Texture.from("buttontimmy"),
-            Texture.from("buttontimmyPress"),
-            Texture.from("buttontimmy"),
+            Texture.from("marcoPlayer"),
+            Texture.from("marcoPlayerPress"),
+            Texture.from("marcoPlayer"),
             "Timmy");
         this.buttonTimmy.on("buttonClick",this.onButtonTimmyClick, this);
-        this.buttonTimmy.position.x = fondoPlayer1.position.x;
-        this.buttonTimmy.position.y = fondoPlayer1.position.y + fondoPlayer1.height + 20;
-        this.buttonTimmy.scale.set(0.2);
+        this.buttonTimmy.position.x = this.buttonBecky.position.x + this.buttonBecky.width * 1.5;
+        this.buttonTimmy.position.y = this.tituloElige.position.y + 250;
+        this.buttonTimmy.scale.set(2.2);
         this.buttonTimmy.interactive= true;
         this.buttonTimmy.buttonMode= true;
 
         this.playerTimmy = new AnimationTimmy(0.5, "idle");
-        this.playerTimmy.x = fondoPlayer1.position.x + fondoPlayer1.width* 3/4;
-        this.playerTimmy.y = fondoPlayer1.position.y + fondoPlayer1.height/8;
+        this.playerTimmy.x = this.buttonTimmy.position.x + this.buttonTimmy.width* 3/4;
+        this.playerTimmy.y = this.buttonTimmy.position.y + this.buttonTimmy.height/8;
         this.playerTimmy.scale.set(-0.55,0.55);
 
         this.playerBecky = new AnimationBecky(0.5, "idle");        
-        this.playerBecky.x = fondoPlayer.position.x + fondoPlayer.width/3;
-        this.playerBecky.y = fondoPlayer.position.y + fondoPlayer.height/7;
+        this.playerBecky.x = this.buttonBecky.position.x + this.buttonBecky.width/3;
+        this.playerBecky.y = this.buttonBecky.position.y + this.buttonBecky.height/7;
         this.playerBecky.scale.set(0.5);
 
 
-        this.addChild(fondo, tituloElige, fondoPlayer, fondoPlayer1, this.buttonBecky, this.buttonTimmy, this.playerTimmy, this.playerBecky/* , this.namePlayer */);
+        this.addChild(fondo, this.tituloElige, this.namePlayer, this.buttonBecky, this.buttonTimmy, this.playerTimmy, this.playerBecky, this.buttonEdit);
+    }
+    async onButtonEditClick() {
+        let nombre = prompt("Ingresa un nombre");
+        const nameObj = {nombre};
+        sessionStorage.setItem("name", JSON.stringify(nameObj));
+        this.removeChild(this.namePlayer);
+        this.namePlayer = new Text(JSON.stringify(nombre), this.nameTextStyle);
+        this.namePlayer.position.set(this.tituloElige.position.x * 0.7, this.tituloElige.position.y + 130);
+        this.addChild(this.namePlayer);
     }
 
 

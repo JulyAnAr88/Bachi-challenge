@@ -9,18 +9,24 @@ import { StartMenu } from "./StartMenu";
 export class FinalMetaDialog extends SceneBase{
     private buttonRetry: Button;
     private buttonExit: Button;
-  
-    constructor(){
+    private timeMessage: Text;
+    //private timeList: String[] = [];
+
+    public static TIME_FINISH: String[] = [];
+
+     
+    constructor(time: String){
         super();
 
+        //FinalMetaDialog.TIME_FINISH.push("00:00");
+        
         const messageDialog = new NineSlicePlane(
             Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
         messageDialog.width = SceneManager.WIDTH * 1/2;
-        messageDialog.height = SceneManager.HEIGHT * 0.4;
-        //namePlayer.scale.set(0.5);
-
+        messageDialog.height = SceneManager.HEIGHT * 0.6;
+        
         const textStyle = new TextStyle({
             align: "center",
             dropShadow: true,
@@ -39,6 +45,42 @@ export class FinalMetaDialog extends SceneBase{
         const message = new Text('¡Excelente, llegaste!', textStyle);
         message.position.set(messageDialog.width * 1/7, messageDialog.height * 1/16);
         messageDialog.addChild(message);
+
+        const timeStyle = new TextStyle({
+            align: "center",
+            dropShadow: true,
+            dropShadowAlpha: 0.8,
+            dropShadowAngle: -3.5,
+            dropShadowBlur: 3,
+            dropShadowDistance: -1,
+            fill: "white",
+            fontFamily: "BowlbyOne-Regular",
+            fontSize: 60,
+            lineHeight: 100,
+            lineJoin: "round",
+            strokeThickness: 1,
+            textBaseline: "middle",
+            whiteSpace: "normal",
+            wordWrap: false,
+            leading: 14
+        });
+        
+                    
+        this.timeMessage = new Text('Tu tiempo: '+ time, timeStyle);
+        this.timeMessage.position.set(messageDialog.width * 1/4, message.height + 50);
+        messageDialog.addChild(this.timeMessage);
+            
+        if (FinalMetaDialog.TIME_FINISH.length == 1){
+            const pastTimeMessage = new Text('Tiempo anterior: 00:00', timeStyle);
+            pastTimeMessage.position.set(messageDialog.width * 1/7, this.timeMessage.height * 1/2 + this.timeMessage.position.y + 15);
+            messageDialog.addChild(pastTimeMessage);
+        }else{
+            const pastTimeMessage = new Text('Tiempo anterior: '+ FinalMetaDialog.TIME_FINISH[FinalMetaDialog.TIME_FINISH.length - 2], timeStyle);
+            pastTimeMessage.position.set(messageDialog.width * 1/7, this.timeMessage.height * 1/2 + this.timeMessage.position.y + 15);
+            messageDialog.addChild(pastTimeMessage);
+        }     
+        
+             
 
         const buttonTextStyle = new TextStyle({
             align: "center",
@@ -71,7 +113,7 @@ export class FinalMetaDialog extends SceneBase{
             boton.texture,
             "Retry");
         this.buttonRetry.on("buttonClick",this.onButtonRetryClick, this);
-        this.buttonRetry.position.set(messageDialog.width * 1/15, message.height + 25);
+        this.buttonRetry.position.set(messageDialog.width * 1/15, this.timeMessage.position.y + this.timeMessage.height + 50);
         this.buttonRetry.scale.set(1.8, 1.9);
         this.buttonRetry.interactive= true;
         this.buttonRetry.buttonMode= true;
@@ -85,7 +127,7 @@ export class FinalMetaDialog extends SceneBase{
             boton.texture,
             "Exit");
         this.buttonExit.on("buttonClick",this.onButtonExitClick, this);
-        this.buttonExit.position.set(this.buttonRetry.position.x + this.buttonRetry.width + 30, message.height + 25);
+        this.buttonExit.position.set(this.buttonRetry.position.x + this.buttonRetry.width + 30, this.timeMessage.position.y + this.timeMessage.height + 50);
         this.buttonExit.scale.set(1.8, 1.9);
         this.buttonExit.interactive= true;
         this.buttonExit.buttonMode= true;

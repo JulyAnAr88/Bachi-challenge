@@ -22,6 +22,7 @@ export class HUD extends Container implements IUpdateable{
     private message: BitmapText;
     
     private str = "00:00"; 
+    public static TIME_NOW = "00:00";
         
 
     constructor (){
@@ -40,13 +41,12 @@ export class HUD extends Container implements IUpdateable{
         this.dialog.position.x = this.corazonLleno.position.x;
         this.dialog.position.y = this.corazonLleno.position.y + 62;
             
-        const namePlayer = new NineSlicePlane(
+        const fondoNamePlayer = new NineSlicePlane(
             Texture.from("HUD/fondoPlayer.png"),
             35,35,35,35
         );
-        namePlayer.width = this.corazonLleno.width * 2;
-        namePlayer.height = fondoPlayer.height;
-        namePlayer.scale.set(0.5);
+        
+        fondoNamePlayer.scale.set(0.5);
 
         const textStyle = new TextStyle({
             align: "center",
@@ -62,30 +62,40 @@ export class HUD extends Container implements IUpdateable{
             wordWrap: true,
             wordWrapWidth: 450
         })
-        
-        switch (ScenePlayerSelect.PLAY_SELECT) {
+
+        let namePlayer = JSON.stringify(sessionStorage.getItem("name"));
+
+        if (namePlayer == "null"){
+            switch (ScenePlayerSelect.PLAY_SELECT) {
             case 0:
 
                 this.textNamePlayer = new Text('Becky', textStyle);
-   
+                
                 
                 break;
             case 1:
 
                 this.textNamePlayer = new Text('Timmy', textStyle);
-                                
+                
                 break;
         
             default:
                 break;
-        }
+            }
     
-        this.textNamePlayer.position.x = namePlayer.position.x + namePlayer.width/12;
-        this.textNamePlayer.position.y = namePlayer.position.y;
-             
-        namePlayer.addChild(this.textNamePlayer);
+        }else{
+            this.textNamePlayer = new Text(namePlayer.substring(15, namePlayer.length-4), textStyle);
+        }        
+        this.textNamePlayer.position.x = fondoNamePlayer.position.x + fondoNamePlayer.width/12;
+        this.textNamePlayer.position.y = fondoNamePlayer.position.y;
 
-        this.dialog.addChild(namePlayer);        
+        
+        fondoNamePlayer.height = this.textNamePlayer.height + 20;
+        fondoNamePlayer.width = this.textNamePlayer.width + 20;
+             
+        fondoNamePlayer.addChild(this.textNamePlayer);
+
+        this.dialog.addChild(fondoNamePlayer);        
         
         this.buttonMenu = new Button(
             Texture.from("HUD/tan.png"),
@@ -102,7 +112,7 @@ export class HUD extends Container implements IUpdateable{
         
         this.contador = new Container;
 
-        //this.message = new Text(this.str, this.textStyle);
+        
         this.message = new BitmapText(this.str,{fontName:"Mi BitmapFont"})
 
         this.contador.position.set(this.buttonMenu.position.x - this.buttonMenu.width * 2, this.buttonMenu.height * 1/3);
@@ -110,11 +120,8 @@ export class HUD extends Container implements IUpdateable{
 
         const toggleMute = new ToggleButton(Texture.from("MusicOn"), Texture.from("MusicOff"));
         toggleMute.position.set(this.contador.position.x - toggleMute.width - 20, this.buttonMenu.height * 1/9);
-        //toggleMute.scale.set(2);
-        toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);
         
-        
-        
+        toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);        
         
         this.addChild(fondoPlayer, this.dialog, this.corazonLleno, this.buttonMenu,this.contador, toggleMute);
     }
@@ -123,8 +130,8 @@ export class HUD extends Container implements IUpdateable{
     update(deltaTime: number, _deltaFrame?: number): void {
 
         this.removeChild(this.contador);
-        let str = this.countdown(deltaTime);
-        this.message.text = str;
+        this.message.text = this.countdown(deltaTime);
+        HUD.TIME_NOW = this.message.text;
         this.contador.addChild(this.message);
         this.addChild(this.contador);
         
