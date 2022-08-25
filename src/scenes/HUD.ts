@@ -2,6 +2,7 @@ import { sound } from "@pixi/sound";
 import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text, BitmapText } from "pixi.js";
 import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
+import { Joystick } from "../ui/Joystick";
 import { ToggleButton } from "../ui/ToggleButton";
 import { IUpdateable } from "../utils/IUpdateable";
 import { SceneManager } from "../utils/SceneManager";
@@ -23,6 +24,8 @@ export class HUD extends Container implements IUpdateable{
     
     private str = "00:00"; 
     public static TIME_NOW = "00:00";
+    public static JOYS_DIRECTION: String;
+    public static JOYS_START = false;
         
 
     constructor (){
@@ -122,6 +125,27 @@ export class HUD extends Container implements IUpdateable{
         toggleMute.position.set(this.contador.position.x - toggleMute.width - 20, this.buttonMenu.height * 1/9);
         
         toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);        
+        
+        
+        const leftJoystick = new Joystick({
+            outer: Sprite.from("outer"),
+            inner: Sprite.from("inner"),
+            outerScale: { x: 1.3, y: 1.3 },
+            innerScale: { x: 1.5, y: 1.5 },
+            onChange: (data) => { 
+                
+                HUD.JOYS_DIRECTION = data.direction;
+             },
+            onStart: () => HUD.JOYS_START = true,
+            onEnd: () => HUD.JOYS_START = false,
+          });
+          leftJoystick.position.set(SceneManager.WIDTH -leftJoystick.width * 0.6, SceneManager.HEIGHT - leftJoystick.height* 0.6);
+
+          if (SceneManager.GAME_WIDTH < 768) {
+            this.addChild(leftJoystick)
+          }
+          
+     
         
         this.addChild(fondoPlayer, this.dialog, this.corazonLleno, this.buttonMenu,this.contador, toggleMute);
     }

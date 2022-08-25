@@ -7,6 +7,8 @@ export namespace SceneManager{
 
     export const WIDTH = 1920;
     export const HEIGHT = 1080;
+    export let GAME_WIDTH: number;
+
     let currentScene:SceneBase;
     let app: Application;
 
@@ -38,6 +40,8 @@ export namespace SceneManager{
             const marginHorizontal = Math.floor((window.innerWidth - gameWidth) / 2);
             const marginVertical = Math.floor((window.innerHeight - gameHeight) / 2);
 
+            SceneManager.GAME_WIDTH = gameWidth;
+
             app.view.style.width = gameWidth + "px";
             app.view.style.height = gameHeight + "px";
 
@@ -46,9 +50,11 @@ export namespace SceneManager{
 
             app.view.style.marginTop = marginVertical + "px";
             app.view.style.marginBottom = marginVertical + "px";
+            
         });
         window.dispatchEvent(new Event("resize"));
 
+       
         Ticker.shared.add(update);
     }
 

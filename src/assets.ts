@@ -49,6 +49,8 @@ export const assets =[
     {url:"./img/UI/fondoPP.jpg",name:"FondoUI"},
     {url:"./img/UI/editing.png",name:"Edit"},
     {url:"./img/UI/editingPress.png",name:"EditPress"},
+    {url:"./img/UI/joystick.png",name:"outer"},
+    {url:"./img/UI/joystick-handle.png",name:"inner"},
     
     {url:"./img/marcoPlayer.png",name:"marcoPlayer"},
     {url:"./img/marcoPlayerPress.png",name:"marcoPlayerPress"},

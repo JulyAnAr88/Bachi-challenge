@@ -2,6 +2,7 @@ import { sound } from "@pixi/sound";
 import { Graphics, ObservablePoint, Rectangle } from "pixi.js";
 import { AnimationBecky } from "../scenes/AnimationBecky";
 import { AnimationTimmy } from "../scenes/AnimationTimmy";
+import { HUD } from "../scenes/HUD";
 import { ScenePlayerSelect } from "../scenes/ScenePlayerSelect";
 import { Keyboard } from "../utils/Keyboard";
 import { GameState } from "./GameState";
@@ -69,7 +70,7 @@ export class Player extends PhysicsContainer implements IHitbox{
         this.ninieAnimated.addChild(this.hitbox);
 
         this.acceleration.y = Player.GRAVITY;
-
+      
         switch (GameState.KEYBOARD_CONFIG) {
             case 0:
                                 
@@ -120,11 +121,22 @@ export class Player extends PhysicsContainer implements IHitbox{
         this.ninieAnimated.update(deltaMS / 1000);
 
         this.timePassedWalk += deltaMS/1000;
+          
+        if ((HUD.JOYS_DIRECTION == "top" || HUD.JOYS_DIRECTION == "top_right") && HUD.JOYS_START) {
+            
+            if (this.canJump)
+            {
+                console.log("saltar");
+                this.canJump = false;            
+                this.ninieAnimated.setState("jump",true);
+                this.speed.y = -Player.JUMP_SPEED;
+            }
+        }
 
         switch (GameState.KEYBOARD_CONFIG) {
             case 0:
-                                
-                if ( Keyboard.state.get("KeyD")){
+                
+                if ( Keyboard.state.get("KeyD") || ((HUD.JOYS_DIRECTION == "bottom_right" || HUD.JOYS_DIRECTION == "right") && HUD.JOYS_START)){
                     
                     GameState.PLAY = true;
                                        
@@ -175,7 +187,7 @@ export class Player extends PhysicsContainer implements IHitbox{
                 break;
             case 1:
              
-                if (Keyboard.state.get("ArrowRight")){
+                if (Keyboard.state.get("ArrowRight") || ((HUD.JOYS_DIRECTION == "bottom_right" || HUD.JOYS_DIRECTION == "right") && HUD.JOYS_START)){
 
                     GameState.PLAY = true;
                                        

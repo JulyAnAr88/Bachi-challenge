@@ -610,7 +610,7 @@ export class GameScene extends SceneBase implements IUpdateable{
         this.platforms.push(plat71_0);
 
         this.bachi = new Bachi();
-        this.bachi.position.set(/*plat71_0.position.x + (plat0_0.width)*4*/700,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
+        this.bachi.position.set(plat71_0.position.x + (plat0_0.width)*4,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
         this.world.addChild(this.bachi);
         this.bachiAndFlag.push(this.bachi);
 
@@ -650,6 +650,7 @@ export class GameScene extends SceneBase implements IUpdateable{
 
         this.addChild(this.world);
         this.addChild(this.hud);
+
         
         this.myGodray.parallel = false;
         this.myGodray.center = [0, -50];
