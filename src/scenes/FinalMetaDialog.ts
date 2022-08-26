@@ -143,7 +143,7 @@ export class FinalMetaDialog extends SceneBase{
         this.visible = false;
         GameState.PLAY = true;
         GameState.GAME_OVER = false;
-        GameState.ISPAUSED = false;
+        GameState.IS_PAUSED = false;
         SceneManager.changeScene(new GameScene());
     }
 

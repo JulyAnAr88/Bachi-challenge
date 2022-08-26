@@ -58,9 +58,9 @@ export class GameScene extends SceneBase implements IUpdateable{
     private timePassedObstacle = 0;
     
 
-    private segSnake= 10500 * 100;//3,75
-    private segEnvir= 5600 * 100;//2
-    private segObstacle= 8500 * 100;//3
+    private segSnake= 8500 * 100;//
+    private segEnvir= 4600 * 100;//
+    private segObstacle= 5500 * 100;//
     private segMosquito= 3500 * 100;//1
 
     private myGodray = new GodrayFilter();
@@ -609,11 +609,6 @@ export class GameScene extends SceneBase implements IUpdateable{
         this.world.addChild(plat71_0);
         this.platforms.push(plat71_0);
 
-        this.bachi = new Bachi();
-        this.bachi.position.set(plat71_0.position.x + (plat0_0.width)*4,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
-        this.world.addChild(this.bachi);
-        this.bachiAndFlag.push(this.bachi);
-
         let plat72_0 = new Platform("Tiles/Tile (1).png")
         plat72_0.position.set(agua7_0.position.x + plat0_0.width-10,GameScene.FLOOR_LEVEL);
         this.world.addChild(plat72_0);
@@ -639,9 +634,64 @@ export class GameScene extends SceneBase implements IUpdateable{
         this.world.addChild(plat76_0);
         this.platforms.push(plat76_0);
 
+        let plat77_0 = new Platform("Tiles/Tile (2).png")
+        plat77_0.position.set(plat76_0.position.x + plat0_0.width,GameScene.FLOOR_LEVEL);
+        this.world.addChild(plat77_0);
+        this.platforms.push(plat77_0);
+
+        let plat78_0 = new Platform("Tiles/Tile (2).png")
+        plat78_0.position.set(plat75_0.position.x + plat0_0.width,GameScene.FLOOR_LEVEL);
+        this.world.addChild(plat78_0);
+        this.platforms.push(plat78_0);
+
+        let plat79_0 = new Platform("Tiles/Tile (2).png")
+        plat79_0.position.set(plat78_0.position.x + plat0_0.width,GameScene.FLOOR_LEVEL);
+        this.world.addChild(plat79_0);
+        this.platforms.push(plat79_0);
+        
+        let plat80_0 = new Platform("Tiles/Tile (2).png")
+        plat80_0.position.set(plat79_0.position.x + plat0_0.width,GameScene.FLOOR_LEVEL);
+        this.world.addChild(plat80_0);
+        this.platforms.push(plat80_0);
+
+        let plat81_0 = new Platform("Tiles/Tile (2).png")
+        plat81_0.position.set(plat80_0.position.x + plat0_0.width,GameScene.FLOOR_LEVEL);
+        this.world.addChild(plat81_0);
+        this.platforms.push(plat81_0);
+  
+        let agua8_0 = new BadWater();        
+        agua8_0.position.set(plat81_0.position.x + 2 * (plat0_0.width) - 10, GameScene.FLOOR_LEVEL + 30);
+        this.world.addChild(agua8_0);
+        this.aguasMalas.push(agua8_0);
+
+        let agua9_0 = new BadWater();        
+        agua9_0.position.set(agua8_0.position.x + agua0_0.width, GameScene.FLOOR_LEVEL + 30);
+        this.world.addChild(agua9_0);
+        this.aguasMalas.push(agua9_0);
+        
+        let plat82_0 = new Platform("Tiles/Tile (3).png")
+        plat82_0.position.set(plat81_0.position.x + plat0_0.width,GameScene.FLOOR_LEVEL);
+        this.world.addChild(plat82_0);
+        this.platforms.push(plat82_0);
+
+        let agua10_0 = new BadWater();        
+        agua10_0.position.set(agua9_0.position.x + agua0_0.width, GameScene.FLOOR_LEVEL + 30);
+        this.world.addChild(agua10_0);
+        this.aguasMalas.push(agua10_0);
+
+        this.bachi = new Bachi();
+        this.bachi.position.set(plat72_0.position.x + (plat0_0.width)*3,GameScene.FLOOR_LEVEL - (this.bachi.height * 7/9)-35);
+        this.world.addChild(this.bachi);
+        this.bachiAndFlag.push(this.bachi);
+
+        let agua11_0 = new BadWater();        
+        agua11_0.position.set(agua10_0.position.x + agua0_0.width, GameScene.FLOOR_LEVEL + 30);
+        this.world.addChild(agua11_0);
+        this.aguasMalas.push(agua11_0);
+
 
         this.playerNinix = new Player();
-        this.playerNinix.position.x = 50;
+        this.playerNinix.x = 50;
         this.playerNinix.y = GameScene.FLOOR_LEVEL - plat0_0.height * 4;
         this.playerNinix.scale.set(0.5);
         this.world.addChild(this.playerNinix);
@@ -661,7 +711,7 @@ export class GameScene extends SceneBase implements IUpdateable{
     
     
     update(deltaTime: number, _deltaMS: number): void {
-        if(GameState.ISPAUSED){
+        if(GameState.IS_PAUSED){
             GameScene.GAME_SPEED_BASE = 0;
             return;
         }
@@ -772,11 +822,11 @@ export class GameScene extends SceneBase implements IUpdateable{
         {
             bandera.animar();     
             this.metaDialog1.position.set(SceneManager.WIDTH * 2/5, SceneManager.HEIGHT * 1/10);
-            this.world.addChild(this.metaDialog1);
+            this.addChild(this.metaDialog1);
 
             setTimeout(() => {
-                this.world.removeChild(this.metaDialog1);
-            }, 5 * 1000);
+                this.removeChild(this.metaDialog1);
+            }, 3.5 * 1000);
         }
 
         if (bandera.getHitbox().right < 0){
@@ -817,7 +867,7 @@ export class GameScene extends SceneBase implements IUpdateable{
             SceneManager.addScene(metaFinalDialog);
             this.filters = [this.myGodray];
             this.filterArea = new Rectangle(0, 0, SceneManager.WIDTH, SceneManager.HEIGHT);
-            GameState.ISPAUSED = true;
+            GameState.IS_PAUSED = true;
             
         }
 

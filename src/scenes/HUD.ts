@@ -1,4 +1,3 @@
-import { sound } from "@pixi/sound";
 import { Container, NineSlicePlane, Sprite, TextStyle, Texture, Text, BitmapText } from "pixi.js";
 import { GameState } from "../game/GameState";
 import { Button } from "../ui/Button";
@@ -9,6 +8,7 @@ import { SceneManager } from "../utils/SceneManager";
 import { Health } from "./Health";
 import { MenuDialog } from "./MenuDialog";
 import { ScenePlayerSelect } from "./ScenePlayerSelect";
+import { StartMenu } from "./StartMenu";
 
 export class HUD extends Container implements IUpdateable{
 
@@ -141,7 +141,7 @@ export class HUD extends Container implements IUpdateable{
           });
           leftJoystick.position.set(SceneManager.WIDTH -leftJoystick.width * 0.6, SceneManager.HEIGHT - leftJoystick.height* 0.6);
 
-          if (SceneManager.GAME_WIDTH < 768) {
+          if (SceneManager.GAME_WIDTH < 780) {
             this.addChild(leftJoystick)
           }
           
@@ -204,7 +204,7 @@ export class HUD extends Container implements IUpdateable{
 
 
     private onButtonClick() {
-        GameState.ISPAUSED = true;
+        GameState.IS_PAUSED = true;
         let dialogo = new MenuDialog();
         dialogo.visible = true;
         dialogo.position.set(SceneManager.WIDTH * 1/3, SceneManager.HEIGHT * 1/7);
@@ -214,10 +214,10 @@ export class HUD extends Container implements IUpdateable{
     public toggleMute(unMute:boolean) {
         if (unMute) 
         {
-            sound.unmuteAll();
+            StartMenu.CORTINA.unMute();
         }else
         {
-            sound.muteAll();
+            StartMenu.CORTINA.mute();
         }
     }
 

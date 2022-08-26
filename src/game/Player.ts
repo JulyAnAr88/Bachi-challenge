@@ -12,11 +12,12 @@ import { PhysicsContainer } from "./PhysicsContainer";
 
 export class Player extends PhysicsContainer implements IHitbox{
 
-    private static readonly GRAVITY = 450;
+    private static readonly GRAVITY = 400;
     private static readonly MOVE_SPEED = 350;
-    private static readonly JUMP_SPEED = 450;
+    private static readonly JUMP_SPEED = 400;
 
     public canJump = true;
+    public isJumping = false;
     private ninieAnimated: any;
     private hitbox:Graphics;
 
@@ -96,6 +97,7 @@ export class Player extends PhysicsContainer implements IHitbox{
         super.destroy(options);
         Keyboard.down.off("ArrowUp",this.jump);
         Keyboard.down.off("Space",this.jump);
+        
     }
 
 
@@ -121,18 +123,7 @@ export class Player extends PhysicsContainer implements IHitbox{
         this.ninieAnimated.update(deltaMS / 1000);
 
         this.timePassedWalk += deltaMS/1000;
-          
-        if ((HUD.JOYS_DIRECTION == "top" || HUD.JOYS_DIRECTION == "top_right") && HUD.JOYS_START) {
-            
-            if (this.canJump)
-            {
-                console.log("saltar");
-                this.canJump = false;            
-                this.ninieAnimated.setState("jump",true);
-                this.speed.y = -Player.JUMP_SPEED;
-            }
-        }
-
+      
         switch (GameState.KEYBOARD_CONFIG) {
             case 0:
                 
@@ -159,29 +150,27 @@ export class Player extends PhysicsContainer implements IHitbox{
         
                     if (this.canJump)
                     {
-                        //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
-                        //this.speed.x = -Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = -1;
                         this.ninieAnimated.setState("walk",true);
-
-                        //this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
-                                
-                        /* if(this.timePassedWalk > 10){
-                            //console.log("ruuuun bitch");
-        
-                            this.speed.x = -Player.MOVE_SPEED;
-                            //this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
-                            this.ninieAnimated.setState("run",true);
-                            this.timePassedWalk =0;
-                        }  */
         
                     }
                 }else{       
-                    
-                    this.speed.x = 0;
-                    this.timePassedWalk =0;
-                    this.ninieAnimated.setState("idle",true);
-                    
+                    if(!this.isJumping){
+                        this.speed.x = 0;
+                        this.timePassedWalk =0;
+                        this.ninieAnimated.setState("idle",true);
+                    }
+                                      
+                }
+
+                if ((HUD.JOYS_DIRECTION == "top" || HUD.JOYS_DIRECTION == "top_right") && HUD.JOYS_START) {
+                    if (this.canJump && !this.isJumping)
+                        {
+                            this.canJump = false;            
+                            this.isJumping = true;       
+                            this.ninieAnimated.setState("jump",true);
+                            this.speed.y = -Player.JUMP_SPEED;
+                        }
                 }
                 
                 break;
@@ -209,25 +198,16 @@ export class Player extends PhysicsContainer implements IHitbox{
         
                     if (this.canJump)
                     {
-                        //console.log("timeapretandowalk pa tras: " + this.timePassedWalk);
-                        //this.speed.x = -Player.MOVE_SPEED;
                         this.ninieAnimated.scale.x = -1;
-                        //this.ninieAnimated.changeToWalkAnimation(deltaMS/ 50/60);
                         this.ninieAnimated.setState("walk",true);
-        
-                        /* if(this.timePassedWalk > 10){
-                            //console.log("ruuuun bitch");
-        
-                            this.speed.x = -Player.MOVE_SPEED;
-                            //this.ninieAnimated.changeToRunAnimation(deltaMS/ 10/60);
-                            this.ninieAnimated.setState("run",true);
-                            this.timePassedWalk =0;
-                        }  */
         
                     }
                 }else{
-                            
-                    this.speed.x = 0;
+                    if(!this.isJumping){
+                        this.speed.x = 0;
+                        this.timePassedWalk =0;
+                        this.ninieAnimated.setState("idle",true);
+                    }
                 }
                 
                 break;
@@ -242,9 +222,10 @@ export class Player extends PhysicsContainer implements IHitbox{
  
     private jump()
     {
-        if (this.canJump)
+        if (this.canJump && !this.isJumping)
         {
             this.canJump = false;            
+            this.isJumping = true;       
             this.ninieAnimated.setState("jump",true);
             this.speed.y = -Player.JUMP_SPEED;
         }
@@ -280,6 +261,7 @@ export class Player extends PhysicsContainer implements IHitbox{
                         this.y -= overlap.height;
                         this.speed.y = 0;
                         this.canJump = true;
+                        this.isJumping = false;
                     }
                 }
     }

@@ -12,7 +12,7 @@ export class MetaDialog1 extends SceneBase{
             35,35,35,35
         );
         messageDialog.width = SceneManager.WIDTH * 1/4;
-        messageDialog.height = SceneManager.HEIGHT * 1/7;
+        messageDialog.height = SceneManager.HEIGHT * 1/6;
         //namePlayer.scale.set(0.5);
 
         const textStyle = new TextStyle({
@@ -26,6 +26,7 @@ export class MetaDialog1 extends SceneBase{
             fontFamily: "BowlCap",
             fontSize: 35,
             lineJoin: "round",
+            lineHeight: 45,
             wordWrap: true,
             wordWrapWidth: 450
         })

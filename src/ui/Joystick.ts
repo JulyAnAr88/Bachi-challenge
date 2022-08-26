@@ -28,6 +28,7 @@ export interface JoystickChangeEvent {
   }
   
   export class Joystick extends Container {
+
     settings: JoystickSettings;
   
     outerRadius: number = 0;
@@ -84,7 +85,7 @@ export interface JoystickChangeEvent {
   
       this.bindEvents();
     }
-  
+ 
     protected bindEvents() {
       let that = this;
       this.interactive = true;

@@ -79,7 +79,7 @@ export class MenuDialog extends Container{
 
     }
     onButtonReturnClick() {
-        GameState.ISPAUSED = false
+        GameState.IS_PAUSED = false
         this.visible = false;
     }
 

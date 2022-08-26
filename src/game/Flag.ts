@@ -1,5 +1,4 @@
 import { AnimatedSprite, Graphics, Rectangle, Sprite, Texture } from "pixi.js";
-//import { MetaDialog1 } from "../scenes/MetaDialog1";
 import { IHitbox } from "./IHitbox";
 import { PhysicsContainer } from "./PhysicsContainer";
 
@@ -8,7 +7,8 @@ export class Flag extends PhysicsContainer implements IHitbox {
     private hitbox: Graphics;
     private bandera: AnimatedSprite;
     private banderaCaida: Sprite;
-    //private dialog;
+    /* dialog: MetaDialog1;
+    private dialog; */
     
     constructor()
     {
@@ -43,8 +43,6 @@ export class Flag extends PhysicsContainer implements IHitbox {
         this.addChild(this.bandera);
         this.bandera.addChild(this.hitbox);
 
-        /*this.dialog = new MetaDialog1();
-        this.addChild(this.dialog);*/
     }   
     
     
@@ -55,14 +53,5 @@ export class Flag extends PhysicsContainer implements IHitbox {
     public animar() {
         this.banderaCaida.visible = false;
         this.bandera.visible = true;
-        /*this.dialog.position.set(contenedor.width * 2/5, 0);
-        this.dialog.visible = true;
-        contenedor.addChild(this)
-        setTimeout(() => {
-            this.dialog.visible = false;
-        }, 8 * 1000);
-
-        contenedor.addChild(this.dialog);*/
-
     }
 }

@@ -20,11 +20,19 @@ export class SoundScene extends SceneBase implements IUpdateable {
         toggleMute.on(ToggleButton.TOGGLE_EVENT, this.toggleMute, this);
         allCont.addChild(toggleMute);
 
-
-
     }
+
     update(_deltaTime: number, _deltaFrame?: number): void {
        
+    }
+
+
+    public mute(): void{ 
+        sound.pause("Chamarrito");
+    }
+
+    public unMute(): void{ 
+        sound.resume("Chamarrito");
     }
 
     public toggleMute(unMute:boolean) {

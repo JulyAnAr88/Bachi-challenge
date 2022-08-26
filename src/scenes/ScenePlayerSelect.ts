@@ -126,7 +126,7 @@ export class ScenePlayerSelect extends SceneBase {
                             .to({x: SceneManager.WIDTH + this.playerTimmy.width},2000)
                             .start()
                             .onComplete(()=>{
-                                GameState.ISPAUSED = false;
+                                GameState.IS_PAUSED = false;
                                 ScenePlayerSelect.PLAY_SELECT = 1;
                                 SceneManager.changeScene(new GameScene());
                             });
@@ -154,7 +154,7 @@ export class ScenePlayerSelect extends SceneBase {
                             .start()
                             .onComplete(()=>{                        
                                 ScenePlayerSelect.PLAY_SELECT = 0;
-                                GameState.ISPAUSED = false;
+                                GameState.IS_PAUSED = false;
                                 SceneManager.changeScene(new GameScene());
                             });
                     });

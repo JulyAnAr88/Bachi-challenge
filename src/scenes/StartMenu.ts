@@ -1,4 +1,3 @@
-import { sound } from "@pixi/sound";
 import { Container, Sprite, Texture } from "pixi.js";
 import { Button } from "../ui/Button";
 import { ToggleButton } from "../ui/ToggleButton";
@@ -6,6 +5,7 @@ import { SceneBase } from "../utils/SceneBase";
 import { SceneManager } from "../utils/SceneManager";
 import { MenuConfig } from "./MenuConfig";
 import { ScenePlayerSelect } from "./ScenePlayerSelect";
+import { SoundScene } from "./SoundScene";
 
 
 export class StartMenu extends SceneBase {
@@ -13,6 +13,7 @@ export class StartMenu extends SceneBase {
     private buttonExit:Button;
     private buttonConfig:Button;
     private buttonRight:Button;
+    public static CORTINA: SoundScene;
 
          
     
@@ -66,7 +67,8 @@ export class StartMenu extends SceneBase {
         dialog.position.y = tituloGame.position.y * 2.5;
         dialog.addChild(this.buttonRight, this.buttonConfig, this.buttonExit);
         
-        sound.find("Chamarrito");
+        StartMenu.CORTINA = new SoundScene()
+        SceneManager.addScene(StartMenu.CORTINA);
 
         const toggleMute = new ToggleButton(Texture.from("MusicOn"), Texture.from("MusicOff"));
         toggleMute.position.set(dialog.position.x * 2, tituloGame.position.y * 4);
@@ -75,8 +77,7 @@ export class StartMenu extends SceneBase {
 
         
         this.addChild(fondo, tituloGame, dialog, toggleMute);
-        this.cortina();
-
+        
     }
     onButtonRightClick():void {
         SceneManager.changeScene(new ScenePlayerSelect());
@@ -96,20 +97,14 @@ export class StartMenu extends SceneBase {
     public toggleMute(unMute:boolean) {
         if (unMute) 
         {
-            sound.unmuteAll();
+            StartMenu.CORTINA.unMute();
         }else
         {
-            sound.muteAll();
+            StartMenu.CORTINA.mute();
         }
     }
 
-    public cortina(){
-        sound.play("Chamarrito", {
-            loop:true,
-            singleInstance:true,
-            });
-    }
-
+    
     public update(): void {
     }
 

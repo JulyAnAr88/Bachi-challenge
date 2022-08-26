@@ -105,7 +105,7 @@ export class MenuConfig extends Container{
 
         }
     onButtonSalirClick() {
-        GameState.ISPAUSED = false;
+        GameState.IS_PAUSED = false;
         this.visible = false;
     }
     onButtonKey1Click() {
